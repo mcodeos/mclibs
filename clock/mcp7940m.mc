@@ -41,13 +41,13 @@ component SYS.Clock.MCP7940M(partno)
 
     func Cap()
     {
-        CAP(100nF, 10V).Cap(VCC, VSS)
+        CAP(100nF, 10V).Cap([VCC, VSS])
     }
 
     func xtal()
     {
         XTAL2 y(32.768kHz)
-        CAP c1(10nF, 10V), c2(12nF, 10V) 
+        CAP c1(10nF, 10V), c2(12nF, 10V)
         XTAL + y.Cap(VSS)
     }
 

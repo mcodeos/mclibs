@@ -31,7 +31,7 @@ component UARTtoRS485
 
     func Cap(c::CAP(100nF,10V))
     {
-        c.Cap(VCC, GND)
+        c.Cap([VCC, GND])
     }
 
     func ImpedanceMatch()

@@ -86,13 +86,13 @@ component TLE7368 (partno)
 
     func Reset()
     {
-        CAP cReset(1nF, 10V).Cap(RT, VSS)
+        CAP cReset(1nF, 10V).Cap([RT, VSS])
     }
 
     func Charge()
     {
         CAP ccp(220nF, 25V), cc1(100nF, 16V), cc2(100nF, 16V)
-        ccp.Cap(CCP, VSS)
+        ccp.Cap([CCP, VSS])
         //.. pins.C1\+ - cc1 - pins.C1\-
         //.. pins.C2\+ - cc2 - pins.C2\-
     }
@@ -113,9 +113,9 @@ component TLE7368 (partno)
         CAP ct1(4.7μF,10V), ct2(4.7μF,10V), cldo1(1μF,10V)
         
         //.. VSW -> pins.FBL_IN
-        ct1.Cap(Q_T1, VSS)
-        ct2.Cap(Q_T1, VSS)
-        cldo1.Cap(Q_LDO1, VSS)
+        ct1.Cap([Q_T1, VSS])
+        ct2.Cap([Q_T1, VSS])
+        cldo1.Cap([Q_LDO1, VSS])
     }
 
     func LDO2(vLdo2)
@@ -133,7 +133,7 @@ component TLE7368 (partno)
             Q_LDO2 = volt: 3.3V
         }
         
-        cldo2.Cap(Q_LDO2, VSS)
+        cldo2.Cap([Q_LDO2, VSS])
     }
 
     func LDO3(ldo3)
@@ -159,17 +159,17 @@ component TLE7368 (partno)
             Q_STBY = volt: 2.6V
         }
 
-        cstby.Cap(Q_STBY, VSS)
+        cstby.Cap([Q_STBY, VSS])
     }
 
     func PullUp_RO1()
     {
-        RES(10kΩ).Pullup(RO_1, VCC.MCU) // LDO1 reset output to MCU 
+        RES(10kΩ).Pullup([RO_1, VCC.MCU]) // LDO1 reset output to MCU
     }
 
     func PullUp_RO2_FBEXT()
     {
-        RES(10kΩ).Pullup(RO_2, VCC.MCU) // LDO2/FB_EXT reset output to MCU 
+        RES(10kΩ).Pullup([RO_2, VCC.MCU]) // LDO2/FB_EXT reset output to MCU
     }
 
     func Ignite()
