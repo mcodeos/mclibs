@@ -60,17 +60,17 @@ component ISO.NSI8140(partno)
 
     func pull(sin[1:4])
     {
-        if sin[1]==HIGH RES(10kΩ).Pullup(IN.A, DC1.VDD1) else if sin[1]==LOW RES(10kΩ).Pulldown(IN.A, DC1.GND1) 
-        if sin[2]==HIGH RES(10kΩ).Pullup(IN.B, DC1.VDD1) else if sin[2]==LOW RES(10kΩ).Pulldown(IN.B, DC1.GND1) 
-        if sin[3]==HIGH RES(10kΩ).Pullup(IN.C, DC1.VDD1) else if sin[3]==LOW RES(10kΩ).Pulldown(IN.C, DC1.GND1) 
-        if sin[4]==HIGH RES(10kΩ).Pullup(IN.D, DC1.VDD1) else if sin[4]==LOW RES(10kΩ).Pulldown(IN.D, DC1.GND1) 
+        if sin[1]==HIGH RES(10kΩ).Pullup([IN.A, DC1.VDD1]) else if sin[1]==LOW RES(10kΩ).Pulldown([IN.A, DC1.GND1])
+        if sin[2]==HIGH RES(10kΩ).Pullup([IN.B, DC1.VDD1]) else if sin[2]==LOW RES(10kΩ).Pulldown([IN.B, DC1.GND1])
+        if sin[3]==HIGH RES(10kΩ).Pullup([IN.C, DC1.VDD1]) else if sin[3]==LOW RES(10kΩ).Pulldown([IN.C, DC1.GND1])
+        if sin[4]==HIGH RES(10kΩ).Pullup([IN.D, DC1.VDD1]) else if sin[4]==LOW RES(10kΩ).Pulldown([IN.D, DC1.GND1])
     }
     func Pullup(vdd)
     {
-        RES(10kΩ).Pullup(IN, vdd)
+        RES(10kΩ).Pullup([IN, vdd])
     }
     func Pulldown(gnd)
     {
-        RES(10kΩ).Pulldown(IN, gnd)
+        RES(10kΩ).Pulldown([IN, gnd])
     }
 }

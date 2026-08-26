@@ -111,25 +111,25 @@ component TC275
     func CapDigital(gnd)
     {
         //..
-        CAP(100nF).Cap(this{10,24,68,100,123}, gnd)
-        CAP(100nF).Cap(this{25,69,99,153}, gnd)
-        CAP(100nF).Cap([pins{104,154}, pins.155, pins.164], gnd)
+        CAP(100nF).Cap([this{10,24,68,100,123}, gnd])
+        CAP(100nF).Cap([this{25,69,99,153}, gnd])
+        CAP(100nF).Cap([[pins{104,154}, pins.155, pins.164], gnd])
     }
 
     func CapAnalog(vag1, vag2, vddm)
     {
-        CAP(100nF).Cap(VAREF1, vag1)
-        CAP(100nF).Cap(VAREF2, vag2)
-        CAP(100nF).Cap(VDDM, vddm)
+        CAP(100nF).Cap([VAREF1, vag1])
+        CAP(100nF).Cap([VAREF2, vag2])
+        CAP(100nF).Cap([VDDM, vddm])
     }
 
     func Xtal(gnd)
     {
         //Crystal y(20MHz)
         //CAP c[1:2](10pF, 10V)
-        //XTAL + y.Cap(c[1:2], gnd)
-        
-        XTAL <- Crystal(20MHz).Cap(c[1:2]::CAP(10pF, 10V), gnd)
+        //XTAL + y.Cap([c[1:2], gnd])
+
+        XTAL <- Crystal(20MHz).Cap([c[1:2]::CAP(10pF, 10V), gnd])
     }
 
     func HwReset()

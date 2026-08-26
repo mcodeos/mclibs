@@ -42,7 +42,7 @@ component TTL.D.SN74LVC1G175(partno)
 
     func Cap()
     {
-        CAP(100nF,10V).Cap(VCC, GND)
+        CAP(100nF,10V).Cap([VCC, GND])
     }
 
     SN74LVC1G175.desc.features = ["Availabel in the Texas Instruments NanoFreeTM Package",
