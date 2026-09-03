@@ -19,11 +19,10 @@ component HUM011D_5_S
 
     pins =
     [
-        1 = VBUS
+        [1, [5,6,7]] = [VBUS, GND]::DC(5V)
         2 = D\-
         3 = D\+
         4 = ID
-        [5,6,7] = GND
         8 = SHIELD3
         9 = SHIELD4
     ]
