@@ -12,51 +12,37 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-component UARTtoRS485
+abstract component UARTtoRS485
 {
-    abstract = "UART to RS485 Tranciever"
+    name = "UARTtoRS485"
+    desc = "UART to RS485 Tranciever"
 
     partno = ""
     package = ""
     spec.HBM = ±0kV
     spec.workingtemperature = -0°C ~ +0°C
 
-    pins = [
-        in [8,5] = [VCC,GND]::DC(5V)
-        io [6,7] = [A, B]::RS485(), "RS485 interface"
-        io [1,4] = uart[RO, DI]::UART.TTL(DTE), ["Receive Output", "Transmit Data Input"]
-        in 2 = _RE, "RX enable"
-        in 3 = DE, "TX enable"
-    ]
+    in [VCC,GND]::DC(5V)
+    io RS485{A, B}::RS485(), "RS485 interface"
+    io UART{RO, DI}::UART.TTL(DTE), ["Receive Output", "Transmit Data Input"]
+    in _RE, "RX enable"
+    in DE, "TX enable"
 
-    func Cap(c::CAP(100nF,10V))
+    func UARTtoRS485(pwr::DC(5V))
     {
-        c.Cap([VCC, GND])
+        pwr -> [VCC, GND]
     }
 
-    func ImpedanceMatch()
+    func IPDMatch()
     {
-        RES R[1:2](5.1kΩ), R3(120Ω)
-        VCC - R1 - RS485.A - R3 - RS485.B - R2 - GND
+        VCC - RES(5.1kΩ) - RS485.A - RES(120Ω) - RS485.B - RES(5.1kΩ) - GND
     }
 
-    // Substitute the chosen MOS and RES part numbers in via the parameters
-    func AutoTrans(Q::Transistor.NPN.NMOS(), R[1:2]::RES(4.7kΩ))
+    func AutoTrans()
     {
-        VCC - R1 - (Q.C + DE + _RE)
-        DI - R2 - Q.B 
+        TRANS.NPN Q
+        VCC -> RES(4.7kΩ) -> (Q.C + DE + _RE)
+        UART.DI - RES(4.7kΩ) - Q.B
         Q.E + GND
-    }
-
-    func Protect(D[1:2]::DIODE())
-    {
-        RS485.A - D1[Neg, Pos] - GND
-        RS485.B - D2[Neg, Pos] - GND
-    }
-
-    func Uart2Rs485(uart::UART.TTL(DCE))
-    {
-        uart -> this.uart
-        return RS485
     }
 }

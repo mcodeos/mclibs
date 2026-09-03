@@ -25,14 +25,13 @@ component AHC.74AHC00
         4 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         12 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -46,14 +45,13 @@ component AHC.74AHC02
         4 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         5 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         9 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         12 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -67,14 +65,13 @@ component AHC.74AHC04
         4 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         5 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = Y5, "Output Y5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = A5, "Input A5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = Y6, "Output Y6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = A6, "Input A6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -88,14 +85,13 @@ component AHC.74AHC08
         4 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         12 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -109,14 +105,13 @@ component AHC.74AHC32
         4 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         12 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -130,14 +125,13 @@ component AHC.74AHC86
         4 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         12 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -151,14 +145,13 @@ component AHC.74AHC10
         4 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         5 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = C2, "Input C2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = C3, "Input C3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -172,14 +165,13 @@ component AHC.74AHC20
         4 = D1, "Input D1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         6 = NC, "No connection"
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = D2, "Input D2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = C2, "Input C2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = NC, "No connection"
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -193,14 +185,13 @@ component AHC.74AHC30
         4 = D, "Input D", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = E, "Input E", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = F, "Input F", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = Y, "Output Y", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = NC, "No connection"
         10 = NC, "No connection"
         11 = NC, "No connection"
         12 = NC, "No connection"
         13 = G, "Input G", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -214,14 +205,13 @@ component AHC.74AHC14
         4 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         5 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = Y5, "Output Y5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = A5, "Input A5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = Y6, "Output Y6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = A6, "Input A6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -235,14 +225,13 @@ component AHC.74AHC03
         4 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = Y2, "Output Y2 (open collector)", voltage:[low:0V ~ 0.05*VCC, high:0V ~ VCC]
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = Y3, "Output Y3 (open collector)", voltage:[low:0V ~ 0.05*VCC, high:0V ~ VCC]
         9 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = Y4, "Output Y4 (open collector)", voltage:[low:0V ~ 0.05*VCC, high:0V ~ VCC]
         12 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -256,14 +245,13 @@ component AHC.74AHC125
         4 = OE2, "Output enable 2 - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = OE3, "Output enable 3 - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         12 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = OE4, "Output enable 4 - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -277,14 +265,13 @@ component AHC.74AHC126
         4 = OE2, "Output enable 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = OE3, "Output enable 3 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         12 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = OE4, "Output enable 4 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -299,7 +286,7 @@ component AHC.74AHC138
         5 = A1, "Input A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = Y0, "Output Y0 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = Y1, "Output Y1 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Y2, "Output Y2 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Y3, "Output Y3 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -307,7 +294,6 @@ component AHC.74AHC138
         13 = Y5, "Output Y5 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = Y6, "Output Y6 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         15 = Y7, "Output Y7 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -322,7 +308,7 @@ component AHC.74AHC139
         5 = Y11, "Output Y1 for decoder 1 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         6 = Y12, "Output Y2 for decoder 1 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = Y13, "Output Y3 for decoder 1 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = Y23, "Output Y3 for decoder 2 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Y22, "Output Y2 for decoder 2 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Y21, "Output Y1 for decoder 2 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -330,7 +316,6 @@ component AHC.74AHC139
         13 = A21, "Input A1 for decoder 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = A20, "Input A0 for decoder 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         15 = E2, "Enable 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -345,7 +330,7 @@ component AHC.74AHC42
         5 = Y0, "Output Y0 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         6 = Y1, "Output Y1 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = Y2, "Output Y2 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = Y3, "Output Y3 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Y4, "Output Y4 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Y5, "Output Y5 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -353,7 +338,6 @@ component AHC.74AHC42
         13 = Y7, "Output Y7 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = Y8, "Output Y8 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         15 = Y9, "Output Y9 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -368,7 +352,7 @@ component AHC.74AHC47
         5 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = BI_RBO, "Blanking input/Ripple blanking output", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = a, "Segment a - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = b, "Segment b - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = c, "Segment c - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -376,7 +360,6 @@ component AHC.74AHC47
         13 = e, "Segment e - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = f, "Segment f - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         15 = g, "Segment g - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -391,7 +374,7 @@ component AHC.74AHC48
         5 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = BI_RBO, "Blanking input/Ripple blanking output", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = a, "Segment a - active high", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = b, "Segment b - active high", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = c, "Segment c - active high", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -399,7 +382,6 @@ component AHC.74AHC48
         13 = e, "Segment e - active high", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = f, "Segment f - active high", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         15 = g, "Segment g - active high", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -414,7 +396,7 @@ component AHC.74AHC147
         5 = I5, "Input 5 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = I6, "Input 6 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = I7, "Input 7 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = A0, "Output A0 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = A1, "Output A1 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = A2, "Output A2 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -422,7 +404,6 @@ component AHC.74AHC147
         13 = I8, "Input 8 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = I9, "Input 9 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         15 = NC, "No connection"
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -436,14 +417,13 @@ component AHC.74AHC74
         4 = PR1, "Preset 1 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         6 = Q1N, "Output Q1 complement", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = Q2N, "Output Q2 complement", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = PR2, "Preset 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = CLK2, "Clock 2 - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = D2, "Data 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = CLR2, "Clear 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -458,7 +438,7 @@ component AHC.74AHC76
         5 = PR1, "Preset 1 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = Q1N, "Output Q1 complement", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = Q2N, "Output Q2 complement", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = PR2, "Preset 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -466,7 +446,6 @@ component AHC.74AHC76
         13 = K2, "Input K2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = J2, "Input J2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         15 = CLK2, "Clock 2 - negative edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -481,7 +460,7 @@ component AHC.74AHC174
         5 = D4, "Data 4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = D5, "Data 5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = D6, "Data 6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = Q6, "Output Q6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Q5, "Output Q5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Q4, "Output Q4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -489,7 +468,6 @@ component AHC.74AHC174
         13 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         15 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -507,7 +485,7 @@ component AHC.74AHC373
         8 = D5, "Data 5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         9 = D6, "Data 6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = D7, "Data 7", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        11 = GND, "Ground"
+        [20,11] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         12 = Q0, "Output Q0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -516,7 +494,6 @@ component AHC.74AHC373
         17 = Q5, "Output Q5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         18 = Q6, "Output Q6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         19 = Q7, "Output Q7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        20 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -533,7 +510,7 @@ component AHC.74AHC374
         7 = D5, "Data 5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         8 = D6, "Data 6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         9 = D7, "Data 7", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = GND, "Ground"
+        [20,10] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         11 = OE, "Output enable - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = Q0, "Output Q0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -543,7 +520,6 @@ component AHC.74AHC374
         17 = Q5, "Output Q5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         18 = Q6, "Output Q6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         19 = Q7, "Output Q7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        20 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -558,7 +534,7 @@ component AHC.74AHC160
         5 = D3, "Data 3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = ENP, "Enable P", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = ENT, "Enable T", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = RCO, "Ripple carry output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Q0, "Output Q0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -566,7 +542,6 @@ component AHC.74AHC160
         13 = Q3, "Output Q3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         15 = LOAD, "Load - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -581,7 +556,7 @@ component AHC.74AHC190
         5 = UP_DN, "Up/down control", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = EN, "Enable", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = LOAD, "Load - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = MAX_MIN, "Maximum/minimum indicator", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = RCO, "Ripple carry output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Q0, "Output Q0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -589,7 +564,6 @@ component AHC.74AHC190
         13 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = Q3, "Output Q3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         15 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -604,13 +578,12 @@ component AHC.74AHC90
         5 = R02, "Reset 02", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = R91, "Reset 91", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = R92, "Reset 92", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
+        [14,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = Q3, "Output Q3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         12 = CLK2A, "Clock 2A", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = CLK2B, "Clock 2B", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -625,7 +598,7 @@ component AHC.74AHC161
         5 = D3, "Data 3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = ENP, "Enable P", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = ENT, "Enable T", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = RCO, "Ripple carry output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Q0, "Output Q0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -633,7 +606,6 @@ component AHC.74AHC161
         13 = Q3, "Output Q3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         15 = LOAD, "Load - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -648,7 +620,7 @@ component AHC.74AHC163
         5 = D3, "Data 3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = ENP, "Enable P", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = ENT, "Enable T", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = RCO, "Ripple carry output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Q0, "Output Q0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -656,7 +628,6 @@ component AHC.74AHC163
         13 = Q3, "Output Q3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         15 = LOAD, "Load - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -671,7 +642,7 @@ component AHC.74AHC191
         5 = UP_DN, "Up/down control", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = EN, "Enable", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = LOAD, "Load - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = MAX_MIN, "Maximum/minimum indicator", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = RCO, "Ripple carry output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Q0, "Output Q0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -679,7 +650,6 @@ component AHC.74AHC191
         13 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = Q3, "Output Q3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         15 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -693,14 +663,13 @@ component AHC.74AHC393
         4 = Q11, "Output Q1 for counter 1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         5 = Q12, "Output Q2 for counter 1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         6 = Q13, "Output Q3 for counter 1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        7 = GND, "Ground"
+        [14,7] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         8 = Q23, "Output Q3 for counter 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = Q22, "Output Q2 for counter 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Q21, "Output Q1 for counter 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Q20, "Output Q0 for counter 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         12 = MR2, "Master reset 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = CLK2, "Clock 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -715,7 +684,7 @@ component AHC.74AHC4017
         5 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         6 = Q3, "Output Q3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = Q4, "Output Q4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = Q5, "Output Q5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Q6, "Output Q6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Q7, "Output Q7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -723,7 +692,6 @@ component AHC.74AHC4017
         13 = Q9, "Output Q9", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = CO, "Carry output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         15 = INH, "Inhibit", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -738,13 +706,12 @@ component AHC.74AHC4022
         5 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         6 = Q3, "Output Q3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = Q4, "Output Q4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        8 = GND, "Ground"
+        [14,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = Q5, "Output Q5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Q6, "Output Q6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Q7, "Output Q7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         12 = CO, "Carry output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = INH, "Inhibit", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -759,13 +726,12 @@ component AHC.74AHC164
         5 = Q0, "Output Q0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         6 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        8 = GND, "Ground"
+        [14,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = Q3, "Output Q3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Q4, "Output Q4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Q5, "Output Q5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         12 = Q6, "Output Q6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = Q7, "Output Q7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        14 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -782,13 +748,12 @@ component AHC.74AHC165
         7 = D5, "Data 5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         8 = D6, "Data 6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         9 = D7, "Data 7", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = GND, "Ground"
+        [16,10] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         11 = CLK, "Clock", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = CLK_INH, "Clock inhibit", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = Q7, "Output Q7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = Q7N, "Output Q7 complement", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         15 = SER, "Serial input", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -803,7 +768,7 @@ component AHC.74AHC595
         5 = QE, "Output QE", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         6 = QF, "Output QF", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = QG, "Output QG", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = QH, "Output QH", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = MR, "Master reset - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = SH_CP, "Shift register clock", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -811,7 +776,6 @@ component AHC.74AHC595
         13 = OE, "Output enable - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = DS, "Serial data input", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         15 = QHS, "Serial data output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -826,7 +790,7 @@ component AHC.74AHC597
         5 = D4, "Data 4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = D5, "Data 5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = D6, "Data 6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = D7, "Data 7", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = LG, "Latch enable - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = CLK, "Clock", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -834,7 +798,6 @@ component AHC.74AHC597
         13 = Q7, "Output Q7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = Q7N, "Output Q7 complement", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         15 = SER, "Serial input", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -849,7 +812,7 @@ component AHC.74AHC194
         5 = MR, "Master reset - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = S0, "Mode control S0", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = S1, "Mode control S1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = Q0, "Output Q0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -857,7 +820,6 @@ component AHC.74AHC194
         13 = CLK, "Clock", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = DS_L, "Serial input left", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         15 = DS_R, "Serial input right", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -872,7 +834,7 @@ component AHC.74AHC151
         5 = D4, "Data 4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = D5, "Data 5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = D6, "Data 6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = D7, "Data 7", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = A0, "Address A0", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = A1, "Address A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -880,7 +842,6 @@ component AHC.74AHC151
         13 = STROBE, "Strobe - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = Y, "Output Y", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         15 = W, "Output W", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -895,7 +856,7 @@ component AHC.74AHC153
         5 = 1D2, "Data 2 for selector 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = 1D3, "Data 3 for selector 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = 1STROBE, "Strobe 1 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
+        [16,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = 1Y, "Output 1Y", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = 2Y, "Output 2Y", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = 2STROBE, "Strobe 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -903,7 +864,6 @@ component AHC.74AHC153
         13 = 2D2, "Data 2 for selector 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = 2D1, "Data 1 for selector 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         15 = 2D0, "Data 0 for selector 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        16 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -921,14 +881,13 @@ component AHC.74AHC245
         8 = B3, "Bus B3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = A4, "Bus A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = B4, "Bus B4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        11 = GND, "Ground"
+        [18,11] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         12 = B5, "Bus B5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = A5, "Bus A5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = B6, "Bus B6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         15 = A6, "Bus A6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         16 = B7, "Bus B7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         17 = A7, "Bus A7", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        18 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
 
@@ -943,7 +902,7 @@ component AHC.74AHC244
         5 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         6 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        8 = GND, "Ground"
+        [18,8] = [VCC,GND]::DC(1.8V~5.5V), ["Power supply 1.8V~5.5V", "Ground"]
         9 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = OE2, "Output enable 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -953,6 +912,5 @@ component AHC.74AHC244
         15 = A6, "Input A6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         16 = Y7, "Output Y7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         17 = A7, "Input A7", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        18 = VCC, "Power supply 1.8V~5.5V"
     ]
 }
