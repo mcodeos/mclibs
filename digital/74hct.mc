@@ -171,14 +171,14 @@ component HCT.74HCT20
         3 = C1, "Input C1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         4 = D1, "Input D1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        6 = NC, "No connection"
+        nc 6 = NC, "No connection"
         7 = GND, "Ground"
         8 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = D2, "Input D2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = C2, "Input C2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = NC, "No connection"
+        nc 13 = NC, "No connection"
         14 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
@@ -195,10 +195,10 @@ component HCT.74HCT30
         6 = F, "Input F", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = GND, "Ground"
         8 = Y, "Output Y", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        9 = NC, "No connection"
-        10 = NC, "No connection"
-        11 = NC, "No connection"
-        12 = NC, "No connection"
+        nc 9 = NC, "No connection"
+        nc 10 = NC, "No connection"
+        nc 11 = NC, "No connection"
+        nc 12 = NC, "No connection"
         13 = G, "Input G", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = VCC, "Power supply 4.5V~5.5V"
     ]
@@ -421,7 +421,7 @@ component HCT.74HCT147
         12 = A3, "Output A3 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = I8, "Input 8 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = I9, "Input 9 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        15 = NC, "No connection"
+        nc 15 = NC, "No connection"
         16 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
@@ -608,10 +608,10 @@ component HCT.74HCT90
         9 = QD, "Output QD", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = QC, "Output QC", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = QB, "Output QB", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        12 = NC, "No connection"
+        nc 12 = NC, "No connection"
         13 = CLK2A, "Clock 2A (5-divide)", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = CLK2B, "Clock 2B (5-divide)", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        15 = NC, "No connection"
+        nc 15 = NC, "No connection"
         16 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
@@ -789,7 +789,7 @@ component HCT.74HCT165
         12 = CLK_INH, "Clock inhibit", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = Q7, "Output Q7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = Q7N, "Output Q7 complement", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        15 = NC, "No connection"
+        nc 15 = NC, "No connection"
         16 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
@@ -835,7 +835,7 @@ component HCT.74HCT597
         12 = CLK_INH, "Clock inhibit", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = Q7, "Output Q7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = Q7N, "Output Q7 complement", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        15 = NC, "No connection"
+        nc 15 = NC, "No connection"
         16 = VCC, "Power supply 4.5V~5.5V"
     ]
 }

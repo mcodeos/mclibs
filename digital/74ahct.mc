@@ -171,14 +171,14 @@ component AHCT.74AHCT20
         3 = C1, "Input C1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         4 = D1, "Input D1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         5 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        6 = NC, "No connection"
+        nc 6 = NC, "No connection"
         7 = GND, "Ground"
         8 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = D2, "Input D2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         10 = C2, "Input C2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         11 = B2, "Input B2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         12 = A2, "Input A2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        13 = NC, "No connection"
+        nc 13 = NC, "No connection"
         14 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
@@ -195,10 +195,10 @@ component AHCT.74AHCT30
         6 = F, "Input F", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         7 = GND, "Ground"
         8 = Y, "Output Y", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        9 = NC, "No connection"
-        10 = NC, "No connection"
-        11 = NC, "No connection"
-        12 = NC, "No connection"
+        nc 9 = NC, "No connection"
+        nc 10 = NC, "No connection"
+        nc 11 = NC, "No connection"
+        nc 12 = NC, "No connection"
         13 = G, "Input G", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         14 = VCC, "Power supply 4.5V~5.5V"
     ]
@@ -421,7 +421,7 @@ component AHCT.74AHCT147
         12 = A3, "Output A3 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = I8, "Input 8 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         14 = I9, "Input 9 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        15 = NC, "No connection"
+        nc 15 = NC, "No connection"
         16 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
