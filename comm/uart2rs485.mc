@@ -41,8 +41,8 @@ abstract component UARTtoRS485
     func AutoTrans()
     {
         TRANS.NPN Q
-        VCC -> RES(4.7kΩ) -> (Q.C + DE + _RE)
-        UART.DI - RES(4.7kΩ) - Q.B
-        Q.E + GND
+        VCC -> RES(4.7kΩ) -> (Q.COLLECTOR + DE + _RE)
+        UART.DI - RES(4.7kΩ) - Q.BASE
+        Q.EMITTER + GND
     }
 }
