@@ -383,7 +383,7 @@ component LVC.74LVC47
         5 = RBI, "Ripple blanking input - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = D, "Input D (MSB)", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = GND, "Ground"
-        8 = RBI, "Ripple blanking output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        8 = _RBO, "Ripple blanking output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = a, "Segment a - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = b, "Segment b - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         11 = c, "Segment c - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -405,7 +405,7 @@ component LVC.74LVC48
         4 = C, "Input C", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = D, "Input D (MSB)", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = LT, "Lamp test - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        7 = RBI, "Ripple blanking output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        7 = _RBO, "Ripple blanking output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         8 = GND, "Ground"
         9 = VCC, "Power supply 1.65V~5.5V"
         10 = g, "Segment g - active high", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
