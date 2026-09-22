@@ -17,9 +17,10 @@
 // standard SPI NOR pinout):
 //   1 = _CS, 2 = SO/IO1, 3 = _WP/IO2, 4 = VSS, 5 = SI/IO0, 6 = SCLK,
 //   7 = _HOLD/IO3, 8 = VCC
-// SPI adoption rides the Slave wire order [CS, SCLK, SO, SI] =
-// pins [1, 6, 2, 5]. The `power` terminal macro (decoupling + pullups on
-// the strap pins) rides the base: funcs are inside the variant data lock.
+// SPI adoption rides the Slave wire order [SCLK, SI, SO, CS] =
+// pins [6, 5, 2, 1] (b3804 face: ordinal = wire identity, SCLK first). The
+// `power` terminal macro (decoupling + pullups on the strap pins) rides the
+// base: funcs are inside the variant data lock.
 
 abstract component FLASH.SPI_NOR
 {
@@ -36,7 +37,7 @@ abstract component FLASH.SPI_NOR
         7 = _HOLD | IO3                 // hold, active low
         [8, 4] = [VCC, VSS]::DC(3.3V)   // supply pair
 
-        [1, 6, 2, 5] = SPI::SPI(Slave)  // Slave wire order [CS, SCLK, SO, SI]
+        [6, 5, 2, 1] = SPI::SPI(Slave)  // Slave wire order [SCLK, SI, SO, CS]
     ]
 
     // Terminal macro: bind the 3.3V domain onto the flash supply pins
