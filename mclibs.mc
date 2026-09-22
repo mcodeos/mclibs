@@ -17,20 +17,8 @@
 // this file never references it (dependency direction mcpub -> mclibs ->
 // mcode is one-way).
 
-// import modules
-pub use ./analog/amp.mc
-pub use ./analog/filter.mc
-pub use ./clock/timer.mc
-pub use ./comm/uart2rs485.mc
-pub use ./digital/74ahc.mc
-pub use ./digital/74ahct.mc
-pub use ./digital/74hc.mc
-pub use ./digital/74hct.mc
-pub use ./digital/74lvc.mc
-pub use ./digital/74lvct.mc
-pub use ./digital/cd4000b.mc
-pub use ./digital/cd4500.mc
-pub use ./digital/ttl.mc
-pub use ./digital/ttl74s.mc
-pub use ./isolation/digitalio.mc
-pub use ./power/reg.mc
+// The library is installed whole (cp.sh copies it into ~/.mcode) but
+// consumed per part file: a project references exactly the abstraction
+// it needs, e.g. `use mclibs.power/reg.mc`. Same policy as mcpub --
+// no aggregate import; loading this entry file registers nothing by
+// design; do not turn it into a full manifest.
