@@ -347,7 +347,7 @@ component LVCT.74LVCT47{
         5 = RBI, "Ripple blanking input - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         6 = D, "Input D (MSB)", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         7 = GND, "Ground"
-        8 = RBI, "Ripple blanking output", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        8 = _RBO, "Ripple blanking output", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         9 = a, "Segment a - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         10 = b, "Segment b - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         11 = c, "Segment c - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
@@ -368,7 +368,7 @@ component LVCT.74LVCT48{
         4 = C, "Input C", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         5 = D, "Input D (MSB)", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         6 = LT, "Lamp test - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        7 = RBI, "Ripple blanking output", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        7 = _RBO, "Ripple blanking output", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         8 = GND, "Ground"
         9 = VCC, "Power supply 3.0V~3.6V"
         10 = g, "Segment g - active high", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]

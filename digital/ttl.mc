@@ -12,14 +12,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+// D flip-flop family shape. Reformed to the verified single-gate face
+// (U195: the paired sample is SN74LVC1G175) - the old catalog face
+// (1=CLK,2=D,3=Q,4=_Q,5=_CLR, no power pins) contradicted the real device
+// and dangled the only consumer's VCC/GND references (mcpub tle7368).
 component TTL.D
 {
     pins = [
+        in [5,2] = [VCC, GND]::DC(5V)
+
         in  1 = CLK, "Clock input - rising edge trigger"
-        in  2 = D,  "Data input"
-        out 3 = Q,  "Output"
-        out 4 = _Q, "Complementary output"
-        in 5 = _CLR, "Clear - active low"
+        in  3 = D,  "Data input"
+        out 4 = Q,  "Output"
+        in 6 = _CLR, "Clear - active low"
     ]
 }
 
