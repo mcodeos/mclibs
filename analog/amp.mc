@@ -148,3 +148,23 @@ component AMP.BUFFER(zin::UV.OHM, iout::UV.AMP, volt::UV.VOLT)
 
 # 5. Buffer amplifier for impedance matching
 # AMP.BUFFER(1TΩ, 50mA, 9V).UnityGainBuffer(high_impedance_input)
+
+// ---------------------------------------------------------------------------------------------
+// Audio power amplifier, BTL output (component inventory C7, electroacoustic family)
+// ---------------------------------------------------------------------------------------------
+// Abstract pin-shape base for real audio amp parts (U192 ruling 1b: package
+// pin-shape families live in mclibs; real parts bind with `:` per the
+// part-binding playbook). Pin rows are the verified hbl device face.
+abstract component AMP.AUDIO_BTL
+{
+    name = "Audio power amplifier, BTL output"
+    description = "Differential analog input on the ADC.DIFF receiver side, BTL bridge-tied speaker output on the AMP.BTL transmitter side; enable and internal-bypass pins; 3.3V power pair (unregulated converter, no spec breakpoint)"
+
+    pins = [
+        1 = EN                                                      // enable (pulled up to VDD; mute line is active low)
+        2 = BYPASS                                                  // internal reference bypass
+        in [3, 4] = IN{P, N}::ADC.DIFF(Receiver) @class(analog)     // differential analog input (peer MIC face is Transmitter)
+        out [5, 8] = VO[1, 2]::AMP.BTL(Transmitter) @class(analog)  // BTL output (inverting VO1 goes through the feedback summing point)
+        psnk [6, 7] = [VDD, GND]::DC(3.3V)                          // power (non-regulating converter, no spec breakpoint)
+    ]
+}
