@@ -12,7 +12,25 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-// MCode is an industrial-grade circuit programming language aimed at precise
-// and efficient circuit programming. This file aggregates the standard
-// components and interfaces of the language as the mcode basic library.
+// Common abstract component library. Family/catalog names only: no vendor
+// part numbers, no manufacturer identity. Real sampled parts live in mcpub;
+// this file never references it (dependency direction mcpub -> mclibs ->
+// mcode is one-way).
 
+// import modules
+pub use ./analog/amp.mc
+pub use ./analog/filter.mc
+pub use ./clock/timer.mc
+pub use ./comm/uart2rs485.mc
+pub use ./digital/74ahc.mc
+pub use ./digital/74ahct.mc
+pub use ./digital/74hc.mc
+pub use ./digital/74hct.mc
+pub use ./digital/74lvc.mc
+pub use ./digital/74lvct.mc
+pub use ./digital/cd4000b.mc
+pub use ./digital/cd4500.mc
+pub use ./digital/ttl.mc
+pub use ./digital/ttl74s.mc
+pub use ./isolation/digitalio.mc
+pub use ./power/reg.mc
