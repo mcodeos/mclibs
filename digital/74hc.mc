@@ -27,11 +27,11 @@ component HC.74HC00
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = GND, "Ground"
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        9 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        9 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        10 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        12 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        12 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        13 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = VCC, "Power supply 2V~6V"
 
         // U208 gate-grain LOGIC adoption: ordinals pair with the interface
@@ -39,8 +39,8 @@ component HC.74HC00
         // and voltage windows.
         [1,2,3] = G1::LOGIC.NAND()
         [4,5,6] = G2::LOGIC.NAND()
-        [10,9,8] = G3::LOGIC.NAND()
-        [13,12,11] = G4::LOGIC.NAND()
+        [9,10,8] = G3::LOGIC.NAND()
+        [12,13,11] = G4::LOGIC.NAND()
     ]
 }
 
@@ -48,28 +48,28 @@ component HC.74HC00
 component HC.74HC02
 {
     pins = [
-        1 = A1, "Input A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        2 = B1, "Input B1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        3 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        1 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        2 = A1, "Input A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        3 = B1, "Input B1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         4 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        5 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        6 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        5 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        6 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = GND, "Ground"
         8 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         9 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        11 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        13 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = VCC, "Power supply 2V~6V"
 
         // U208 gate-grain LOGIC adoption: ordinals pair with the interface
         // member order; the book rows above stay authoritative for names
         // and voltage windows.
-        [1,2,3] = G1::LOGIC.NOR()
-        [6,5,4] = G2::LOGIC.NOR()
+        [2,3,1] = G1::LOGIC.NOR()
+        [5,6,4] = G2::LOGIC.NOR()
         [8,9,10] = G3::LOGIC.NOR()
-        [13,12,11] = G4::LOGIC.NOR()
+        [11,12,13] = G4::LOGIC.NOR()
     ]
 }
 
@@ -116,11 +116,11 @@ component HC.74HC08
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = GND, "Ground"
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        9 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        9 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        10 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        12 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        12 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        13 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = VCC, "Power supply 2V~6V"
 
         // U208 gate-grain LOGIC adoption: ordinals pair with the interface
@@ -128,8 +128,8 @@ component HC.74HC08
         // and voltage windows.
         [1,2,3] = G1::LOGIC.AND()
         [4,5,6] = G2::LOGIC.AND()
-        [10,9,8] = G3::LOGIC.AND()
-        [13,12,11] = G4::LOGIC.AND()
+        [9,10,8] = G3::LOGIC.AND()
+        [12,13,11] = G4::LOGIC.AND()
     ]
 }
 
@@ -166,11 +166,11 @@ component HC.74HC32
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = GND, "Ground"
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        9 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        9 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        10 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        12 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        12 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        13 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = VCC, "Power supply 2V~6V"
 
         // U208 gate-grain LOGIC adoption: ordinals pair with the interface
@@ -178,8 +178,8 @@ component HC.74HC32
         // and voltage windows.
         [1,2,3] = G1::LOGIC.OR()
         [4,5,6] = G2::LOGIC.OR()
-        [10,9,8] = G3::LOGIC.OR()
-        [13,12,11] = G4::LOGIC.OR()
+        [9,10,8] = G3::LOGIC.OR()
+        [12,13,11] = G4::LOGIC.OR()
     ]
 }
 
@@ -195,11 +195,11 @@ component HC.74HC86
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = GND, "Ground"
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        9 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        9 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        10 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        12 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        12 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        13 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = VCC, "Power supply 2V~6V"
 
         // U208 gate-grain LOGIC adoption: ordinals pair with the interface
@@ -207,8 +207,8 @@ component HC.74HC86
         // and voltage windows.
         [1,2,3] = G1::LOGIC.XOR()
         [4,5,6] = G2::LOGIC.XOR()
-        [10,9,8] = G3::LOGIC.XOR()
-        [13,12,11] = G4::LOGIC.XOR()
+        [9,10,8] = G3::LOGIC.XOR()
+        [12,13,11] = G4::LOGIC.XOR()
     ]
 }
 
@@ -218,25 +218,25 @@ component HC.74HC10
     pins = [
         1 = A1, "Input A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         2 = B1, "Input B1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        3 = C1, "Input C1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        4 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        5 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        6 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        3 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        4 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        5 = C2, "Input C2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        6 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = GND, "Ground"
-        8 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        9 = C2, "Input C2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        11 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        12 = C3, "Input C3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        8 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        9 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        10 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        11 = C3, "Input C3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        12 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        13 = C1, "Input C1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = VCC, "Power supply 2V~6V"
 
         // U208 gate-grain LOGIC adoption: ordinals pair with the interface
         // member order; the book rows above stay authoritative for names
         // and voltage windows.
-        [1,2,3,4] = G1::LOGIC.NAND.3()
-        [5,6,9,8] = G2::LOGIC.NAND.3()
-        [10,11,12,13] = G3::LOGIC.NAND.3()
+        [1,2,13,12] = G1::LOGIC.NAND.3()
+        [3,4,5,6] = G2::LOGIC.NAND.3()
+        [9,10,11,8] = G3::LOGIC.NAND.3()
     ]
 }
 
@@ -246,24 +246,24 @@ component HC.74HC20
     pins = [
         1 = A1, "Input A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         2 = B1, "Input B1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        3 = C1, "Input C1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        4 = D1, "Input D1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        5 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        nc 6 = NC, "No connection"
+        nc 3 = NC, "No connection"
+        4 = C1, "Input C1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        5 = D1, "Input D1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        6 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = GND, "Ground"
         8 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        9 = D2, "Input D2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = C2, "Input C2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        11 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        12 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        nc 13 = NC, "No connection"
+        9 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        10 = B2, "Input B2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        nc 11 = NC, "No connection"
+        12 = C2, "Input C2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        13 = D2, "Input D2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = VCC, "Power supply 2V~6V"
 
         // U208 gate-grain LOGIC adoption: ordinals pair with the interface
         // member order; the book rows above stay authoritative for names
         // and voltage windows.
-        [1,2,3,4,5] = G1::LOGIC.NAND.4()
-        [12,11,10,9,8] = G2::LOGIC.NAND.4()
+        [1,2,4,5,6] = G1::LOGIC.NAND.4()
+        [9,10,12,13,8] = G2::LOGIC.NAND.4()
     ]
 }
 
@@ -281,10 +281,15 @@ component HC.74HC30
         8 = Y, "Output Y", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         nc 9 = NC, "No connection"
         nc 10 = NC, "No connection"
-        nc 11 = NC, "No connection"
-        nc 12 = NC, "No connection"
-        13 = G, "Input G", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        11 = G, "Input G", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        12 = H, "Input H", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        nc 13 = NC, "No connection"
         14 = VCC, "Power supply 2V~6V"
+
+        // U208 gate-grain LOGIC adoption: ordinals pair with the interface
+        // member order; the book rows above stay authoritative for names
+        // and voltage windows.
+        [1,2,3,4,5,6,11,12,8] = G1::LOGIC.NAND.8()
     ]
 }
 
@@ -331,11 +336,11 @@ component HC.74HC03
         6 = Y2, "Output Y2 (open collector)", voltage:[low:0V ~ 0.05*VCC, high:0V ~ VCC]
         7 = GND, "Ground"
         8 = Y3, "Output Y3 (open collector)", voltage:[low:0V ~ 0.05*VCC, high:0V ~ VCC]
-        9 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        9 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        10 = B3, "Input B3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = Y4, "Output Y4 (open collector)", voltage:[low:0V ~ 0.05*VCC, high:0V ~ VCC]
-        12 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        12 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        13 = B4, "Input B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = VCC, "Power supply 2V~6V"
 
         // U208 gate-grain LOGIC adoption: ordinals pair with the interface
@@ -343,8 +348,8 @@ component HC.74HC03
         // and voltage windows.
         [1,2,3] = G1::LOGIC.NAND()
         [4,5,6] = G2::LOGIC.NAND()
-        [10,9,8] = G3::LOGIC.NAND()
-        [13,12,11] = G4::LOGIC.NAND()
+        [9,10,8] = G3::LOGIC.NAND()
+        [12,13,11] = G4::LOGIC.NAND()
     ]
 }
 

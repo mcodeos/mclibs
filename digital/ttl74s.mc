@@ -24,11 +24,11 @@ component TTL.7400
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         7 = GND, "Ground"
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        9 = B3, "Input B3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        10 = A3, "Input A3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        9 = A3, "Input A3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        10 = B3, "Input B3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        12 = B4, "Input B4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        13 = A4, "Input A4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        12 = A4, "Input A4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        13 = B4, "Input B4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         14 = VCC, "Power supply 5V"
     ]
 }
@@ -37,19 +37,19 @@ component TTL.7400
 component TTL.7402
 {
     pins = [
-        1 = A1, "Input A1", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        2 = B1, "Input B1", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        3 = Y1, "Output Y1", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        1 = Y1, "Output Y1", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        2 = A1, "Input A1", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        3 = B1, "Input B1", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         4 = Y2, "Output Y2", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        5 = B2, "Input B2", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        6 = A2, "Input A2", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        5 = A2, "Input A2", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        6 = B2, "Input B2", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         7 = GND, "Ground"
         8 = A3, "Input A3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         9 = B3, "Input B3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         10 = Y3, "Output Y3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        11 = Y4, "Output Y4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        11 = A4, "Input A4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         12 = B4, "Input B4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        13 = A4, "Input A4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        13 = Y4, "Output Y4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         14 = VCC, "Power supply 5V"
     ]
 }
@@ -87,11 +87,11 @@ component TTL.7408
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         7 = GND, "Ground"
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        9 = B3, "Input B3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        10 = A3, "Input A3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        9 = A3, "Input A3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        10 = B3, "Input B3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        12 = B4, "Input B4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        13 = A4, "Input A4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        12 = A4, "Input A4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        13 = B4, "Input B4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         14 = VCC, "Power supply 5V"
     ]
 }
@@ -108,11 +108,11 @@ component TTL.7432
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         7 = GND, "Ground"
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        9 = B3, "Input B3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        10 = A3, "Input A3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        9 = A3, "Input A3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        10 = B3, "Input B3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        12 = B4, "Input B4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        13 = A4, "Input A4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        12 = A4, "Input A4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        13 = B4, "Input B4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         14 = VCC, "Power supply 5V"
     ]
 }
@@ -150,11 +150,11 @@ component TTL.7486
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         7 = GND, "Ground"
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        9 = B3, "Input B3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        10 = A3, "Input A3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        9 = A3, "Input A3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        10 = B3, "Input B3", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        12 = B4, "Input B4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
-        13 = A4, "Input A4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        12 = A4, "Input A4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
+        13 = B4, "Input B4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         14 = VCC, "Power supply 5V"
     ]
 }
