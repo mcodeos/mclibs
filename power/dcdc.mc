@@ -16,10 +16,13 @@
 // abstracts live in mclibs; real parts in mcpub bind with `:`).
 // Pin order is the verified device face (hbl LP3220 board):
 //   1 = EN, 2 = GND, 3 = LX, 4 = Vin, 5 = FB
-// Rails are the canonical 3.3V-in/1.2V-out grade literals: pin DC contracts
-// are decoded at component-def level and do NOT substitute formal params (see
-// ldo.mc) - other voltage grades need their own shape base. Grade spec
-// windows stay on the bound variants (spec is outside the variant data lock).
+// The VIN sink row states no nominal (U227 b3877, applied-nominal-design.md
+// §4.1 ruling 1): an input requirement is an application-side property, so
+// the generic base declares the DC crossing only and the real part's
+// accepted window (spec input_req) adjudicates each board's feed.
+// The LX source row keeps the canonical output nominal: a source nominal is
+// device truth, and the variant-level specialization of that nominal is
+// ruling 2 (案 A), not yet landed.
 
 abstract component DCDC.SOT23_5
 {
@@ -28,7 +31,7 @@ abstract component DCDC.SOT23_5
     description = "SOT23-5 buck pin shape: EN enable, LX switch node, Vin/GND input pair, FB feedback"
 
     pins = [
-        psnk [4, 2] = VIN{Vin, GND}::DC(3.3V)  // sink: input supply pair
+        psnk [4, 2] = VIN{Vin, GND}::DC()      // sink: input supply pair (no nominal — application side)
         psrc [3, 2] = LX{Lx, GND}::DC(1.2V)    // source: switch node (::DC is the filtered rail contract, delivered through the inductor)
         in 1 = EN                              // chip enable
         in 5 = FB                              // output voltage feedback

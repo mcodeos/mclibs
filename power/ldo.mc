@@ -16,12 +16,13 @@
 // live in mclibs; real parts in mcpub bind with `:` and keep the family name).
 // Pin order is the verified device face (hbl SGM2019 board):
 //   1 = Vin, 2 = GND, 3 = CE, 4 = FB, 5 = Vout
-// Rails are the canonical 5V-in/3.3V-out grade literals: pin DC contracts are
-// decoded at component-def level and do NOT substitute formal params (a
-// `::DC(v_in)` formal survives as the bare name and trips pin-contract-decode,
-// measured in the U192 power batch) - other voltage grades need their own
-// shape base, same debt class as the ams1117 ADJ grade. Grade spec windows
-// stay on the bound variants (spec is outside the variant data lock).
+// The VIN sink row states no nominal (U227 b3877, applied-nominal-design.md
+// §4.1 ruling 1): an input requirement is an application-side property, so
+// the generic base declares the DC crossing only and the real part's
+// accepted window (spec input_req) adjudicates each board's feed.
+// The VOUT source row keeps the canonical output nominal: a source nominal
+// is device truth, and the variant-level specialization of that nominal is
+// ruling 2 (案 A), not yet landed.
 
 abstract component LDO.SOT23_5
 {
@@ -30,7 +31,7 @@ abstract component LDO.SOT23_5
     description = "SOT23-5 LDO pin shape: Vin/GND input pair, CE enable, FB feedback, Vout/GND regulated pair"
 
     pins = [
-        psnk [1, 2] = VIN{Vin, GND}::DC(5V)      // sink: unregulated input pair
+        psnk [1, 2] = VIN{Vin, GND}::DC()        // sink: unregulated input pair (no nominal — application side)
         in 3 = CE                                // chip enable, active high
         in 4 = FB                                // output voltage feedback
         psrc [5, 2] = VOUT{Vout, GND}::DC(3.3V)  // source: regulated output pair
