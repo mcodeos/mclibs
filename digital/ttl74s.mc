@@ -30,6 +30,13 @@ component TTL.7400
         12 = A4, "Input A4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         13 = B4, "Input B4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         14 = VCC, "Power supply 5V"
+        // U208 gate-grain LOGIC adoption: ordinals pair with the interface
+        // member order; the book rows above stay authoritative for names
+        // and voltage windows.
+        [1,2,3] = G1::LOGIC.NAND()
+        [4,5,6] = G2::LOGIC.NAND()
+        [9,10,8] = G3::LOGIC.NAND()
+        [12,13,11] = G4::LOGIC.NAND()
     ]
 }
 
@@ -51,6 +58,13 @@ component TTL.7402
         12 = B4, "Input B4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         13 = Y4, "Output Y4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         14 = VCC, "Power supply 5V"
+        // U208 gate-grain LOGIC adoption: ordinals pair with the interface
+        // member order; the book rows above stay authoritative for names
+        // and voltage windows.
+        [2,3,1] = G1::LOGIC.NOR()
+        [5,6,4] = G2::LOGIC.NOR()
+        [8,9,10] = G3::LOGIC.NOR()
+        [11,12,13] = G4::LOGIC.NOR()
     ]
 }
 
@@ -72,6 +86,15 @@ component TTL.7404
         12 = Y6, "Output Y6", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         13 = A6, "Input A6", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         14 = VCC, "Power supply 5V"
+        // U208 gate-grain LOGIC adoption: ordinals pair with the interface
+        // member order; the book rows above stay authoritative for names
+        // and voltage windows.
+        [1,2] = G1::LOGIC.NOT()
+        [3,4] = G2::LOGIC.NOT()
+        [5,6] = G3::LOGIC.NOT()
+        [9,8] = G4::LOGIC.NOT()
+        [11,10] = G5::LOGIC.NOT()
+        [13,12] = G6::LOGIC.NOT()
     ]
 }
 
@@ -93,6 +116,13 @@ component TTL.7408
         12 = A4, "Input A4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         13 = B4, "Input B4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         14 = VCC, "Power supply 5V"
+        // U208 gate-grain LOGIC adoption: ordinals pair with the interface
+        // member order; the book rows above stay authoritative for names
+        // and voltage windows.
+        [1,2,3] = G1::LOGIC.AND()
+        [4,5,6] = G2::LOGIC.AND()
+        [9,10,8] = G3::LOGIC.AND()
+        [12,13,11] = G4::LOGIC.AND()
     ]
 }
 
@@ -114,6 +144,13 @@ component TTL.7432
         12 = A4, "Input A4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         13 = B4, "Input B4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         14 = VCC, "Power supply 5V"
+        // U208 gate-grain LOGIC adoption: ordinals pair with the interface
+        // member order; the book rows above stay authoritative for names
+        // and voltage windows.
+        [1,2,3] = G1::LOGIC.OR()
+        [4,5,6] = G2::LOGIC.OR()
+        [9,10,8] = G3::LOGIC.OR()
+        [12,13,11] = G4::LOGIC.OR()
     ]
 }
 
@@ -156,6 +193,13 @@ component TTL.7486
         12 = A4, "Input A4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         13 = B4, "Input B4", voltage:[low:0V ~ 0.4V, high:1.2V ~ 1.8V]
         14 = VCC, "Power supply 5V"
+        // U208 gate-grain LOGIC adoption: ordinals pair with the interface
+        // member order; the book rows above stay authoritative for names
+        // and voltage windows.
+        [1,2,3] = G1::LOGIC.XOR()
+        [4,5,6] = G2::LOGIC.XOR()
+        [9,10,8] = G3::LOGIC.XOR()
+        [12,13,11] = G4::LOGIC.XOR()
     ]
 }
 
