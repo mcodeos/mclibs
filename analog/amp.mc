@@ -168,3 +168,25 @@ abstract component AMP.AUDIO_BTL
         psnk [6, 7] = [VDD, GND]::DC(3.3V)                          // power (non-regulating converter, no spec breakpoint)
     ]
 }
+
+// ---------------------------------------------------------------------------------------------
+// Isolation amplifier, SOIC8 (component inventory C6, isolated secondary-side load)
+// ---------------------------------------------------------------------------------------------
+// Abstract pin-shape base for real isolation amplifier parts (U226 b3878:
+// sedimented from the pwrint board's board-internal AMP.ISO_OP per the
+// part-binding playbook). The power-sink row states no nominal (U227 b3877,
+// applied-nominal-design.md §4.1 ruling 1); the per-domain draw (amp:) is
+// device truth and stays. The return GND_ISO is a separate return copper; the
+// world the secondary side lives in is decided by the bound conduit role.
+abstract component AMP.ISO_SOIC8
+{
+    name = "Isolation amplifier, SOIC8"
+    description = "Isolated-side supply pair, differential analog input pair, differential analog output pair, one unbound pad"
+
+    pins = [
+        psnk [1,4] = [VDD, GND_ISO]::DC(amp:6mA)   // isolated-side power sink (return GND_ISO)
+        io [2,3]  = [INP, INN] @pair(inp)          // differential analog input
+        io [7,6]  = [OUTP, OUTN] @pair(outp)       // differential analog output
+        nc 5 = NC
+    ]
+}
