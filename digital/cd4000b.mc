@@ -22,17 +22,25 @@ component CD4000B.CD4011
         1 = A1, "Input A1", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         2 = B1, "Input B1", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         3 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VDD, high:0.95*VDD ~ VDD]
-        4 = A2, "Input A2", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
-        5 = B2, "Input B2", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
-        6 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VDD, high:0.95*VDD ~ VDD]
+        4 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VDD, high:0.95*VDD ~ VDD]
+        5 = A2, "Input A2", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
+        6 = B2, "Input B2", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         7 = VSS, "Ground"
-        8 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VDD, high:0.95*VDD ~ VDD]
+        8 = A3, "Input A3", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         9 = B3, "Input B3", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
-        10 = A3, "Input A3", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
+        10 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VDD, high:0.95*VDD ~ VDD]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VDD, high:0.95*VDD ~ VDD]
-        12 = B4, "Input B4", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
-        13 = A4, "Input A4", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
+        12 = A4, "Input A4", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
+        13 = B4, "Input B4", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         14 = VDD, "Power supply 3V~18V"
+
+        // U208 gate-grain LOGIC adoption: ordinals pair with the interface
+        // member order; the book rows above stay authoritative for names
+        // and voltage windows.
+        [1,2,3] = G1::LOGIC.NAND()
+        [5,6,4] = G2::LOGIC.NAND()
+        [8,9,10] = G3::LOGIC.NAND()
+        [12,13,11] = G4::LOGIC.NAND()
     ]
 }
 
@@ -44,16 +52,24 @@ component CD4000B.CD4001
         2 = B1, "Input B1", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         3 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VDD, high:0.95*VDD ~ VDD]
         4 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VDD, high:0.95*VDD ~ VDD]
-        5 = B2, "Input B2", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
-        6 = A2, "Input A2", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
+        5 = A2, "Input A2", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
+        6 = B2, "Input B2", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         7 = VSS, "Ground"
         8 = A3, "Input A3", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         9 = B3, "Input B3", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         10 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VDD, high:0.95*VDD ~ VDD]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VDD, high:0.95*VDD ~ VDD]
-        12 = B4, "Input B4", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
-        13 = A4, "Input A4", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
+        12 = A4, "Input A4", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
+        13 = B4, "Input B4", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         14 = VDD, "Power supply 3V~18V"
+
+        // U208 gate-grain LOGIC adoption: ordinals pair with the interface
+        // member order; the book rows above stay authoritative for names
+        // and voltage windows.
+        [1,2,3] = G1::LOGIC.NOR()
+        [5,6,4] = G2::LOGIC.NOR()
+        [8,9,10] = G3::LOGIC.NOR()
+        [12,13,11] = G4::LOGIC.NOR()
     ]
 }
 
