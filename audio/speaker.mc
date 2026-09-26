@@ -26,7 +26,7 @@ abstract component SPEAKER.BTL
     description = "Bridge-tied-load speaker: differential drive pair as the BTL receiver side, skeleton/shield grounds expecting quiet copper"
 
     pins = [
-        in [1, 2] = IN{P, N}::AMP.BTL(Receiver)  // BTL bridge-driven load, plus/minus
+        in [1, 2] = IN{P, N}::AMP.BTL(RECEIVER)  // BTL bridge-driven load, plus/minus
         3 = GND @role(quiet)                     // skeleton/shield ground: expects quiet copper (6051/6052 judge)
         4 = GND @role(quiet)                     // (current binding = consuming module's self-held quiet island)
     ]

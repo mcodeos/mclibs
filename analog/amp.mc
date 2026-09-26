@@ -163,8 +163,8 @@ abstract component AMP.AUDIO_BTL
     pins = [
         1 = EN                                                      // enable (pulled up to VDD; mute line is active low)
         2 = BYPASS                                                  // internal reference bypass
-        in [3, 4] = IN{P, N}::ADC.DIFF(Receiver) @class(analog)     // differential analog input (peer MIC face is Transmitter)
-        out [5, 8] = VO[1, 2]::AMP.BTL(Transmitter) @class(analog)  // BTL output (inverting VO1 goes through the feedback summing point)
+        in [3, 4] = IN{P, N}::ADC.DIFF(RECEIVER) @class(analog)     // differential analog input (peer MIC face is TRANSMITTER)
+        out [5, 8] = VO[1, 2]::AMP.BTL(TRANSMITTER) @class(analog)  // BTL output (inverting VO1 goes through the feedback summing point)
         psnk [6, 7] = [VDD, GND]::DC(3.3V)                          // power (non-regulating converter, no spec breakpoint)
     ]
 }

@@ -30,8 +30,8 @@ abstract component MCU.QFN32
         psnk [5,21]   = [VDD, GND]::DC(amp:120mA)             // digital power sink
         psnk [14,21]  = [VDD_CORE, GND]::DC(amp:90mA)         // core power sink
         psnk [17,18]  = [AVDD, AGND]::DC(amp:8mA)             // analog power sink (return AGND)
-        io [6,7]      = ADC{P, N}::ADC.DIFF(Receiver)         // differential analog input
-        io [8,9]      = I2C0::I2C(Master)
+        io [6,7]      = ADC{P, N}::ADC.DIFF(RECEIVER)         // differential analog input
+        io [8,9]      = I2C0::I2C(MASTER)
         nc 10 = NC
         nc 11 = NC
         nc 12 = NC

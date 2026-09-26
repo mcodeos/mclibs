@@ -37,7 +37,7 @@ abstract component FLASH.SPI_NOR
         7 = _HOLD | IO3                 // hold, active low
         [8, 4] = [VCC, VSS]::DC(3.3V)   // supply pair
 
-        [6, 5, 2, 1] = SPI::SPI(Slave)  // Slave wire order [SCLK, SI, SO, CS]
+        [6, 5, 2, 1] = SPI::SPI(SLAVE)  // Slave wire order [SCLK, SI, SO, CS]
     ]
 
     // Terminal macro: bind the 3.3V domain onto the flash supply pins
