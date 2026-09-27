@@ -44,11 +44,26 @@ abstract component MCU.QFN32
 
     // Terminal-level wiring macro: bind the three domains to the MCU power
     // pins (boundary = container terminal). Each incoming pair drops one local
-    // decoupling capacitor at its continuation (hot->pin, ret->pin, cap across).
+    // decoupling capacitor at its continuation (hot->pin, ret->pin, cap
+    // across). Written in operand-statement form on purpose (U328): in the
+    // former `=> ... -> [VDD, GND]` chain the bare `GND` fork target named the
+    // CALLER's ground spelling, so the local return pins (21) were never wired
+    // by this body; `this.GND` is the local-pin qualified form that reaches
+    // them. A bare `GND` operand takes the caller's spelling back to the
+    // caller's net (caller-scope value, U328), so the return side is tied to
+    // the local pin explicitly and the hot side to the formal by name.
     func Power([VDD_3V3, GND]::DC(3.3V), [VCC_1V2, GND]::DC(1.2V), [VDDA, GNDA]::DC(3.3V))
     {
-        [VDD_3V3, GND]  => CAP(100nF).Cap(_) -> [VDD, GND]
-        [VCC_1V2, GND]  => CAP(100nF).Cap(_) -> [VDD_CORE, GND]
-        [VDDA, GNDA]    => CAP(100nF).Cap(_) -> [AVDD, AGND]
+        VDD_3V3 - CAP(100nF) - GND
+        GND - this.GND
+        VDD_3V3 - VDD
+
+        VCC_1V2 - CAP(100nF) - GND
+        GND - this.GND
+        VCC_1V2 - VDD_CORE
+
+        VDDA - CAP(100nF) - GNDA
+        GNDA - AGND
+        VDDA - AVDD
     }
 }
