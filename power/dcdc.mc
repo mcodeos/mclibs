@@ -37,7 +37,7 @@ abstract component DCDC.SOT23_5
         in 5 = FB                              // output voltage feedback
     ]
 
-    func enable() {
+    func Enable() {
         VIN.Vin -> RES(47kΩ) -> EN  // EN driven off the input rail through 47k
     }
 }

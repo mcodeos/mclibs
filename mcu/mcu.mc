@@ -45,7 +45,7 @@ abstract component MCU.QFN32
     // Terminal-level wiring macro: bind the three domains to the MCU power
     // pins (boundary = container terminal). Each incoming pair drops one local
     // decoupling capacitor at its continuation (hot->pin, ret->pin, cap across).
-    func power([VDD_3V3, GND]::DC(3.3V), [VCC_1V2, GND]::DC(1.2V), [VDDA, GNDA]::DC(3.3V))
+    func Power([VDD_3V3, GND]::DC(3.3V), [VCC_1V2, GND]::DC(1.2V), [VDDA, GNDA]::DC(3.3V))
     {
         [VDD_3V3, GND]  => CAP(100nF).Cap(_) -> [VDD, GND]
         [VCC_1V2, GND]  => CAP(100nF).Cap(_) -> [VDD_CORE, GND]

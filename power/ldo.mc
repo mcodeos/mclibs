@@ -37,7 +37,7 @@ abstract component LDO.SOT23_5
         psrc [5, 2] = VOUT{Vout, GND}::DC(3.3V)  // source: regulated output pair
     ]
 
-    func enable() {
+    func Enable() {
         VIN.Vin -> CE  // tie CE to the input hot rail to enable
     }
 }
