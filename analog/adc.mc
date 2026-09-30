@@ -40,7 +40,7 @@ abstract component ADC.C4SPI
         [11, 9, 10, 8] = SPI::SPI(SLAVE)   // Slave wire order [SCLK, SI, SO, CS]
 
         [14, 12] = [VDD, AGND]::DC(3.3V)   // analog supply pair
-        13 = VREF                          // reference input
+        13 = VREF @role(quiet)             // reference input; quiet expectation pairs with the AGND return
     ]
 
     // Terminal macro: bind the 3.3V domain onto the ADC supply pins

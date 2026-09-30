@@ -35,7 +35,7 @@ abstract component DAC.C1SPI
 
         [1, 7] = [VDD, VSS]::DC(3.3V)      // supply pair
         5 = LDAC                           // output sync strap
-        6 = VREF                           // reference input
+        6 = VREF @role(quiet)              // reference input; quiet expectation pairs with the VSS return
     ]
 
     // Terminal macro: bind the 3.3V domain onto the DAC supply pins
