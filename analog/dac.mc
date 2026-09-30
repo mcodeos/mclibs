@@ -26,16 +26,15 @@ abstract component DAC.C1SPI
 {
     package = PKG.SOP8
     name = "single-channel write-only SPI DAC"
-    description = "Write-only SPI DAC shape: analog output on the DAC transmitter face, CS/SCK/SDI bus, VDD/VSS supply pair, LDAC sync strap, VREF reference input, SPI.WO Slave adoption"
+    description = "Write-only SPI DAC shape: analog output on the DAC transmitter face, CS/SCK/SDI bus, VREF/VSS quiet reference pair, VDD supply on the shared VSS return, LDAC sync strap, SPI.WO Slave adoption"
 
     pins = [
+        [6, 7] = [VREF, VSS]::DC(3.3V) @role(quiet)  // reference pair: VREF input and its VSS return both expect quiet copper (row attr is per member -- U363 has no per-leg attachment yet); family default 3.3V, part VDD range 2.7-5.5V (DS22248A)
         out 8 = VOUT::DAC(TRANSMITTER)     // analog output, the DAC drives the line
 
+        [1, 7] = [VDD, VSS]::DC(3.3V)      // supply pair: the noisy side, no quiet expectation (VSS shared with the reference pair above, ldo GND precedent)
         [2, 3, 4] = SPI::SPI.WO(SLAVE)     // Slave wire order [CS, SCLK, SI]
-
-        [1, 7] = [VDD, VSS]::DC(3.3V) @role(quiet)  // analog supply pair, both legs expect quiet copper (row attr is per member -- U363 has no per-leg attachment yet); family default 3.3V, part VDD range 2.7-5.5V (DS22248A)
         5 = LDAC                           // output sync strap
-        6 = VREF @role(quiet)              // reference input, quiet bypass to the return
     ]
 
     // Terminal macro: bind the 3.3V domain onto the DAC supply pins
