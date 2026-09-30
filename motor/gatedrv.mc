@@ -96,3 +96,69 @@ abstract component GATEDRV.H6
         VREF - CAP(100nF, ±20%, CAP.X5R, 6.3V) - AGND
     }
 }
+
+// Brushed-DC full-bridge gate driver pin-shape family: four external N-channel
+// FETs driven by one package (C8 gap). Anatomy distilled from the page-verified
+// DRV8701 RGE pinout (mcpub motor/drv8701p, TI ZHCSDO0A p.3 package drawing;
+// Pin Functions table cross-checked pin-by-pin against the figure):
+//   1 VM, 2 VCP, 3 CPH, 4 CPL, 5 GND, 6 VREF, 7 AVDD, 8 DVDD, 9 nFAULT,
+//   10 SNSOUT, 11 SO, 12 IDRIVE, 13 nSLEEP, 14 IN2, 15 IN1, 16 GND,
+//   17 GH1, 18 SH1, 19 GL1, 20 SN, 21 SP, 22 GL2, 23 SH2, 24 GH2;
+//   the GND group is 5 / 16 / PPAD (unnumbered exposed pad), all ground
+//   ("must be connected to ground" per the ZHCSDO0A GND row).
+// Control face: the P variant uses IN1/IN2 PWM inputs (each adopts its own
+//   single-lane PWM(RECEIVER) crossing); the E variant swaps 14/15 for PH/EN
+//   -- a different shape family, not folded here (same ruling as DRV8304S).
+// VM operating range 5.9-45V.
+
+abstract component GATEDRV.H1
+{
+    package = PKG.QFN24
+    name = "Brushed-DC full-bridge gate driver"
+    description = "Single brushed-DC full-bridge gate driver shape for external N-channel FETs: two PWM control inputs each adopting PWM(RECEIVER), two half-bridge gate trios (GHx/SHx/GLx) whose SHx nodes carry the motor terminals, one shunt amplifier (SP/SN/SO), sense comparator and fault outputs open-drain, charge pump, 3.3V logic and 4.8V analog regulators, resistor-set gate drive current"
+
+    pins = [
+        in 15 = IN1::PWM(RECEIVER), "Bridge PWM input 1"
+        in 14 = IN2::PWM(RECEIVER), "Bridge PWM input 2"
+
+        out 17 = GH1, "Half-bridge 1 high-side FET gate"
+        in 18 = SH1, "Phase node 1 (high-side source / low-side drain; motor terminal A)"
+        out 19 = GL1, "Half-bridge 1 low-side FET gate"
+        out 24 = GH2, "Half-bridge 2 high-side FET gate"
+        in 23 = SH2, "Phase node 2 (high-side source / low-side drain; motor terminal B)"
+        out 22 = GL2, "Half-bridge 2 low-side FET gate"
+
+        in 21 = SP, "Shunt amplifier positive input (low-side FET common source)"
+        in 20 = SN, "Shunt amplifier negative input (sense resistor to GND)"
+        out 11 = SO, "Shunt amplifier output (max 1nF load)"
+        out 10 = SNSOUT, "Sense comparator output (open-drain, external pullup)"
+        out 9 = nFAULT, "Fault indication (open-drain, external pullup)"
+
+        in 12 = IDRIVE, "Gate drive current setting (external resistor to GND)"
+        in 13 = nSLEEP, "Sleep mode input (low = sleep, internal pulldown)"
+        in 6 = VREF, "Analog reference for current regulation (0.3V to AVDD)"
+
+        out 8 = DVDD, "Internal 3.3V logic regulator (bypass 1uF/6.3V)"
+        out 7 = AVDD, "Internal 4.8V analog regulator (bypass 1uF/6.3V)"
+        out 2 = VCP, "Charge pump output (bypass 1uF/16V to VM)"
+        3 = CPH, "Charge pump switching node (0.1uF VM-rated to CPL)"
+        4 = CPL, "Charge pump switching node"
+
+        psnk [[1], [5, 16, [pad]]] = [VM, GND]::DC(12V), "Motor supply 5.9-45V; GND pins 5 and 16 plus the exposed PPAD all ground (ZHCSDO0A GND row); family default 12V"
+    ]
+
+    // Terminal macro: bind the bridge rail and wire the External Passive
+    // Components table (CVM1 0.1uF + CVM2 >=10uF, CVCP 1uF/16V, CSW 0.1uF
+    // VM-rated, CDVDD/CAVDD 1uF/6.3V each; RIDRIVE sizing is application-level
+    // and stays on the design side)
+    func Power([VM_RAIL, GNDP]::DC(12V)) {
+        VM_RAIL - CAP(100nF, ±20%, CAP.X5R, 50V) - GNDP
+        VM_RAIL - CAP(10µF, ±20%, CAP.X5R, 50V) - GNDP
+        VCP - CAP(1µF, ±20%, CAP.X5R, 16V) - VM
+        CPH - CAP(100nF, ±20%, CAP.X7R, 50V) - CPL
+        DVDD - CAP(1µF, ±20%, CAP.X5R, 6.3V) - GNDP
+        AVDD - CAP(1µF, ±20%, CAP.X5R, 6.3V) - GNDP
+        VM_RAIL - VM
+        GNDP - GND
+    }
+}
