@@ -44,8 +44,8 @@ abstract component STEPDRV
 
         in 17 = VSDO, "SDO output logic supply (tie 3.3V or 5V for the desired level)"
         in 23 = DRVOFF, "Output disable (high = outputs off, internal pullup to DVDD)"
-        in 24 = nSLEEP, "Sleep mode input (high = enabled, internal pulldown)"
-        out 14 = nFAULT, "Fault indication (open-drain, external pullup)"
+        in 24 = _SLEEP, "Sleep mode input (datasheet nSLEEP; high = enabled, internal pulldown)"
+        out 14 = _FAULT, "Fault indication (datasheet nFAULT; open-drain, external pullup)"
         in 15 = VREF, "Current set reference input (max 3.3V)"
 
         out 13 = DVDD, "Internal logic supply regulator (bypass 0.47uF to GND)"

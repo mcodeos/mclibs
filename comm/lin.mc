@@ -29,7 +29,7 @@ abstract component UARTtoLIN
 {
     package = PKG.SOIC8
     name = "UART to LIN transceiver"
-    description = "LIN transceiver shape: TXD/RXD logic side adopting UART.TTL(DCE), LBUS single-wire bus side, VBB/VSS 12V battery-domain supply pair, active-low CS and WAKE control inputs, VREN regulator-enable output"
+    description = "LIN transceiver shape: TXD/RXD logic side adopting UART.TTL(DCE), LBUS single-wire bus side, VBB/VSS 12V battery-domain supply pair, active-low _CS and _WAKE control inputs, VREN regulator-enable output"
 
     pins = [
         in 4 = TXD, "Driver Input (from DTE TX)"
@@ -39,8 +39,8 @@ abstract component UARTtoLIN
         io [6, 5] = LIN{LBUS, VSS}::LIN(), "LIN bus wire with return"   // role-less conductor view
 
         psnk [7, 5] = [VBB, VSS]::DC(12V)   // VSS rides both rows: bus return on the face, supply return on the crossing
-        in 2 = CS, "Chip select, active low (figure shows CS with overbar)"
-        in 3 = WAKE, "Wake-up input, active low (figure shows WAKE with overbar)"
+        in 2 = _CS, "Chip select (datasheet CS with overbar)"
+        in 3 = _WAKE, "Wake-up input (datasheet WAKE with overbar)"
         out 8 = VREN, "Regulator enable output (high in all modes except Power-Down, drives the logic input of an external regulator)"
     ]
 

@@ -61,8 +61,8 @@ abstract component HBRIDGE.DUAL
         out 5 = BOUT2, "Bridge B output"
         out 6 = BISEN, "Bridge B sense (sense resistor to GND sets current regulation)"
 
-        in 1 = nSLEEP, "Sleep mode input (high = enabled, internal pulldown)"
-        out 8 = nFAULT, "Fault indication (open-drain, external pullup)"
+        in 1 = _SLEEP, "Sleep mode input (datasheet nSLEEP; high = enabled, internal pulldown)"
+        out 8 = _FAULT, "Fault indication (datasheet nFAULT; open-drain, external pullup)"
 
         psnk [[12], [13, [pad]]] = [VM, GND]::DC(5V)   // bridge power; GND pin and PowerPAD both ground (SLVSCP9 GND row); family default 5V, DRV8833C operating range 2.7-11.8V
         out 14 = VINT, "Internal 3.3V regulator (bypass 2.2uF to GND)"

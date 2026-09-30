@@ -24,7 +24,7 @@ component TTL.D
         in  1 = CLK, "Clock input - rising edge trigger"
         in  3 = D,  "Data input"
         out 4 = Q,  "Output"
-        in 6 = _CLR, "Clear - active low"
+        in 6 = _CLR, "Clear"
     ]
 }
 
@@ -37,8 +37,8 @@ component TTL.JK
         in  3 = K,  "K input"
         out 4 = Q,  "Output"
         out 5 = _Q, "Complementary output"
-        in 6 = _CLR, "Clear - active low"
-        in 7 = _PR, "Preset - active low"
+        in 6 = _CLR, "Clear"
+        in 7 = _PR, "Preset"
     ]
 }
 
@@ -61,7 +61,7 @@ component TTL.T
         in  2 = T,  "Toggle input"
         out 3 = Q,  "Output"
         out 4 = _Q, "Complementary output"
-        in 5 = _CLR, "Clear - active low"
+        in 5 = _CLR, "Clear"
     ]
 }
 
@@ -70,8 +70,8 @@ component TTL.COUNTER_4BIT
 {
     pins = [
         in  1 = CLK, "Clock input"
-        in  2 = _CLR, "Clear - active low"
-        in  3 = _LOAD, "Load - active low"
+        in  2 = _CLR, "Clear"
+        in  3 = _LOAD, "Load"
         in  4 = ENP, "Enable P"
         in  5 = ENT, "Enable T"
         in  6 = D0, "Data input 0"
@@ -91,8 +91,8 @@ component TTL.COUNTER_DECADE
 {
     pins = [
         in  1 = CLK, "Clock input"
-        in  2 = _CLR, "Clear - active low"
-        in  3 = _LOAD, "Load - active low"
+        in  2 = _CLR, "Clear"
+        in  3 = _LOAD, "Load"
         in  4 = ENP, "Enable P"
         in  5 = ENT, "Enable T"
         in  6 = D0, "Data input 0"
@@ -113,7 +113,7 @@ component TTL.SHIFT_REGISTER_SISO
     pins = [
         in  1 = CLK, "Clock input"
         in  2 = SI, "Serial input"
-        in  3 = _CLR, "Clear - active low"
+        in  3 = _CLR, "Clear"
         out 4 = SO, "Serial output"
     ]
 }
@@ -124,7 +124,7 @@ component TTL.SHIFT_REGISTER_SIPO
     pins = [
         in  1 = CLK, "Clock input"
         in  2 = SI, "Serial input"
-        in  3 = _CLR, "Clear - active low"
+        in  3 = _CLR, "Clear"
         out 4 = Q0, "Parallel output 0"
         out 5 = Q1, "Parallel output 1"
         out 6 = Q2, "Parallel output 2"
@@ -138,7 +138,7 @@ component TTL.DECODER_2TO4
     pins = [
         in  1 = A0, "Address input 0"
         in  2 = A1, "Address input 1"
-        in  3 = _E, "Enable - active low"
+        in  3 = _E, "Enable"
         out 4 = Y0, "Output 0"
         out 5 = Y1, "Output 1"
         out 6 = Y2, "Output 2"
@@ -153,8 +153,8 @@ component TTL.DECODER_3TO8
         in  1 = A0, "Address input 0"
         in  2 = A1, "Address input 1"
         in  3 = A2, "Address input 2"
-        in  4 = _E1, "Enable 1 - active low"
-        in  5 = _E2, "Enable 2 - active low"
+        in  4 = _E1, "Enable 1"
+        in  5 = _E2, "Enable 2"
         in  6 = E3, "Enable 3"
         out 7 = Y0, "Output 0"
         out 8 = Y1, "Output 1"
@@ -177,7 +177,7 @@ component TTL.MUX_4TO1
         in  4 = D1, "Data input 1"
         in  5 = D2, "Data input 2"
         in  6 = D3, "Data input 3"
-        in  7 = _E, "Enable - active low"
+        in  7 = _E, "Enable"
         out 8 = Y,  "Output"
     ]
 }
@@ -197,7 +197,7 @@ component TTL.MUX_8TO1
         in  9 = D5, "Data input 5"
         in 10 = D6, "Data input 6"
         in 11 = D7, "Data input 7"
-        in 12 = _E, "Enable - active low"
+        in 12 = _E, "Enable"
         out 13 = Y,  "Output"
     ]
 }
@@ -231,9 +231,9 @@ component TTL.SEGMENT_DECODER
         in  2 = A1, "BCD input 1"
         in  3 = A2, "BCD input 2"
         in  4 = A3, "BCD input 3"
-        in  5 = _LT, "Lamp test - active low"
-        in  6 = _BI, "Blanking input - active low"
-        in  7 = _RBI, "Ripple blanking input - active low"
+        in  5 = _LT, "Lamp test"
+        in  6 = _BI, "Blanking input"
+        in  7 = _RBI, "Ripple blanking input"
         out  8 = a, "Segment a"
         out  9 = b, "Segment b"
         out 10 = c, "Segment c"
@@ -241,7 +241,7 @@ component TTL.SEGMENT_DECODER
         out 12 = e, "Segment e"
         out 13 = f, "Segment f"
         out 14 = g, "Segment g"
-        out 15 = _RBO, "Ripple blanking output - active low"
+        out 15 = _RBO, "Ripple blanking output"
     ]
 }
 
@@ -250,7 +250,7 @@ component TTL.REGISTER_4BIT
 {
     pins = [
         in  1 = CLK, "Clock input"
-        in  2 = _CLR, "Clear - active low"
+        in  2 = _CLR, "Clear"
         in  3 = D0, "Data input 0"
         in  4 = D1, "Data input 1"
         in  5 = D2, "Data input 2"
@@ -267,7 +267,7 @@ component TTL.BUS_TRANSCEIVER
 {
     pins = [
         in  1 = DIR, "Direction control"
-        in  2 = _OE, "Output enable - active low"
+        in  2 = _OE, "Output enable"
         in  3 = A0, "Bus A0"
         in  4 = A1, "Bus A1"
         in  5 = A2, "Bus A2"

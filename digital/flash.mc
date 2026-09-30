@@ -29,12 +29,12 @@ abstract component FLASH.SPI_NOR
     description = "SOP8 SPI NOR flash shape: _CS/_WP/_HOLD straps, SI/SO/SCLK bus, VCC/VSS supply pair, SPI Slave adoption"
 
     pins = [
-        1 = _CS                         // chip select, active low
+        1 = _CS                         // chip select
         2 = SO | IO1                    // serial data output
         3 = _WP | IO2                   // write protection
         5 = SI | IO0                    // serial data input
         6 = SCLK                        // serial clock input
-        7 = _HOLD | IO3                 // hold, active low
+        7 = _HOLD | IO3                 // hold
         [8, 4] = [VCC, VSS]::DC(3.3V)   // supply pair
 
         [6, 5, 2, 1] = SPI::SPI(SLAVE)  // Slave wire order [SCLK, SI, SO, CS]

@@ -78,7 +78,7 @@ abstract component GATEDRV.H6
         in 29 = GAIN, "Shunt amplifier gain setting (4-level input, external resistor)"
         in 30 = ENABLE, "Gate driver enable (low = sleep; low pulse resets faults)"
         in 31 = CAL, "Amplifier calibration input (logic high shorts inputs for offset calibration)"
-        out 25 = nFAULT, "Fault indicator output (open-drain, external pullup)"
+        out 25 = _FAULT, "Fault indicator output (datasheet nFAULT; open-drain, external pullup)"
     ]
 
     // Terminal macro: bind the bridge rail onto VM/PGND and wire the external
@@ -132,10 +132,10 @@ abstract component GATEDRV.H1
         in 20 = SN, "Shunt amplifier negative input (sense resistor to GND)"
         out 11 = SO, "Shunt amplifier output (max 1nF load)"
         out 10 = SNSOUT, "Sense comparator output (open-drain, external pullup)"
-        out 9 = nFAULT, "Fault indication (open-drain, external pullup)"
+        out 9 = _FAULT, "Fault indication (datasheet nFAULT; open-drain, external pullup)"
 
         in 12 = IDRIVE, "Gate drive current setting (external resistor to GND)"
-        in 13 = nSLEEP, "Sleep mode input (low = sleep, internal pulldown)"
+        in 13 = _SLEEP, "Sleep mode input (datasheet nSLEEP; low = sleep, internal pulldown)"
         in 6 = VREF, "Analog reference for current regulation (0.3V to AVDD)"
 
         out 8 = DVDD, "Internal 3.3V logic regulator (bypass 1uF/6.3V)"
@@ -223,7 +223,7 @@ abstract component GATEDRV.H6S
 
         in 30 = ENABLE, "Gate driver enable (low = sleep; low pulse resets faults)"
         in 31 = CAL, "Amplifier calibration input (logic high shorts inputs for offset calibration)"
-        out 25 = nFAULT, "Fault indicator output (open-drain, external pullup)"
+        out 25 = _FAULT, "Fault indicator output (datasheet nFAULT; open-drain, external pullup)"
     ]
 
     // Terminal macro: bind the bridge rail and wire the datasheet pin-table
@@ -331,8 +331,8 @@ abstract component GATEDRV.H6B
         in 12 = DC_CAL, "Shunt amplifier offset calibration (high shorts inputs)"
         in 7 = DTC, "Dead-time adjustment (external resistor to GND)"
         in 16 = EN_GATE, "Gate enable (low = sleep; low pulse resets faults)"
-        out 5 = nOCTW, "Overcurrent/overtemperature warning (open-drain, external pullup)"
-        out 6 = nFAULT, "Fault report (open-drain, external pullup)"
+        out 5 = _OCTW, "Overcurrent/overtemperature warning (datasheet nOCTW; open-drain, external pullup)"
+        out 6 = _FAULT, "Fault report (datasheet nFAULT; open-drain, external pullup)"
     ]
 
     // Terminal macro: bind the two supply domains and wire the datasheet
