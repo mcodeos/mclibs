@@ -38,7 +38,6 @@
 
 abstract component MCU.LQFP48
 {
-    package = PKG.LQFP48
     name = "LQFP48 motor-control MCU"
     description = "48-pin MCU shape: advanced timer adopting PWM.H6(TRANSMITTER) plus single-lane CH4, general-purpose timer adopting STEPDIR(TRANSMITTER), one digital power domain over three VDD/VSS pairs, one analog domain, remaining GPIO/OSC/debug/BOOT pins unbound with alternate functions in descriptions"
 

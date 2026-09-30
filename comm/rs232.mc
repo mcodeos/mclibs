@@ -26,7 +26,6 @@
 
 abstract component UARTtoRS232
 {
-    package = PKG.SOIC16
     name = "UART to RS232 transceiver"
     description = "Two-channel charge-pump RS232 transceiver shape: DIN/ROUT logic side adopting UART.TTL(DCE), RIN/DOUT cable side adopting UART.RS232.3(DCE), VCC/GND 3.3V supply pair, dual charge-pump capacitor pins"
 

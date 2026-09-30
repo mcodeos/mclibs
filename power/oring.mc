@@ -23,7 +23,6 @@
 
 abstract component ORING.IDEAL
 {
-    package = PKG.SOT_23_6
     name = "Ideal-diode ORing, 2:1"
     description = "Two power inputs combined onto one output pair (ideal-diode ORing; anti-backfeed per branch)"
 

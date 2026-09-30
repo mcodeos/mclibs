@@ -21,7 +21,6 @@
 
 abstract component BAT.LI_PO
 {
-    package = PKG.BAT_PAD
     name = "Li-Po battery, 2-pad"
     description = "Two-pad Li-Po battery: one bidirectional power pair (charge sinks, discharge sources)"
 

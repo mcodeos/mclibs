@@ -25,7 +25,6 @@
 
 abstract component DCDC.ISO_SOIC8
 {
-    package = PKG.SOIC8
     name = "Isolated DCDC converter, SOIC8"
     description = "Primary sink pair, secondary source pair with isolated return, one unbound pad"
 

@@ -29,7 +29,6 @@
 
 abstract component STEPDRV
 {
-    package = PKG.TSSOP24
     name = "Stepper driver"
     description = "Stepper driver shape (HTSSOP-24 with PowerPAD): STEP/DIR indexer control adopting STEPDIR(RECEIVER), full SPI(SLAVE) configuration port, dual winding output pairs, charge pump, internal logic regulator, VM motor supply with PGND/GND/PowerPAD all to system ground"
 

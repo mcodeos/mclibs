@@ -27,7 +27,6 @@ abstract component UARTtoRS485
     desc = "UART to RS485 Transceiver"
 
     partno = ""
-    package = ""
     spec.HBM = ±0kV
     spec.workingtemperature = -0°C ~ +0°C
 

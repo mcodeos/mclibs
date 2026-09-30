@@ -25,7 +25,6 @@
 
 abstract component UARTtoCAN
 {
-    package = PKG.SOIC8
     name = "UART to CAN transceiver"
     description = "CAN transceiver shape: TXD/RXD logic side adopting UART.TTL(DCE), CANH/CANL differential bus side, VDD/VSS 5V supply pair, VDD/2 reference output, slope-control input"
 

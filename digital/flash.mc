@@ -24,7 +24,6 @@
 
 abstract component FLASH.SPI_NOR
 {
-    package = PKG.SOP8
     name = "SPI NOR flash"
     description = "SOP8 SPI NOR flash shape: _CS/_WP/_HOLD straps, SI/SO/SCLK bus, VCC/VSS supply pair, SPI Slave adoption"
 

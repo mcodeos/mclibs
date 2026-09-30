@@ -26,7 +26,6 @@
 
 abstract component LDO.SOT23_5
 {
-    package = PKG.SOT_23_5
     name = "SOT23-5 LDO"
     description = "SOT23-5 LDO pin shape: Vin/GND input pair, CE enable, FB feedback, Vout/GND regulated pair"
 

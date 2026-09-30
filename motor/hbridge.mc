@@ -44,7 +44,6 @@
 
 abstract component HBRIDGE.DUAL
 {
-    package = PKG.TSSOP16
     name = "Dual H-bridge motor driver"
     description = "Dual brushed-DC H-bridge driver shape (HTSSOP-16 with PowerPAD): four PWM inputs each adopting PWM(RECEIVER), two bridge output pairs with per-bridge sense, sleep and open-drain fault pins, internal 3.3V regulator, VM/GND bridge power with grounded PowerPAD"
 
@@ -82,7 +81,6 @@ abstract component HBRIDGE.DUAL
 
 abstract component HBRIDGE.SINGLE
 {
-    package = PKG.SOIC8
     name = "Full-bridge motor driver"
     description = "Single brushed-DC full-bridge driver shape (SOICN-8 with exposed pad): two PWM inputs each adopting PWM(RECEIVER), one output pair, VREF current-limit reference, LSS power return for the sense resistor, VBB/GND load power"
 
@@ -112,7 +110,6 @@ abstract component HBRIDGE.SINGLE
 
 abstract component HBRIDGE.DUAL.E
 {
-    package = PKG.MULTIWATT15
     name = "Dual full-bridge driver (per-bridge enable)"
     description = "Classic dual full-bridge driver shape (Multiwatt15, tab = GND): four TTL PWM inputs each adopting PWM(RECEIVER), per-bridge enable pins, two bridge output pairs with per-bridge sense pins, dual supply (Vs power, Vss logic) with shared ground"
 

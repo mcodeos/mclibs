@@ -26,7 +26,6 @@
 
 abstract component DCDC.SOT23_5
 {
-    package = PKG.SOT_23_5
     name = "SOT23-5 buck"
     description = "SOT23-5 buck pin shape: EN enable, LX switch node, Vin/GND input pair, FB feedback"
 

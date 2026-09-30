@@ -30,7 +30,6 @@
 
 abstract component GATEDRV.H6
 {
-    package = PKG.QFN40
     name = "Three-phase smart gate driver"
     description = "Three-phase gate driver shape: six complementary PWM control inputs adopting PWM.H6(RECEIVER), three half-bridge gate output trios (GHx/SHx/GLx), per-phase low-side shunt amplifier (SPx/SNx/SOx), VM/PGND bridge power, charge pump, internal 3.3V regulator, resistor-set drive configuration"
 
@@ -113,7 +112,6 @@ abstract component GATEDRV.H6
 
 abstract component GATEDRV.H1
 {
-    package = PKG.QFN24
     name = "Brushed-DC full-bridge gate driver"
     description = "Single brushed-DC full-bridge gate driver shape for external N-channel FETs: two PWM control inputs each adopting PWM(RECEIVER), two half-bridge gate trios (GHx/SHx/GLx) whose SHx nodes carry the motor terminals, one shunt amplifier (SP/SN/SO), sense comparator and fault outputs open-drain, charge pump, 3.3V logic and 4.8V analog regulators, resistor-set gate drive current"
 
@@ -177,7 +175,6 @@ abstract component GATEDRV.H1
 
 abstract component GATEDRV.H6S
 {
-    package = PKG.QFN40
     name = "Three-phase smart gate driver (SPI)"
     description = "SPI-configured three-phase gate driver shape: six complementary PWM control inputs adopting PWM.H6(RECEIVER), three half-bridge gate output trios (GHx/SHx/GLx), per-phase low-side shunt amplifier (SPx/SNx/SOx), full SPI(SLAVE) configuration port, VM/PGND bridge power with grounded pad, charge pump, internal 3.3V regulator"
 
@@ -265,7 +262,6 @@ abstract component GATEDRV.H6S
 
 abstract component GATEDRV.H6B
 {
-    package = PKG.TSSOP56
     name = "Three-phase gate driver with buck regulator"
     description = "Three-phase gate driver shape with integrated buck regulator: six complementary PWM control inputs adopting PWM.H6(RECEIVER), three half-bridge gate trios (GHx/SHx/GLx) with bootstrap pins and low-side source sense (SLx), two shunt amplifiers, buck regulator with its own PVDD2 domain, gate-drive and analog regulators, resistor/logic-set configuration"
 

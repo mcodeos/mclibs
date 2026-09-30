@@ -22,7 +22,6 @@
 
 abstract component MCU.QFN32
 {
-    package = PKG.QFN32
     name = "QFN32 audio MCU"
     description = "QFN32 audio MCU pin shape: digital/core/analog power sink rows, differential ADC input, I2C master, unbound pads"
 

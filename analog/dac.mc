@@ -24,7 +24,6 @@
 
 abstract component DAC.C1SPI
 {
-    package = PKG.SOP8
     name = "single-channel write-only SPI DAC"
     description = "Write-only SPI DAC shape: analog output on the DAC transmitter face, CS/SCK/SDI bus, VREF/VSS quiet reference pair, VDD supply on the shared VSS return, LDAC sync strap, SPI.WO Slave adoption"
 
