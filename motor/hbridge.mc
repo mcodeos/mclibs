@@ -30,6 +30,15 @@
 // PAD (unnumbered) for thermal dissipation only -- the datasheet claims
 // no net for it, so the face carries it as its own unnumbered pin.
 //
+// HBRIDGE.DUAL.E -- distilled from the page-verified L298 Multiwatt15
+// pinout (mcpub motor/l298, ST L298 p.2 PIN CONNECTIONS drawing; Pin
+// Functions table p.3 cross-checked pin-by-pin): 1 Sense A, 2 Out 1,
+// 3 Out 2, 4 Vs, 5 Input 1, 6 Enable A, 7 Input 2, 8 GND, 9 Vss,
+// 10 Input 3, 11 Enable B, 12 Input 4, 13 Out 3, 14 Out 4, 15 Sense B;
+// the metal tab is connected to pin 8 (GND). The classic 1990s shape:
+// per-bridge enable pins (no sleep/fault/regulator generation), dual
+// supply (Vs power 2.5-46V, Vss logic 5V), per-bridge sense pins.
+//
 // Each PWM input adopts its own single-lane PWM(RECEIVER) crossing (the
 // two inputs of one bridge are independent control signals, not a pair).
 
@@ -97,6 +106,43 @@ abstract component HBRIDGE.SINGLE
         VBB_RAIL - CAP(100µF, ±20%, CAP.WET_ALUMINUM, 50V) - GNDP
         VBB_RAIL - CAP(220nF, ±20%, CAP.X5R, 50V) - GNDP
         VBB_RAIL - VBB
+        GNDP - GND
+    }
+}
+
+abstract component HBRIDGE.DUAL.E
+{
+    package = PKG.MULTIWATT15
+    name = "Dual full-bridge driver (per-bridge enable)"
+    description = "Classic dual full-bridge driver shape (Multiwatt15, tab = GND): four TTL PWM inputs each adopting PWM(RECEIVER), per-bridge enable pins, two bridge output pairs with per-bridge sense pins, dual supply (Vs power, Vss logic) with shared ground"
+
+    pins = [
+        in 5 = IN1::PWM(RECEIVER), "Bridge A input 1 (TTL compatible)"
+        in 7 = IN2::PWM(RECEIVER), "Bridge A input 2 (TTL compatible)"
+        in 10 = IN3::PWM(RECEIVER), "Bridge B input 1 (TTL compatible)"
+        in 12 = IN4::PWM(RECEIVER), "Bridge B input 2 (TTL compatible)"
+
+        in 6 = ENA, "Bridge A enable (low disables bridge A)"
+        in 11 = ENB, "Bridge B enable (low disables bridge B)"
+
+        out 2 = OUT1, "Bridge A output"
+        out 3 = OUT2, "Bridge A output (load current monitored at Sense A)"
+        out 13 = OUT3, "Bridge B output"
+        out 14 = OUT4, "Bridge B output (load current monitored at Sense B)"
+        1 = SENSEA, "Bridge A sense (sense resistor between this pin and GND)"
+        15 = SENSEB, "Bridge B sense (sense resistor between this pin and GND)"
+
+        psnk [[4], [8]] = [VS, GND]::DC(24V), "Power output stage supply 2.5-46V (tab = pin 8 GND, so no separate pad pin); family default 24V, per-project rail"
+        psnk [9, 8] = [VSS, GND]::DC(5V), "Logic supply (100nF bypass per ST datasheet)"
+    ]
+
+    // Terminal macro: bind the power rail and wire the datasheet bypassers
+    // (100nF non-inductive on Vs, 100nF on Vss). Sense resistor sizing is
+    // application-level and stays on the design side.
+    func Power([VS_RAIL, GNDP]::DC(24V)) {
+        VS_RAIL - CAP(100nF, ±20%, CAP.X7R, 50V) - GNDP
+        VSS - CAP(100nF, ±20%, CAP.X7R, 10V) - GNDP
+        VS_RAIL - VS
         GNDP - GND
     }
 }
