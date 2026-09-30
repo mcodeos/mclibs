@@ -42,13 +42,26 @@ abstract component ADC.C4SPI
     ]
 
     // Terminal macro: bind the 3.3V domain onto the ADC supply pins
-    // (supply decoupling, reference decoupling, both returns tied to GND)
+    // (supply decoupling, reference decoupling, both returns tied to GND).
+    // Power is the direct-tie shape; PowerIsolated is the bead variant.
     func Power([VDD_RAIL, GND]::DC(3.3V)) {
         VDD_RAIL - CAP(100nF, ±20%, CAP.X5R, 25V) - GND
         VDD_RAIL - VDD
-        GND - AGND  // analog return
+        GND - AGND  // analog return, direct tie
         GND - DGND  // digital return
 
         GND - CAP(100nF, ±20%, CAP.X5R, 25V) - VREF  // reference bypass
+    }
+
+    // Isolated variant: the analog return joins the digital ground through a
+    // ferrite bead instead of a direct tie. AGND stays its own net (DC-common,
+    // HF-isolated), so the reference bypass returns on the analog side and the
+    // VREF quiet expectation judges on AGND alone.
+    func PowerIsolated([VDD_RAIL, GND]::DC(3.3V)) {
+        VDD_RAIL - CAP(100nF, ±20%, CAP.X5R, 25V) - GND
+        VDD_RAIL - VDD
+        GND - DGND  // digital return, direct tie
+        GND - IND.FB(600Ω, 500mA, 100MHz) - AGND  // analog return via bead
+        AGND - CAP(100nF, ±20%, CAP.X5R, 25V) - VREF  // reference bypass, analog side
     }
 }
