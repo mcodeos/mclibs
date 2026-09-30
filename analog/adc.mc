@@ -39,15 +39,15 @@ abstract component ADC.C4SPI
 
         [11, 9, 10, 8] = SPI::SPI(SLAVE)   // Slave wire order [SCLK, SI, SO, CS]
 
-        [14, 12] = [VDD, AGND]::DC(3.3V)   // analog supply pair
+        [14, 12] = [VDD, AGND]::DC(3.3V)   // analog supply pair; family default 3.3V, part VDD range 2.7-5.5V (DS21298E)
         13 = VREF @role(quiet)             // reference input; quiet expectation pairs with the AGND return
     ]
 
     // Terminal macro: bind the 3.3V domain onto the ADC supply pins
     // (supply decoupling, reference decoupling, both returns tied to GND)
-    func Power([VDD_3V3, GND]::DC(3.3V)) {
-        VDD_3V3 - CAP(100nF, ±20%, CAP.X5R, 25V) - GND
-        VDD_3V3 - VDD
+    func Power([VDD_RAIL, GND]::DC(3.3V)) {
+        VDD_RAIL - CAP(100nF, ±20%, CAP.X5R, 25V) - GND
+        VDD_RAIL - VDD
         GND - AGND  // analog return
         GND - DGND  // digital return
 
