@@ -22,7 +22,7 @@
 // SPI.WO slave (CS, SCLK, SI -- CS-first order like SPI.3, no data pair to
 // cross) = pins [2, 3, 4].
 
-abstract component DAC.SPIC1
+abstract component DAC.C1SPI
 {
     package = PKG.SOP8
     name = "single-channel write-only SPI DAC"

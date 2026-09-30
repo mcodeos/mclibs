@@ -24,7 +24,7 @@
 // Channel pins ride the ADC.SINGLE receiver face; the @class(analog) default
 // is inherited from the interface (D3: adoption carries the interface default).
 
-abstract component ADC.SPIC4
+abstract component ADC.C4SPI
 {
     package = PKG.SOIC14
     name = "4-channel SPI ADC"
