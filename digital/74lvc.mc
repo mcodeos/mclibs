@@ -674,20 +674,20 @@ component LVC.74LVC190
 component LVC.74LVC90
 {
     pins = [
-        1 = CLKA, "Clock A - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        2 = CLKB, "Clock B - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        3 = QA, "Output QA", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        4 = QB, "Output QB", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        5 = QC, "Output QC", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        6 = QD, "Output QD", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        7 = R01, "Reset 0-1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = GND, "Ground"
-        9 = R02, "Reset 0-2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = R91, "Reset 9-1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        11 = R92, "Reset 9-2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        nc 12 = NC, "No connection"
+        1 = CKB, "Clock B - divide-by-5 section - negative edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        2 = R01, "Reset to zero gated pair member 1 - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        3 = R02, "Reset to zero gated pair member 2 - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        nc 4 = NC, "No connection"
+        5 = VCC, "Power supply 1.65V~5.5V"
+        6 = R91, "Set to nine gated pair member 1 - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        7 = R92, "Set to nine gated pair member 2 - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        8 = QC, "Output QC", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        9 = QB, "Output QB", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        10 = GND, "Ground"
+        11 = QD, "Output QD", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        12 = QA, "Output QA", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         nc 13 = NC, "No connection"
-        14 = VCC, "Power supply 1.65V~5.5V"
+        14 = CKA, "Clock A - divide-by-2 flip-flop - negative edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
     ]
 }
 
@@ -764,19 +764,19 @@ component LVC.74LVC191
 component LVC.74LVC393
 {
     pins = [
-        1 = CLK1, "Clock 1 - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        2 = _CLR1, "Clear 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        3 = Q10, "Output Q10", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        4 = Q11, "Output Q11", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        5 = Q12, "Output Q12", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        6 = Q13, "Output Q13", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        1 = CLK1, "Clock 1 - negative edge (ripple)", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        2 = CLR1, "Clear 1 - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        3 = Q10, "Output QA for counter 1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        4 = Q11, "Output QB for counter 1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        5 = Q12, "Output QC for counter 1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        6 = Q13, "Output QD for counter 1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = GND, "Ground"
-        8 = Q23, "Output Q23", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        9 = Q22, "Output Q22", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        10 = Q21, "Output Q21", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        11 = Q20, "Output Q20", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        12 = _CLR2, "Clear 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = CLK2, "Clock 2 - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        8 = Q23, "Output QD for counter 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        9 = Q22, "Output QC for counter 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        10 = Q21, "Output QB for counter 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        11 = Q20, "Output QA for counter 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        12 = CLR2, "Clear 2 - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        13 = CLK2, "Clock 2 - negative edge (ripple)", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = VCC, "Power supply 1.65V~5.5V"
     ]
 }
@@ -808,20 +808,22 @@ component LVC.74LVC4017
 component LVC.74LVC4022
 {
     pins = [
-        1 = Q4, "Output Q4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        2 = Q5, "Output Q5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        3 = Q6, "Output Q6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        4 = Q7, "Output Q7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        5 = Q0, "Output Q0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        6 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        7 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        1 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        2 = Q0, "Output Q0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        3 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        4 = Q5, "Output Q5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        5 = Q6, "Output Q6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        nc 6 = NC, "No connection"
+        7 = Q3, "Output Q3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         8 = GND, "Ground"
-        9 = Q3, "Output Q3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        10 = CO, "Carry output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        11 = _EN, "Enable", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        12 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = RESET, "Reset - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = VCC, "Power supply 1.65V~5.5V"
+        nc 9 = NC, "No connection"
+        10 = Q7, "Output Q7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        11 = Q4, "Output Q4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        12 = CO, "Carry output - LOW when count >= 4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        13 = CE, "Clock enable - counting enabled when LOW", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        14 = CP, "Clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        15 = MR, "Master reset - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        16 = VCC, "Power supply 1.65V~5.5V"
     ]
 }
 
@@ -896,21 +898,21 @@ component LVC.74LVC595
 component LVC.74LVC597
 {
     pins = [
-        1 = _SH_LD, "Shift/load", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        2 = D0, "Data 0", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        3 = D1, "Data 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        4 = D2, "Data 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        5 = D3, "Data 3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        6 = D4, "Data 4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        7 = D5, "Data 5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        8 = D6, "Data 6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        9 = D7, "Data 7", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = GND, "Ground"
-        11 = CLK, "Clock", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        12 = CLK_INH, "Clock inhibit", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = Q7, "Output Q7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        14 = Q7N, "Output Q7 complement", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        nc 15 = NC, "No connection"
+        1 = D1, "Parallel input D1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        2 = D2, "Parallel input D2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        3 = D3, "Parallel input D3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        4 = D4, "Parallel input D4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        5 = D5, "Parallel input D5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        6 = D6, "Parallel input D6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        7 = D7, "Parallel input D7", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        8 = GND, "Ground"
+        9 = Q, "Serial data output for cascading", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        10 = _MR, "Master reset - asynchronous active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        11 = SHCP, "Shift register clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        12 = STCP, "Storage register clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        13 = _PL, "Parallel load of input register - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        14 = DS, "Serial data input", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        15 = D0, "Parallel input D0", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         16 = VCC, "Power supply 1.65V~5.5V"
     ]
 }
@@ -1015,25 +1017,25 @@ component LVC.74LVC245
 component LVC.74LVC244
 {
     pins = [
-        1 = _OE1, "Output enable 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        1 = _OE1, "Output enable group 1 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         2 = A1, "Input A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        3 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        3 = Y24, "Output Y4 group 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         4 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        5 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        5 = Y23, "Output Y3 group 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         6 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        7 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        7 = Y22, "Output Y2 group 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         8 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        9 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        9 = Y21, "Output Y1 group 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = GND, "Ground"
-        11 = Y5, "Output Y5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        12 = A5, "Input A5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = Y6, "Output Y6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        14 = A6, "Input A6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        15 = Y7, "Output Y7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        16 = A7, "Input A7", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        17 = Y8, "Output Y8", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        18 = A8, "Input A8", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        19 = _OE2, "Output enable 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        11 = A21, "Input A1 group 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        12 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        13 = A22, "Input A2 group 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        14 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        15 = A23, "Input A3 group 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        16 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        17 = A24, "Input A4 group 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        18 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        19 = _OE2, "Output enable group 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         20 = VCC, "Power supply 1.65V~5.5V"
     ]
 }
