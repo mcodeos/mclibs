@@ -659,6 +659,8 @@ component LVCT.74LVCT90{
         9 = R02, "Reset 0-2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         10 = R91, "Reset 9-1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         11 = R92, "Reset 9-2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        nc 12 = NC, "No connection"
+        nc 13 = NC, "No connection"
         14 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -836,6 +838,7 @@ component LVCT.74LVCT165
         12 = CLK_INH, "Clock inhibit", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         13 = Q7, "Output Q7", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         14 = Q7N, "Output Q7 complement", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        nc 15 = NC, "No connection"
         16 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -881,6 +884,7 @@ component LVCT.74LVCT597
         12 = CLK_INH, "Clock inhibit", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         13 = Q7, "Output Q7", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         14 = Q7N, "Output Q7 complement", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        nc 15 = NC, "No connection"
         16 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
