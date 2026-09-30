@@ -39,8 +39,8 @@ abstract component ADC.C4SPI
 
         [11, 9, 10, 8] = SPI::SPI(SLAVE)   // Slave wire order [SCLK, SI, SO, CS]
 
-        [14, 12] = [VDD, AGND]::DC(3.3V)   // analog supply pair; family default 3.3V, part VDD range 2.7-5.5V (DS21298E)
-        13 = VREF @role(quiet)             // reference input; quiet expectation pairs with the AGND return
+        [14, 12] = [VDD, AGND]::DC(3.3V) @role(quiet)  // analog supply pair, both legs expect quiet copper (row attr is per member -- U363 has no per-leg attachment yet); DGND stays unmarked, digital return is the noisy domain. Family default 3.3V, part VDD range 2.7-5.5V (DS21298E)
+        13 = VREF @role(quiet)             // reference input, quiet bypass to the return
     ]
 
     // Terminal macro: bind the 3.3V domain onto the ADC supply pins

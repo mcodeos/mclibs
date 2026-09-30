@@ -33,9 +33,9 @@ abstract component DAC.C1SPI
 
         [2, 3, 4] = SPI::SPI.WO(SLAVE)     // Slave wire order [CS, SCLK, SI]
 
-        [1, 7] = [VDD, VSS]::DC(3.3V)      // supply pair; family default 3.3V, part VDD range 2.7-5.5V (DS22248A)
+        [1, 7] = [VDD, VSS]::DC(3.3V) @role(quiet)  // analog supply pair, both legs expect quiet copper (row attr is per member -- U363 has no per-leg attachment yet); family default 3.3V, part VDD range 2.7-5.5V (DS22248A)
         5 = LDAC                           // output sync strap
-        6 = VREF @role(quiet)              // reference input; quiet expectation pairs with the VSS return
+        6 = VREF @role(quiet)              // reference input, quiet bypass to the return
     ]
 
     // Terminal macro: bind the 3.3V domain onto the DAC supply pins
