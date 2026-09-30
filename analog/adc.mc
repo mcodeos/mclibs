@@ -35,7 +35,7 @@ abstract component ADC.C4SPI
         in 2 = CH1::ADC.SINGLE(RECEIVER)   // channel 1
         in 3 = CH2::ADC.SINGLE(RECEIVER)   // channel 2
         in 4 = CH3::ADC.SINGLE(RECEIVER)   // channel 3
-        [13, 12] = [VREF, AGND]::DC(3.3V) @role(quiet)  // reference pair: VREF input and its AGND return both expect quiet copper (row attr is per member -- U363 has no per-leg attachment yet); family default 3.3V, part VDD range 2.7-5.5V (DS21298E)
+        [13, 12] = [VREF, AGND]::VREF(3.3V)  // reference pair; quiet expectation rides the VREF face (b4332); family default 3.3V, part VDD range 2.7-5.5V (DS21298E)
 
         [14, 7] = [VDD, DGND]::DC(3.3V)    // supply pair: the noisy side, no quiet expectation
         [11, 9, 10, 8] = SPI::SPI(SLAVE)   // Slave wire order [SCLK, SI, SO, CS]

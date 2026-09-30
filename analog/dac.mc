@@ -29,7 +29,7 @@ abstract component DAC.C1SPI
     description = "Write-only SPI DAC shape: analog output on the DAC transmitter face, CS/SCK/SDI bus, VREF/VSS quiet reference pair, VDD supply on the shared VSS return, LDAC sync strap, SPI.WO Slave adoption"
 
     pins = [
-        [6, 7] = [VREF, VSS]::DC(3.3V) @role(quiet)  // reference pair: VREF input and its VSS return both expect quiet copper (row attr is per member -- U363 has no per-leg attachment yet); family default 3.3V, part VDD range 2.7-5.5V (DS22248A)
+        [6, 7] = [VREF, VSS]::VREF(3.3V)  // reference pair; quiet expectation rides the VREF face (b4332); family default 3.3V, part VDD range 2.7-5.5V (DS22248A)
         out 8 = VOUT::DAC(TRANSMITTER)     // analog output, the DAC drives the line
 
         [1, 7] = [VDD, VSS]::DC(3.3V)      // supply pair: the noisy side, no quiet expectation (VSS shared with the reference pair above, ldo GND precedent)
