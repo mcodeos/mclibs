@@ -311,22 +311,22 @@ component LVCT.74LVCT03{
     ]
 }
 
-# 74LVCT125 - Quad bus buffer with 3-state outputs
+# 74LVCT125 - Quad bus buffer with 3-state outputs (active low)
 component LVCT.74LVCT125{
     pins = [
-        1 = OE1, "Output enable 1 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        1 = _OE1, "Output enable 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = A1, "Input A1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = Y1, "Output Y1", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        4 = OE2, "Output enable 2 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        4 = _OE2, "Output enable 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         5 = A2, "Input A2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         7 = GND, "Ground"
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         9 = A3, "Input A3", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        10 = OE3, "Output enable 3 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        10 = _OE3, "Output enable 3", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         12 = A4, "Input A4", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        13 = OE4, "Output enable 4 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        13 = _OE4, "Output enable 4", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         14 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -356,20 +356,20 @@ component LVCT.74LVCT126{
 component LVCT.74LVCT138{
     pins = [
         1 = G1, "Enable G1 - active high", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        2 = G2A, "Enable G2A - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        3 = G2B, "Enable G2B - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        2 = _G2A, "Enable G2A", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        3 = _G2B, "Enable G2B", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         4 = A, "Input A", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         5 = B, "Input B", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         6 = C, "Input C", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        7 = Y0, "Output Y0 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        7 = _Y0, "Output Y0", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         8 = GND, "Ground"
-        9 = Y1, "Output Y1 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        10 = Y2, "Output Y2 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        11 = Y3, "Output Y3 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        12 = Y4, "Output Y4 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        13 = Y5, "Output Y5 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        14 = Y6, "Output Y6 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        15 = Y7, "Output Y7 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        9 = _Y1, "Output Y1", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        10 = _Y2, "Output Y2", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        11 = _Y3, "Output Y3", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        12 = _Y4, "Output Y4", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        13 = _Y5, "Output Y5", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        14 = _Y6, "Output Y6", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        15 = _Y7, "Output Y7", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         16 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -377,21 +377,21 @@ component LVCT.74LVCT138{
 # 74LVCT139 - Dual 2-to-4 line decoder
 component LVCT.74LVCT139{
     pins = [
-        1 = G1, "Enable 1 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        1 = _G1, "Enable 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = A1, "Input A1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = B1, "Input B1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        4 = Y10, "Output Y10 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        5 = Y11, "Output Y11 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        6 = Y12, "Output Y12 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        7 = Y13, "Output Y13 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        4 = _Y10, "Output Y10", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        5 = _Y11, "Output Y11", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        6 = _Y12, "Output Y12", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        7 = _Y13, "Output Y13", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         8 = GND, "Ground"
-        9 = Y23, "Output Y23 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        10 = Y22, "Output Y22 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        11 = Y21, "Output Y21 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        12 = Y20, "Output Y20 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        9 = _Y23, "Output Y23", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        10 = _Y22, "Output Y22", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        11 = _Y21, "Output Y21", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        12 = _Y20, "Output Y20", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         13 = B2, "Input B2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         14 = A2, "Input A2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        15 = G2, "Enable 2 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        15 = _G2, "Enable 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         16 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -399,17 +399,17 @@ component LVCT.74LVCT139{
 # 74LVCT42 - BCD to decimal decoder
 component LVCT.74LVCT42{
     pins = [
-        1 = Y0, "Output Y0 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        2 = Y1, "Output Y1 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        3 = Y2, "Output Y2 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        4 = Y3, "Output Y3 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        5 = Y4, "Output Y4 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        6 = Y5, "Output Y5 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        7 = Y6, "Output Y6 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        1 = _Y0, "Output Y0", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        2 = _Y1, "Output Y1", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        3 = _Y2, "Output Y2", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        4 = _Y3, "Output Y3", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        5 = _Y4, "Output Y4", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        6 = _Y5, "Output Y5", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        7 = _Y6, "Output Y6", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         8 = GND, "Ground"
-        9 = Y7, "Output Y7 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        10 = Y8, "Output Y8 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        11 = Y9, "Output Y9 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        9 = _Y7, "Output Y7", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        10 = _Y8, "Output Y8", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        11 = _Y9, "Output Y9", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         12 = A, "Input A (LSB)", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         13 = B, "Input B", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         14 = C, "Input C", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
@@ -424,18 +424,18 @@ component LVCT.74LVCT47{
         1 = A, "Input A (LSB)", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = B, "Input B", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = C, "Input C", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        4 = LT, "Lamp test - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        5 = RBI, "Ripple blanking input - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        4 = _LT, "Lamp test", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        5 = _RBI, "Ripple blanking input", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         6 = D, "Input D (MSB)", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         7 = GND, "Ground"
         8 = _RBO, "Ripple blanking output", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        9 = a, "Segment a - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        10 = b, "Segment b - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        11 = c, "Segment c - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        12 = d, "Segment d - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        13 = e, "Segment e - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        14 = f, "Segment f - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        15 = g, "Segment g - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        9 = _a, "Segment a", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        10 = _b, "Segment b", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        11 = _c, "Segment c", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        12 = _d, "Segment d", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        13 = _e, "Segment e", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        14 = _f, "Segment f", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        15 = _g, "Segment g", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         16 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -443,12 +443,12 @@ component LVCT.74LVCT47{
 # 74LVCT48 - BCD to 7-segment decoder (common cathode, active high)
 component LVCT.74LVCT48{
     pins = [
-        1 = RBI, "Ripple blanking input - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        1 = _RBI, "Ripple blanking input", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = A, "Input A (LSB)", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = B, "Input B", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         4 = C, "Input C", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         5 = D, "Input D (MSB)", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        6 = LT, "Lamp test - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        6 = _LT, "Lamp test", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         7 = _RBO, "Ripple blanking output", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         8 = GND, "Ground"
         9 = VCC, "Power supply 3.0V~3.6V"
@@ -465,20 +465,20 @@ component LVCT.74LVCT48{
 # 74LVCT147 - 10-to-4 line priority encoder (active low)
 component LVCT.74LVCT147{
     pins = [
-        1 = Y0, "Output Y0 (LSB) - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        2 = Y1, "Output Y1 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        3 = Y2, "Output Y2 - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        4 = Y3, "Output Y3 (MSB) - active low", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        1 = _Y0, "Output Y0 (LSB)", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        2 = _Y1, "Output Y1", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        3 = _Y2, "Output Y2", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
+        4 = _Y3, "Output Y3 (MSB)", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         5 = GND, "Ground"
-        6 = I9, "Input I9 (highest priority) - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        7 = I8, "Input I8 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        8 = I7, "Input I7 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        9 = I6, "Input I6 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        10 = I5, "Input I5 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        11 = I4, "Input I4 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        12 = I3, "Input I3 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        13 = I2, "Input I2 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        14 = I1, "Input I1 (lowest priority) - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        6 = _I9, "Input I9 (highest priority)", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        7 = _I8, "Input I8", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        8 = _I7, "Input I7", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        9 = _I6, "Input I6", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        10 = _I5, "Input I5", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        11 = _I4, "Input I4", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        12 = _I3, "Input I3", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        13 = _I2, "Input I2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        14 = _I1, "Input I1 (lowest priority)", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         15 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -487,19 +487,19 @@ component LVCT.74LVCT147{
 # 74LVCT74 - Dual D flip-flop
 component LVCT.74LVCT74{
     pins = [
-        1 = CLR1, "Clear 1 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        1 = _CLR1, "Clear 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = D1, "Data 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = CLK1, "Clock 1 - rising edge", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        4 = PR1, "Preset 1 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        4 = _PR1, "Preset 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         5 = Q1, "Output Q1", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         6 = Q1N, "Output Q1 complement", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         7 = GND, "Ground"
         8 = Q2N, "Output Q2 complement", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         9 = Q2, "Output Q2", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        10 = PR2, "Preset 2 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        10 = _PR2, "Preset 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         11 = CLK2, "Clock 2 - rising edge", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         12 = D2, "Data 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        13 = CLR2, "Clear 2 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        13 = _CLR2, "Clear 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         14 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -510,15 +510,15 @@ component LVCT.74LVCT76{
         1 = CLK1, "Clock 1 - negative edge", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = J1, "Input J1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = K1, "Input K1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        4 = CLR1, "Clear 1 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        5 = PR1, "Preset 1 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        4 = _CLR1, "Clear 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        5 = _PR1, "Preset 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         6 = Q1, "Output Q1", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         7 = Q1N, "Output Q1 complement", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         8 = GND, "Ground"
         9 = Q2N, "Output Q2 complement", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         10 = Q2, "Output Q2", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        11 = PR2, "Preset 2 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        12 = CLR2, "Clear 2 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        11 = _PR2, "Preset 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        12 = _CLR2, "Clear 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         13 = K2, "Input K2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         14 = J2, "Input J2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         15 = CLK2, "Clock 2 - negative edge", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
@@ -529,7 +529,7 @@ component LVCT.74LVCT76{
 # 74LVCT174 - Hex D flip-flop with common clock and clear
 component LVCT.74LVCT174{
     pins = [
-        1 = CLR, "Clear - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        1 = _CLR, "Clear", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = D1, "Data 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = D2, "Data 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         4 = D3, "Data 3", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
@@ -551,7 +551,7 @@ component LVCT.74LVCT174{
 # 74LVCT373 - Octal D latch with 3-state outputs
 component LVCT.74LVCT373{
     pins = [
-        1 = OE, "Output enable - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        1 = _OE, "Output enable", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = D1, "Data 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = D2, "Data 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         4 = D3, "Data 3", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
@@ -577,7 +577,7 @@ component LVCT.74LVCT373{
 # 74LVCT374 - Octal D flip-flop with 3-state outputs
 component LVCT.74LVCT374{
     pins = [
-        1 = OE, "Output enable - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        1 = _OE, "Output enable", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = D1, "Data 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = D2, "Data 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         4 = D3, "Data 3", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
@@ -604,7 +604,7 @@ component LVCT.74LVCT374{
 # 74LVCT160 - Synchronous 4-bit decimal counter with synchronous clear and load
 component LVCT.74LVCT160{
     pins = [
-        1 = CLR, "Clear - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        1 = _CLR, "Clear", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = D0, "Data 0", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = D1, "Data 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         4 = D2, "Data 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
@@ -618,7 +618,7 @@ component LVCT.74LVCT160{
         12 = Q2, "Output Q2", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         13 = Q3, "Output Q3", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         14 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        15 = LOAD, "Load - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        15 = _LOAD, "Load", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         16 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -631,7 +631,7 @@ component LVCT.74LVCT190{
         3 = D1, "Data 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         4 = D2, "Data 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         5 = D3, "Data 3", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        6 = LOAD, "Load - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        6 = _LOAD, "Load", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         7 = DOWN, "Count down - active high", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         8 = GND, "Ground"
         9 = RCO, "Ripple carry output", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
@@ -640,7 +640,7 @@ component LVCT.74LVCT190{
         12 = Q1, "Output Q1", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         13 = Q2, "Output Q2", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         14 = Q3, "Output Q3", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        15 = EN, "Enable - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        15 = _EN, "Enable", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         16 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -668,7 +668,7 @@ component LVCT.74LVCT90{
 # 74LVCT161 - Synchronous 4-bit binary counter with synchronous clear and load
 component LVCT.74LVCT161{
     pins = [
-        1 = CLR, "Clear - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        1 = _CLR, "Clear", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = D0, "Data 0", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = D1, "Data 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         4 = D2, "Data 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
@@ -682,7 +682,7 @@ component LVCT.74LVCT161{
         12 = Q2, "Output Q2", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         13 = Q3, "Output Q3", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         14 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        15 = LOAD, "Load - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        15 = _LOAD, "Load", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         16 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -691,7 +691,7 @@ component LVCT.74LVCT161{
 component LVCT.74LVCT163
 {
     pins = [
-        1 = CLR, "Clear - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        1 = _CLR, "Clear", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = D0, "Data 0", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = D1, "Data 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         4 = D2, "Data 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
@@ -705,7 +705,7 @@ component LVCT.74LVCT163
         12 = Q2, "Output Q2", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         13 = Q3, "Output Q3", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         14 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        15 = LOAD, "Load - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        15 = _LOAD, "Load", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         16 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -719,7 +719,7 @@ component LVCT.74LVCT191
         3 = D1, "Data 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         4 = D2, "Data 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         5 = D3, "Data 3", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        6 = LOAD, "Load - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        6 = _LOAD, "Load", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         7 = DOWN, "Count down - active high", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         8 = GND, "Ground"
         9 = RCO, "Ripple carry output", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
@@ -728,7 +728,7 @@ component LVCT.74LVCT191
         12 = Q1, "Output Q1", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         13 = Q2, "Output Q2", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         14 = Q3, "Output Q3", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        15 = EN, "Enable - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        15 = _EN, "Enable", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         16 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -738,7 +738,7 @@ component LVCT.74LVCT393
 {
     pins = [
         1 = CLK1, "Clock 1 - rising edge", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        2 = CLR1, "Clear 1 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        2 = _CLR1, "Clear 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = Q10, "Output Q10", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         4 = Q11, "Output Q11", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         5 = Q12, "Output Q12", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
@@ -748,7 +748,7 @@ component LVCT.74LVCT393
         9 = Q22, "Output Q22", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         10 = Q21, "Output Q21", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         11 = Q20, "Output Q20", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        12 = CLR2, "Clear 2 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        12 = _CLR2, "Clear 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         13 = CLK2, "Clock 2 - rising edge", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         14 = VCC, "Power supply 3.0V~3.6V"
     ]
@@ -770,7 +770,7 @@ component LVCT.74LVCT4017
         10 = Q4, "Output Q4", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         11 = Q9, "Output Q9", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         12 = CO, "Carry output", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        13 = EN, "Enable - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        13 = _EN, "Enable", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         14 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         15 = RESET, "Reset - active high", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         16 = VCC, "Power supply 3.0V~3.6V"
@@ -791,7 +791,7 @@ component LVCT.74LVCT4022
         8 = GND, "Ground"
         9 = Q3, "Output Q3", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         10 = CO, "Carry output", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        11 = EN, "Enable - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        11 = _EN, "Enable", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         12 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         13 = RESET, "Reset - active high", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         14 = VCC, "Power supply 3.0V~3.6V"
@@ -806,7 +806,7 @@ component LVCT.74LVCT164
         1 = A, "Input A", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = B, "Input B", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        4 = CLR, "Clear - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        4 = _CLR, "Clear", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         5 = Q0, "Output Q0", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         6 = Q1, "Output Q1", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         7 = Q2, "Output Q2", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
@@ -824,7 +824,7 @@ component LVCT.74LVCT164
 component LVCT.74LVCT165
 {
     pins = [
-        1 = SH_LD, "Shift/load - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        1 = _SH_LD, "Shift/load", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = D0, "Data 0", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = D1, "Data 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         4 = D2, "Data 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
@@ -858,10 +858,10 @@ component LVCT.74LVCT595
         9 = QG, "Output QG", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         10 = QH, "Output QH", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         11 = QHS, "Serial output QHS", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
-        12 = OE, "Output enable - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        12 = _OE, "Output enable", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         13 = RCLK, "Register clock", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         14 = SRCLK, "Shift register clock", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        15 = SRCLR, "Shift register clear - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        15 = _SRCLR, "Shift register clear", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         16 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -870,7 +870,7 @@ component LVCT.74LVCT595
 component LVCT.74LVCT597
 {
     pins = [
-        1 = SH_LD, "Shift/load - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        1 = _SH_LD, "Shift/load", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = D0, "Data 0", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = D1, "Data 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         4 = D2, "Data 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
@@ -903,7 +903,7 @@ component LVCT.74LVCT194
         8 = GND, "Ground"
         9 = S0, "Mode select S0", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         10 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        11 = CLR, "Clear - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        11 = _CLR, "Clear", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         12 = DA, "Data A", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         13 = DB, "Data B", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         14 = DC, "Data C", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
@@ -931,7 +931,7 @@ component LVCT.74LVCT151
         12 = S0, "Select S0", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         13 = S1, "Select S1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         14 = S2, "Select S2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        15 = EN, "Enable - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        15 = _EN, "Enable", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         16 = VCC, "Power supply 3.0V~3.6V"
     ]
 }
@@ -963,7 +963,7 @@ component LVCT.74LVCT153
 component LVCT.74LVCT245
 {
     pins = [
-        1 = OE, "Output enable - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        1 = _OE, "Output enable", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = A1, "Data A1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = B1, "Data B1", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         4 = A2, "Data A2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
@@ -990,7 +990,7 @@ component LVCT.74LVCT245
 component LVCT.74LVCT244
 {
     pins = [
-        1 = OE1, "Output enable 1 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        1 = _OE1, "Output enable 1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         2 = A1, "Input A1", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         3 = Y1, "Output Y1", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         4 = A2, "Input A2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
@@ -1008,7 +1008,7 @@ component LVCT.74LVCT244
         16 = A7, "Input A7", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         17 = Y8, "Output Y8", voltage:[low:0V ~ 0.4V, high:2.9V ~ VCC]
         18 = A8, "Input A8", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
-        19 = OE2, "Output enable 2 - active low", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
+        19 = _OE2, "Output enable 2", voltage:[low:0V ~ 0.8V, high:2.0V ~ VCC]
         20 = VCC, "Power supply 3.0V~3.6V"
     ]
 }

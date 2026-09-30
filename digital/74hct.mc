@@ -321,44 +321,44 @@ component HCT.74HCT03
     ]
 }
 
-# 74HCT125 - Quad 3-state bus buffer (active high)
+# 74HCT125 - Quad 3-state bus buffer (active low)
 component HCT.74HCT125
 {
     pins = [
-        1 = OE1, "Output enable 1 - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        1 = _OE1, "Output enable 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         2 = A1, "Input A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        4 = OE2, "Output enable 2 - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        4 = _OE2, "Output enable 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = GND, "Ground"
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = OE3, "Output enable 3 - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        10 = _OE3, "Output enable 3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         12 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = OE4, "Output enable 4 - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        13 = _OE4, "Output enable 4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
 
-# 74HCT126 - Quad 3-state bus buffer (active low)
+# 74HCT126 - Quad 3-state bus buffer (active high)
 component HCT.74HCT126
 {
     pins = [
-        1 = OE1, "Output enable 1 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        1 = OE1, "Output enable 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         2 = A1, "Input A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        4 = OE2, "Output enable 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        4 = OE2, "Output enable 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = GND, "Ground"
         8 = Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = OE3, "Output enable 3 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        10 = OE3, "Output enable 3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         12 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = OE4, "Output enable 4 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        13 = OE4, "Output enable 4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
@@ -368,20 +368,20 @@ component HCT.74HCT138
 {
     pins = [
         1 = G1, "Enable G1 - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        2 = G2A, "Enable G2A - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        3 = G2B, "Enable G2B - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        2 = _G2A, "Enable G2A", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        3 = _G2B, "Enable G2B", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         4 = A0, "Input A0", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = A1, "Input A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        7 = Y0, "Output Y0 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        7 = _Y0, "Output Y0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         8 = GND, "Ground"
-        9 = Y1, "Output Y1 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        10 = Y2, "Output Y2 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        11 = Y3, "Output Y3 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        12 = Y4, "Output Y4 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        13 = Y5, "Output Y5 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        14 = Y6, "Output Y6 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        15 = Y7, "Output Y7 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        9 = _Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        10 = _Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        11 = _Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        12 = _Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        13 = _Y5, "Output Y5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        14 = _Y6, "Output Y6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        15 = _Y7, "Output Y7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         16 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
@@ -390,21 +390,21 @@ component HCT.74HCT138
 component HCT.74HCT139
 {
     pins = [
-        1 = E1, "Enable 1 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        1 = _E1, "Enable 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         2 = A10, "Input A0 for decoder 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = A11, "Input A1 for decoder 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        4 = Y10, "Output Y0 for decoder 1 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        5 = Y11, "Output Y1 for decoder 1 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        6 = Y12, "Output Y2 for decoder 1 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        7 = Y13, "Output Y3 for decoder 1 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        4 = _Y10, "Output Y0 for decoder 1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        5 = _Y11, "Output Y1 for decoder 1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        6 = _Y12, "Output Y2 for decoder 1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        7 = _Y13, "Output Y3 for decoder 1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         8 = GND, "Ground"
-        9 = Y23, "Output Y3 for decoder 2 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        10 = Y22, "Output Y2 for decoder 2 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        11 = Y21, "Output Y1 for decoder 2 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        12 = Y20, "Output Y0 for decoder 2 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        9 = _Y23, "Output Y3 for decoder 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        10 = _Y22, "Output Y2 for decoder 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        11 = _Y21, "Output Y1 for decoder 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        12 = _Y20, "Output Y0 for decoder 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = A21, "Input A1 for decoder 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = A20, "Input A0 for decoder 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        15 = E2, "Enable 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        15 = _E2, "Enable 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         16 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
@@ -417,17 +417,17 @@ component HCT.74HCT42
         2 = A1, "Input A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         4 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        5 = Y0, "Output Y0 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        6 = Y1, "Output Y1 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        7 = Y2, "Output Y2 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        5 = _Y0, "Output Y0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        6 = _Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        7 = _Y2, "Output Y2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         8 = GND, "Ground"
-        9 = Y3, "Output Y3 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        10 = Y4, "Output Y4 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        11 = Y5, "Output Y5 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        12 = Y6, "Output Y6 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        13 = Y7, "Output Y7 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        14 = Y8, "Output Y8 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        15 = Y9, "Output Y9 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        9 = _Y3, "Output Y3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        10 = _Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        11 = _Y5, "Output Y5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        12 = _Y6, "Output Y6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        13 = _Y7, "Output Y7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        14 = _Y8, "Output Y8", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        15 = _Y9, "Output Y9", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         16 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
@@ -436,21 +436,21 @@ component HCT.74HCT42
 component HCT.74HCT47
 {
     pins = [
-        1 = LT, "Lamp test - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        2 = RBI, "Ripple blanking input - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        1 = _LT, "Lamp test", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        2 = _RBI, "Ripple blanking input", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = A0, "Input A0", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         4 = A1, "Input A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = A3, "Input A3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         7 = BI_RBO, "Blanking input/Ripple blanking output", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         8 = GND, "Ground"
-        9 = a, "Segment a - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        10 = b, "Segment b - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        11 = c, "Segment c - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        12 = d, "Segment d - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        13 = e, "Segment e - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        14 = f, "Segment f - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        15 = g, "Segment g - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        9 = _a, "Segment a", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        10 = _b, "Segment b", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        11 = _c, "Segment c", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        12 = _d, "Segment d", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        13 = _e, "Segment e", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        14 = _f, "Segment f", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        15 = _g, "Segment g", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         16 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
@@ -459,8 +459,8 @@ component HCT.74HCT47
 component HCT.74HCT48
 {
     pins = [
-        1 = LT, "Lamp test - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        2 = RBI, "Ripple blanking input - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        1 = _LT, "Lamp test", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        2 = _RBI, "Ripple blanking input", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = A0, "Input A0", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         4 = A1, "Input A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -482,20 +482,20 @@ component HCT.74HCT48
 component HCT.74HCT147
 {
     pins = [
-        1 = I1, "Input 1 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        2 = I2, "Input 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        3 = I3, "Input 3 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        4 = I4, "Input 4 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        5 = I5, "Input 5 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        6 = I6, "Input 6 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        7 = I7, "Input 7 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        1 = _I1, "Input 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        2 = _I2, "Input 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        3 = _I3, "Input 3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        4 = _I4, "Input 4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        5 = _I5, "Input 5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        6 = _I6, "Input 6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        7 = _I7, "Input 7", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         8 = GND, "Ground"
-        9 = A0, "Output A0 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        10 = A1, "Output A1 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        11 = A2, "Output A2 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        12 = A3, "Output A3 - active low", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        13 = I8, "Input 8 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        14 = I9, "Input 9 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        9 = _A0, "Output A0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        10 = _A1, "Output A1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        11 = _A2, "Output A2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        12 = _A3, "Output A3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
+        13 = _I8, "Input 8", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        14 = _I9, "Input 9", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         nc 15 = NC, "No connection"
         16 = VCC, "Power supply 4.5V~5.5V"
     ]
@@ -505,19 +505,19 @@ component HCT.74HCT147
 component HCT.74HCT74
 {
     pins = [
-        1 = CLR1, "Clear 1 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        1 = _CLR1, "Clear 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         2 = D1, "Data 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = CLK1, "Clock 1 - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        4 = PR1, "Preset 1 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        4 = _PR1, "Preset 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         6 = Q1N, "Output Q1 complement", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = GND, "Ground"
         8 = Q2N, "Output Q2 complement", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         9 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        10 = PR2, "Preset 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        10 = _PR2, "Preset 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = CLK2, "Clock 2 - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = D2, "Data 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = CLR2, "Clear 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        13 = _CLR2, "Clear 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
@@ -529,15 +529,15 @@ component HCT.74HCT76
         1 = CLK1, "Clock 1 - negative edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         2 = J1, "Input J1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = K1, "Input K1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        4 = CLR1, "Clear 1 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        5 = PR1, "Preset 1 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        4 = _CLR1, "Clear 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        5 = _PR1, "Preset 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = Q1N, "Output Q1 complement", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         8 = GND, "Ground"
         9 = Q2N, "Output Q2 complement", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        11 = PR2, "Preset 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        12 = CLR2, "Clear 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        11 = _PR2, "Preset 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        12 = _CLR2, "Clear 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = K2, "Input K2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = J2, "Input J2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         15 = CLK2, "Clock 2 - negative edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -549,7 +549,7 @@ component HCT.74HCT76
 component HCT.74HCT174
 {
     pins = [
-        1 = CLR, "Clear - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        1 = _CLR, "Clear", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         2 = D1, "Data 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = D2, "Data 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         4 = D3, "Data 3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -573,7 +573,7 @@ component HCT.74HCT373
 {
     pins = [
         1 = LE, "Latch enable - active high", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        2 = OE, "Output enable - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        2 = _OE, "Output enable", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = D0, "Data 0", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         4 = D1, "Data 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = D2, "Data 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -609,7 +609,7 @@ component HCT.74HCT374
         8 = D6, "Data 6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         9 = D7, "Data 7", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = GND, "Ground"
-        11 = OE, "Output enable - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        11 = _OE, "Output enable", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = Q0, "Output Q0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -626,7 +626,7 @@ component HCT.74HCT374
 component HCT.74HCT160
 {
     pins = [
-        1 = CLR, "Clear - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        1 = _CLR, "Clear", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         2 = D0, "Data 0", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = D1, "Data 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         4 = D2, "Data 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -640,7 +640,7 @@ component HCT.74HCT160
         12 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = Q3, "Output Q3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        15 = LOAD, "Load - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        15 = _LOAD, "Load", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         16 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
@@ -653,9 +653,9 @@ component HCT.74HCT190
         2 = D1, "Data 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = D2, "Data 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         4 = D3, "Data 3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        5 = LOAD, "Load - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        5 = _LOAD, "Load", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = DIR, "Direction (up=H, down=L)", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        7 = EN, "Enable - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        7 = _EN, "Enable", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         8 = GND, "Ground"
         9 = RCO, "Ripple carry output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = MAX_MIN, "Maximum/minimum output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -695,7 +695,7 @@ component HCT.74HCT90
 component HCT.74HCT161
 {
     pins = [
-        1 = CLR, "Clear - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        1 = _CLR, "Clear", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         2 = D0, "Data 0", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = D1, "Data 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         4 = D2, "Data 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -709,7 +709,7 @@ component HCT.74HCT161
         12 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = Q3, "Output Q3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        15 = LOAD, "Load - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        15 = _LOAD, "Load", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         16 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
@@ -718,7 +718,7 @@ component HCT.74HCT161
 component HCT.74HCT163
 {
     pins = [
-        1 = CLR, "Clear - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        1 = _CLR, "Clear", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         2 = D0, "Data 0", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = D1, "Data 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         4 = D2, "Data 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -732,7 +732,7 @@ component HCT.74HCT163
         12 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = Q3, "Output Q3", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        15 = LOAD, "Load - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        15 = _LOAD, "Load", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         16 = VCC, "Power supply 4.5V~5.5V"
     ]
 }
@@ -745,9 +745,9 @@ component HCT.74HCT191
         2 = D1, "Data 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = D2, "Data 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         4 = D3, "Data 3", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        5 = LOAD, "Load - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        5 = _LOAD, "Load", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = DIR, "Direction (up=H, down=L)", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        7 = EN, "Enable - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        7 = _EN, "Enable", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         8 = GND, "Ground"
         9 = RCO, "Ripple carry output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = MAX_MIN, "Maximum/minimum output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -832,7 +832,7 @@ component HCT.74HCT164
         1 = A, "Serial input A", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         2 = B, "Serial input B", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        4 = CLR, "Clear - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        4 = _CLR, "Clear", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = Q0, "Output Q0", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         6 = Q1, "Output Q1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         7 = Q2, "Output Q2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -859,7 +859,7 @@ component HCT.74HCT165
         7 = D6, "Parallel input D6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         8 = GND, "Ground"
         9 = D7, "Parallel input D7", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = SH_LD, "Shift/Load - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        10 = _SH_LD, "Shift/Load", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = CLK, "Clock", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = CLK_INH, "Clock inhibit", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = Q7, "Output Q7", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -882,10 +882,10 @@ component HCT.74HCT595
         7 = QG, "Output QG", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         8 = GND, "Ground"
         9 = QH, "Output QH", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        10 = MR, "Master reset - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        10 = _MR, "Master reset", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = SH_CP, "Shift register clock", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = ST_CP, "Storage register clock", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        13 = OE, "Output enable - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        13 = _OE, "Output enable", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = DS, "Serial data input", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         15 = QHS, "Serial data output", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         16 = VCC, "Power supply 4.5V~5.5V"
@@ -929,7 +929,7 @@ component HCT.74HCT194
         8 = GND, "Ground"
         9 = S1, "Mode control S1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = CLK, "Clock - rising edge", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        11 = CLR, "Clear - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        11 = _CLR, "Clear", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = QA, "Output QA", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = QB, "Output QB", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         14 = QC, "Output QC", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
@@ -951,7 +951,7 @@ component HCT.74HCT151
         7 = D6, "Data input D6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         8 = GND, "Ground"
         9 = D7, "Data input D7", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        10 = E, "Enable - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        10 = _E, "Enable", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         11 = A0, "Address input A0", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = A1, "Address input A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = A2, "Address input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -971,11 +971,11 @@ component HCT.74HCT153
         4 = D11, "Data input D1 for selector 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         5 = D12, "Data input D2 for selector 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         6 = D13, "Data input D3 for selector 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
-        7 = E1, "Enable 1 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        7 = _E1, "Enable 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         8 = GND, "Ground"
         9 = Y1, "Output Y for selector 1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = Y2, "Output Y for selector 2", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
-        11 = E2, "Enable 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        11 = _E2, "Enable 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = D23, "Data input D3 for selector 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = D22, "Data input D2 for selector 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = D21, "Data input D1 for selector 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -998,7 +998,7 @@ component HCT.74HCT245
         8 = A4, "Bus A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         9 = B4, "Bus B4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         10 = GND, "Ground"
-        11 = OE, "Output enable - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        11 = _OE, "Output enable", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = B5, "Bus B5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         13 = A5, "Bus A5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = B6, "Bus B6", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -1015,7 +1015,7 @@ component HCT.74HCT245
 component HCT.74HCT244
 {
     pins = [
-        1 = OE1, "Output enable 1 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        1 = OE1, "Output enable 1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         2 = A1, "Input A1", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         3 = Y1, "Output Y1", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         4 = A2, "Input A2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
@@ -1025,7 +1025,7 @@ component HCT.74HCT244
         8 = A4, "Input A4", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         9 = Y4, "Output Y4", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         10 = GND, "Ground"
-        11 = OE2, "Output enable 2 - active low", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
+        11 = OE2, "Output enable 2", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         12 = Y5, "Output Y5", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]
         13 = A5, "Input A5", voltage:[low:0V ~ 0.3*VCC, high:0.7*VCC ~ VCC]
         14 = Y6, "Output Y6", voltage:[low:0V ~ 0.05*VCC, high:0.95*VCC ~ VCC]

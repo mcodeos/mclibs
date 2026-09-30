@@ -69,9 +69,9 @@ component CD4500.CD4511
         2 = B, "BCD input B", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         3 = C, "BCD input C", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         4 = D, "BCD input D", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
-        5 = LT, "Lamp test - active low", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
-        6 = RBI, "Ripple blanking input - active low", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
-        7 = BI, "Blank input - active low", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
+        5 = _LT, "Lamp test", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
+        6 = _RBI, "Ripple blanking input", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
+        7 = _BI, "Blank input", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         8 = VSS, "Ground"
         9 = a, "Segment output a", voltage:[low:0V ~ 0.05*VDD, high:0.95*VDD ~ VDD]
         10 = b, "Segment output b", voltage:[low:0V ~ 0.05*VDD, high:0.95*VDD ~ VDD]
@@ -93,8 +93,8 @@ component CD4500.CD4543
         3 = C, "BCD input C", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         4 = D, "BCD input D", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         5 = LE, "Latch enable - active high", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
-        6 = BI, "Blank input - active low", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
-        7 = LT, "Lamp test - active low", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
+        6 = _BI, "Blank input", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
+        7 = _LT, "Lamp test", voltage:[low:0V ~ 0.3*VDD, high:0.7*VDD ~ VDD]
         8 = VSS, "Ground"
         9 = a, "Segment output a", voltage:[low:0V ~ 0.05*VDD, high:0.95*VDD ~ VDD]
         10 = b, "Segment output b", voltage:[low:0V ~ 0.05*VDD, high:0.95*VDD ~ VDD]
