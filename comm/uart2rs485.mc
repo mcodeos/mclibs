@@ -24,7 +24,7 @@
 abstract component UARTtoRS485
 {
     name = "UARTtoRS485"
-    desc = "UART to RS485 Transceiver"
+    description = "UART to RS485 Transceiver"
 
     partno = ""
     spec.HBM = ±0kV
