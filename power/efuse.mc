@@ -6,7 +6,7 @@
 // varistor parts in mcpub passive). Distilled from the page-verified TI
 // "TPS25200 5V eFuse With Precision Adjustable Current Limit and
 // Overvoltage Clamp" sheet (tps25200.pdf in mcpub power/tps25200; pinout
-// Table 4-1 p.3, §7.3-7.4 pp.11-13, application p.14).
+// Table 4-1, functional description, application section).
 //
 // The shape is the adjustable-limit form: a dedicated ILIM pin programs
 // the current limit with one resistor to ground, EN is an active-high
