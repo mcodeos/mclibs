@@ -20,10 +20,8 @@ abstract component ADC.C4SPI
     description = "SPI ADC shape: four single-ended channel inputs, CLK/DIN/DOUT/CS bus, VREF/AGND quiet reference pair, VDD/DGND supply pair, SPI Slave adoption"
 
     pins = [
-        in 1 = CH0::ADC.SINGLE(RECEIVER)   // channel 0, converter samples the line
-        in 2 = CH1::ADC.SINGLE(RECEIVER)   // channel 1
-        in 3 = CH2::ADC.SINGLE(RECEIVER)   // channel 2
-        in 4 = CH3::ADC.SINGLE(RECEIVER)   // channel 3
+        in [1, 2, 3, 4] = [CH0, CH1, CH2, CH3]::ADC.SINGLE(RECEIVER)
+                                        // channels 0-3, converter samples the lines
         nc [5, 6] = NC                     // unconnected pads (DS21298E pin diagram: 14L pins 5/6 NC)
         [13, 12] = [VREF, AGND]::VREF(3.3V)  // reference pair; quiet expectation rides the VREF face (b4332); family default 3.3V, part VDD range 2.7-5.5V (DS21298E)
 
