@@ -3,8 +3,7 @@
 
 // UART-to-LIN transceiver pin-shape family (C3 gap: the bus-side PHY for
 // LIN, single-wire battery-domain).
-// Anatomy distilled from the page-verified MCP2003 PDIP/SOIC-8 pinout
-// (mcpub comm/mcp2003, DS20002230G p.1 package drawing):
+// Anatomy distilled from the page-verified PDIP/SOIC-8 pinout (package drawing):
 //   1 = RXD, 2 = CS, 3 = WAKE, 4 = TXD, 5 = VSS, 6 = LBUS, 7 = VBB, 8 = VREN
 // CS and WAKE carry overbars in the figure (active low); identifiers keep the
 // plain spelling. The device runs from the 12V battery domain on VBB -- there
@@ -30,7 +29,7 @@ abstract component XCVR.LIN
     ]
 
     // Terminal macro: bind the 12V battery domain onto the supply pins
-    // Statement-unity law (design-axioms B10): the ::DC pair taps ride one
+    // Statement-unity law (B10): the ::DC pair taps ride one
     // vector-zip statement.
     func Power([VBB_12V, GND]::DC(12V)) {
         VBB_12V - CAP(100nF, ±20%, CAP.X5R, 25V) - GND

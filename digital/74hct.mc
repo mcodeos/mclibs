@@ -422,7 +422,7 @@ component HCT.74HCT42
 }
 
 # 74HCT47 - BCD to 7-segment decoder (common anode, active low)
-# No HCT-process 47 exists at TI/NXP/Nexperia; pinout per TI SN7447A / Fairchild DM74LS47
+# No HCT-process 47 exists in vendor catalogs; pinout per the classic TTL-family 7447A
 component HCT.74HCT47
 {
     pins = [
@@ -446,7 +446,7 @@ component HCT.74HCT47
 }
 
 # 74HCT48 - BCD to 7-segment decoder (common cathode, active high)
-# No HCT-process 48 exists at TI/NXP/Nexperia; pinout per TI SN7448A / Fairchild DM74LS48
+# No HCT-process 48 exists in vendor catalogs; pinout per the classic TTL-family 7448A
 component HCT.74HCT48
 {
     pins = [

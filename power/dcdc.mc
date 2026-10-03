@@ -2,11 +2,11 @@
 # Licensed under the Apache License, Version 2.0.
 
 // SOT23-5 buck (DCDC) pin-shape family (U192 ruling 1: package pin-shape
-// abstracts live in mclibs; real parts in mcpub bind with `:`).
-// Pin order is the verified device face (hbl LP3220 board):
+// abstracts live here; concrete parts bind with `:`).
+// Pin order is the verified device face:
 //   1 = EN, 2 = GND, 3 = LX, 4 = Vin, 5 = FB
-// The VIN sink row states no nominal (U227 b3877, applied-nominal-design.md
-// §4.1 ruling 1): an input requirement is an application-side property, so
+// The VIN sink row states no nominal (U227 b3877 nominal-law ruling): an
+// input requirement is an application-side property, so
 // the generic base declares the DC crossing only and the real part's
 // accepted window (spec input_req) adjudicates each board's feed.
 // The LX source row keeps the canonical output nominal: a source nominal is

@@ -3,9 +3,8 @@
 
 // Ethernet 10/100 PHY pin-shape family (C4 gap: the device face the ETHERNET
 // media interface has been missing).
-// Anatomy distilled from the page-verified LAN8710A/LAN8710Ai 32-QFN pinout
-// (mcpub comm/lan8710a, DS00002164B Table 2-8 p.14, pin multiplexing
-// Table 3-2 p.26):
+// Anatomy distilled from the page-verified 32-QFN PHY pinout (pin-
+// multiplexing and strap tables):
 //   1 VDD2A, 2 LED2/nINTSEL, 3 LED1/REGOFF, 4 XTAL2, 5 XTAL1/CLKIN,
 //   6 VDDCR, 7 RXCLK/PHYAD1, 8 RXD3/PHYAD2, 9 RXD2/RMIISEL, 10 RXD1/MODE1,
 //   11 RXD0/MODE0, 12 VDDIO, 13 RXER/RXD4/PHYAD0, 14 CRS, 15 COL/CRS_DV/MODE2,
@@ -17,7 +16,7 @@
 // a mediated device — it claims no HOST/SWITCH node role; HP Auto-MDIX makes
 // the two pairs TX/RX symmetric). The MAC data bus stays bare rows: MII vs
 // RMII is a board decision sampled from the RMIISEL strap at reset
-// (DS00002164B Table 2-1 p.8) — the same pad reads TXD2 in MII mode and
+// (per the datasheet strap table) — the same pad reads TXD2 in MII mode and
 // must-go-to-VSS in RMII mode, so no single interface fits unconditionally
 // (the mclibs mux-pad law: bare row + full alias list; board wiring adopts
 // ifs MII/RMII at the module that owns the strap).
@@ -33,7 +32,7 @@ abstract component XCVR.ETH
         psnk [6] = VDDCR, "Internal 1.2V core regulator output: 1uF + 470pF to GND; REGOFF strap disables the regulator, board then feeds 1.08-1.32V"
         io [29, 28, 31, 30] = ETHERNET{TD\+, TD\-, RD\+, RD\-}::ETHERNET(), "Line pairs, HP Auto-MDIX (TX/RX symmetric), 1:1 center-tapped magnetics to the medium"
         io [17, 16] = MDIO{MDC, MDIO}::MDIO(), "SMI management pair; MDIO open-drain, pull-up to VDDIO"
-        io 5 = XTAL1, "XTAL1/CLKIN — 25MHz crystal input (MII), or REF_CLK 50MHz +-50ppm input in RMII mode (RMIISEL strap); clock must run from hardware reset (DS00002164B §3.8.5.1 p.34)"
+        io 5 = XTAL1, "XTAL1/CLKIN — 25MHz crystal input (MII), or REF_CLK 50MHz +-50ppm input in RMII mode (RMIISEL strap); clock must run from hardware reset (per the datasheet)"
         io 4 = XTAL2, "XTAL2 crystal output (leave unconnected for a single-ended clock)"
         in 19 = RST{nRST}::RST(RECEIVER), "System reset, low active, internal pull-up; straps latch on the rising edge"
         in 32 = RBIAS, "Bias resistor 12.1k 1% to GND"
@@ -50,10 +49,10 @@ abstract component XCVR.ETH
     ]
 
     // Terminal macro: bind the 3.3V domain onto the analog and I/O supplies
-    // and wire the datasheet external components (DS00002164B Figure 3-13
-    // p.39: VDDCR decoupling 1uF + 470pF, supply bypassers; §5.6 p.65: RBIAS
+    // and wire the datasheet external components (VDDCR decoupling 1uF + 470pF,
+    // supply bypassers; RBIAS
     // is wired in the pin book, not here — boards place it once against the
-    // pin row). Statement-unity law (design-axioms B10): the ::DC pair taps
+    // pin row). Statement-unity law (B10): the ::DC pair taps
     // ride one vector-zip statement.
     func Power([VDD3V3, GNDP]::DC(3.3V)) {
         VDD3V3 - CAP(1uF, ±20%, CAP.X5R, 6.3V) - GNDP

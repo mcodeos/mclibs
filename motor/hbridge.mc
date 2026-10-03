@@ -5,23 +5,23 @@
 // PWM face's named consumer -- "motor driver input" per the PWM RECEIVER
 // role -- finally lands). Two families, one per control-face shape:
 //
-// HBRIDGE.DUAL -- distilled from the page-verified DRV8833C PWP pinout
-// (mcpub motor/drv8833c, TI SLVSCP9 p.3 package drawing; Pin Functions
+// HBRIDGE.DUAL -- distilled from the page-verified PWP dual H-bridge pinout
+// (package drawing; Pin Functions
 // table cross-checked against the figure):
 //   1 nSLEEP, 2 AOUT1, 3 AISEN, 4 AOUT2, 5 BOUT2, 6 BISEN, 7 BOUT1,
 //   8 nFAULT, 9 BIN1, 10 BIN2, 11 NC, 12 VM, 13 GND, 14 VINT, 15 AIN2,
 //   16 AIN1; PowerPAD (unnumbered) = GND per the GND row description.
 //   The RTE (VQFN) variant keys differently -- a separate face, not folded.
 //
-// HBRIDGE.SINGLE -- distilled from the page-verified A4950 LJ pinout
-// (mcpub motor/a4950, Allegro A4950-DS rev.2 p.2 terminal list + pin-out
-// diagram): 1 GND, 2 IN2, 3 IN1, 4 VREF, 5 VBB, 6 OUT1, 7 LSS, 8 OUT2,
+// HBRIDGE.SINGLE -- distilled from the page-verified LJ single-bridge pinout
+// (datasheet terminal list): 1 GND, 2 IN2, 3 IN1, 4 VREF, 5 VBB,
+// 6 OUT1, 7 LSS, 8 OUT2,
 // PAD (unnumbered) for thermal dissipation only -- the datasheet claims
 // no net for it, so the face carries it as its own unnumbered pin.
 //
-// HBRIDGE.DUAL.E -- distilled from the page-verified L298 Multiwatt15
-// pinout (mcpub motor/l298, ST L298 p.2 PIN CONNECTIONS drawing; Pin
-// Functions table p.3 cross-checked pin-by-pin): 1 Sense A, 2 Out 1,
+// HBRIDGE.DUAL.E -- distilled from the page-verified Multiwatt15
+// pinout (package drawing; pin functions cross-checked
+// pin-by-pin): 1 Sense A, 2 Out 1,
 // 3 Out 2, 4 Vs, 5 Input 1, 6 Enable A, 7 Input 2, 8 GND, 9 Vss,
 // 10 Input 3, 11 Enable B, 12 Input 4, 13 Out 3, 14 Out 4, 15 Sense B;
 // the metal tab is connected to pin 8 (GND). The classic 1990s shape:
@@ -52,7 +52,7 @@ abstract component HBRIDGE.DUAL
         in 1 = _SLEEP, "Sleep mode input (datasheet nSLEEP; high = enabled, internal pulldown)"
         out 8 = _FAULT, "Fault indication (datasheet nFAULT; open-drain, external pullup)"
 
-        psnk [[12], [13, [pad]]] = [VM, GND]::DC(5V)   // bridge power; GND pin and PowerPAD both ground (SLVSCP9 GND row); family default 5V, DRV8833C operating range 2.7-11.8V
+        psnk [[12], [13, [pad]]] = [VM, GND]::DC(5V)   // bridge power; GND pin and PowerPAD both ground (datasheet GND row); family default 5V, operating range 2.7-11.8V
         out 14 = VINT, "Internal 3.3V regulator (bypass 2.2uF to GND)"
         11 = NC, "No connect (per PWP drawing)"
     ]
@@ -119,7 +119,7 @@ abstract component HBRIDGE.DUAL.E
         15 = SENSEB, "Bridge B sense (sense resistor between this pin and GND)"
 
         psnk [[4], [8]] = [VS, GND]::DC(24V), "Power output stage supply 2.5-46V (tab = pin 8 GND, so no separate pad pin); family default 24V, per-project rail"
-        psnk [9, 8] = [VSS, GND]::DC(5V), "Logic supply (100nF bypass per ST datasheet)"
+        psnk [9, 8] = [VSS, GND]::DC(5V), "Logic supply (100nF bypass per the datasheet)"
     ]
 
     // Terminal macro: bind the power rail and wire the datasheet bypassers

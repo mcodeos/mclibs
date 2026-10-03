@@ -443,7 +443,7 @@ component LVC.74LVC42
 }
 
 # 74LVC47 - BCD to 7-segment decoder (common anode, active low)
-# Part number not in any manufacturer catalog (LVC family has no 7-segment decoder); pinout per TI SN7447A
+# Part number not in any manufacturer catalog (LVC family has no 7-segment decoder); pinout per the classic TTL-family 7447A
 component LVC.74LVC47
 {
     pins = [
@@ -467,7 +467,7 @@ component LVC.74LVC47
 }
 
 # 74LVC48 - BCD to 7-segment decoder (common cathode, active high)
-# Part number not in any manufacturer catalog (LVC family has no 7-segment decoder); pinout per TI SN7448A
+# Part number not in any manufacturer catalog (LVC family has no 7-segment decoder); pinout per the classic TTL-family 7448A
 component LVC.74LVC48
 {
     pins = [

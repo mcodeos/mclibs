@@ -142,8 +142,8 @@ component AMP.BUFFER(zin::UV.OHM, iout::UV.AMP, volt::UV.VOLT)
 // Audio power amplifier, BTL output (component inventory C7, electroacoustic family)
 // ---------------------------------------------------------------------------------------------
 // Abstract pin-shape base for real audio amp parts (U192 ruling 1b: package
-// pin-shape families live in mclibs; real parts bind with `:` per the
-// part-binding playbook). Pin rows are the verified hbl device face.
+// pin-shape families live here; real parts bind with `:` per the
+// part-binding playbook). Pin rows are the verified device face.
 abstract component AMP.AUDIO_BTL
 {
     name = "Audio power amplifier, BTL output"
@@ -162,9 +162,9 @@ abstract component AMP.AUDIO_BTL
 // Isolation amplifier, SOIC8 (component inventory C6, isolated secondary-side load)
 // ---------------------------------------------------------------------------------------------
 // Abstract pin-shape base for real isolation amplifier parts (U226 b3878:
-// sedimented from the pwrint board's board-internal AMP.ISO_OP per the
-// part-binding playbook). The power-sink row states no nominal (U227 b3877,
-// applied-nominal-design.md §4.1 ruling 1); the per-domain draw (amp:) is
+// sedimented from a verified board-internal AMP.ISO_OP per the
+// part-binding playbook). The power-sink row states no nominal (U227 b3877
+// nominal-law ruling); the per-domain draw (amp:) is
 // device truth and stays. The return GND_ISO is a separate return copper; the
 // world the secondary side lives in is decided by the bound conduit role.
 abstract component AMP.ISO_SOIC8

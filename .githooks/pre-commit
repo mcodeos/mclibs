@@ -18,3 +18,19 @@ if [ "$bad" -ne 0 ]; then
     echo "pre-commit: header law violated (see CLAUDE.md)"
     exit 1
 fi
+
+# No document page/section references (CLAUDE.md): evidence trails like
+# `p.27`, `pp.1/25`, `Table 5-1` live in the packs, never in this repo.
+pagebad=0
+while IFS= read -r f; do
+    case "$f" in */libs/*|CLAUDE.md) continue ;; esac
+    [ -f "$f" ] || continue
+    if grep -nEi '(^|[^a-zA-Z0-9])pp?\.[ ]?[0-9]+' "$f" >/dev/null 2>&1; then
+        grep -nEi '(^|[^a-zA-Z0-9])pp?\.[ ]?[0-9]+' "$f" | sed "s|^|FAIL pageref: $f:|"
+        pagebad=1
+    fi
+done < <(git ls-files '*.mc' '*.toml' '*.md')
+if [ "$pagebad" -ne 0 ]; then
+    echo "pre-commit: document page references found (see CLAUDE.md)"
+    exit 1
+fi

@@ -2,17 +2,15 @@
 # Licensed under the Apache License, Version 2.0.
 
 # Piezo sounder abstract shape (component inventory C7, electroacoustic
-# family). Distilled from the page-verified TDK PS-series catalog
-# (mo/ds/tdk-ps-buzzer-catalog.pdf; image-only PDF, document
-# code 007-01/20110508/ef532_ps, PS1240P02BT detail on catalog p.3).
+# family). Distilled from the page-verified piezo sounder catalog
 #
-# The PS series ships without oscillator circuit: an external AC drive
+# The externally-driven series ships without oscillator circuit: an external AC drive
 # (catalog-typical 3 Vo-p rectangular wave, absolute max 30 Vo-p without
 # DC bias) is applied across the two pins. The catalog documents no
 # polarity for the pin-terminal parts, so the leaf stays a passive two
 #-terminal: no direction words, no interface adoption (ruling-19 census
 # A1: passive pairing data is carried by the net's other side). The drive
-# network (transistor buffer + charge/discharge resistor, catalog p.8)
+# network (transistor buffer + charge/discharge resistor)
 # is application-level and stays on the design side.
 
 abstract component BUZZER.PIEZO

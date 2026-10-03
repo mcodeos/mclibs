@@ -3,9 +3,9 @@
 
 // Three-phase gate driver pin-shape family (C8 gap, interface side B6: the
 // complementary-PWM consumer the MCU timers have been missing).
-// Anatomy distilled from the page-verified DRV8304H RHA pinout
-// (mcpub motor/drv8304, TI ZHCSI91B p.3 package drawing; Pin Functions
-// table p.3-5 cross-checked pin-by-pin against the figure):
+// Anatomy distilled from the page-verified pinout (package drawing;
+// Pin Functions
+// table cross-checked pin-by-pin against the figure):
 //   1 CPL, 2 CPH, 3 VCP, 4 VM, 5 VDRAIN, 6 GHA, 7 SHA, 8 GLA, 9 SPA,
 //   10 SNA, 11 SNB, 12 SPB, 13 GLB, 14 SHB, 15 GHB, 16 GHC, 17 SHC,
 //   18 GLC, 19 SPC, 20 SNC, 21 SOC, 22 SOB, 23 SOA, 24 VREF, 25 nFAULT,
@@ -70,7 +70,7 @@ abstract component GATEDRV.H6
     ]
 
     // Terminal macro: bind the bridge rail onto VM/PGND and wire the external
-    // network the datasheet mandates (Table 1: VM decoupling 0.1uF + >=10uF,
+    // network the datasheet mandates (VM decoupling 0.1uF + >=10uF,
     // VCP-VM 1uF/16V, CPH-CPL 22nF/VM-rated, DVDD 1uF/6.3V, VREF 0.1uF/6.3V)
     func Power([VM_RAIL, GND]::DC(12V)) {
         VM_RAIL - CAP(100nF, ±20%, CAP.X5R, 50V) - GND
@@ -87,16 +87,16 @@ abstract component GATEDRV.H6
 
 // Brushed-DC full-bridge gate driver pin-shape family: four external N-channel
 // FETs driven by one package (C8 gap). Anatomy distilled from the page-verified
-// DRV8701 RGE pinout (mcpub motor/drv8701p, TI ZHCSDO0A p.3 package drawing;
-// Pin Functions table cross-checked pin-by-pin against the figure):
+// pinout (package drawing;
+// pin functions cross-checked pin-by-pin):
 //   1 VM, 2 VCP, 3 CPH, 4 CPL, 5 GND, 6 VREF, 7 AVDD, 8 DVDD, 9 nFAULT,
 //   10 SNSOUT, 11 SO, 12 IDRIVE, 13 nSLEEP, 14 IN2, 15 IN1, 16 GND,
 //   17 GH1, 18 SH1, 19 GL1, 20 SN, 21 SP, 22 GL2, 23 SH2, 24 GH2;
 //   the GND group is 5 / 16 / PPAD (unnumbered exposed pad), all ground
-//   ("must be connected to ground" per the ZHCSDO0A GND row).
+//   ("must be connected to ground" per the datasheet GND row).
 // Control face: the P variant uses IN1/IN2 PWM inputs (each adopts its own
 //   single-lane PWM(RECEIVER) crossing); the E variant swaps 14/15 for PH/EN
-//   -- a different shape family, not folded here (same ruling as DRV8304S).
+//   -- a different shape family, not folded here (same ruling as the S variant).
 // VM operating range 5.9-45V.
 
 abstract component GATEDRV.H1
@@ -131,7 +131,7 @@ abstract component GATEDRV.H1
         3 = CPH, "Charge pump switching node (0.1uF VM-rated to CPL)"
         4 = CPL, "Charge pump switching node"
 
-        psnk [[1], [5, 16, [pad]]] = [VM, GND]::DC(12V), "Motor supply 5.9-45V; GND pins 5 and 16 plus the exposed PPAD all ground (ZHCSDO0A GND row); family default 12V"
+        psnk [[1], [5, 16, [pad]]] = [VM, GND]::DC(12V), "Motor supply 5.9-45V; GND pins 5 and 16 plus the exposed PPAD all ground (datasheet GND row); family default 12V"
     ]
 
     // Terminal macro: bind the bridge rail and wire the External Passive
@@ -152,9 +152,9 @@ abstract component GATEDRV.H1
 
 // SPI-configured three-phase gate driver pin-shape family: the S variant the
 // GATEDRV.H6 header predicted. Anatomy distilled from the page-verified
-// DRV8323S RTA pinout (mcpub motor/drv8323s, TI ZHCSG01C p.7 package drawing;
-// Pin Functions table p.7-8 cross-checked pin-by-pin against the figure):
-// pins 1-25 and 31-40 key identically to the DRV8304H RHA map; pins 26-29
+// RTA-variant pinout (package drawing;
+// pin functions cross-checked pin-by-pin):
+// pins 1-25 and 31-40 key identically to the three-phase driver map; pins 26-29
 // swap the resistor-set configuration (MODE/IDRIVE/VDS/GAIN) for the serial
 // face 26 SDO, 27 SDI, 28 SCLK, 29 nSCS. Thermal pad labeled "Thermal Pad"
 // in the figure, unnumbered, "must be connected to ground" per the table.
@@ -198,7 +198,7 @@ abstract component GATEDRV.H6S
         in 20 = SNC, "Phase C shunt amplifier input, low side of the shunt"
         out 21 = SOC, "Phase C shunt amplifier output"
 
-        psnk [[4], [40, [pad]]] = [VM, PGND]::DC(12V)   // bridge power; thermal pad must be grounded (ZHCSG01C); family default 12V, 6-60V range
+        psnk [[4], [40, [pad]]] = [VM, PGND]::DC(12V)   // bridge power; thermal pad must be grounded (datasheet); family default 12V, 6-60V range
         in 5 = VDRAIN, "High-side MOSFET drain sense (common drain point)"
         out 3 = VCP, "Charge pump output"
         out 33 = DVDD, "Internal 3.3V regulator output (up to 30mA)"
@@ -229,9 +229,9 @@ abstract component GATEDRV.H6S
 }
 
 // Three-phase gate driver with integrated buck regulator pin-shape family.
-// Anatomy distilled from the page-verified DRV8302 DCA pinout (mcpub
-// motor/drv8302, TI ZHCS138C p.3 package drawing; Pin Functions table p.3-5
-// cross-checked pin-by-pin against the figure):
+// Anatomy distilled from the page-verified DCA pinout (package drawing;
+// pin functions
+// cross-checked pin-by-pin):
 //   1 RT_CLK, 2 COMP, 3 VSENSE, 4 PWRGD, 5 nOCTW, 6 nFAULT, 7 DTC,
 //   8 M_PWM, 9 M_OC, 10 GAIN, 11 OC_ADJ, 12 DC_CAL, 13 GVDD, 14 CP1,
 //   15 CP2, 16 EN_GATE, 17 INH_A, 18 INL_A, 19 INH_B, 20 INL_B, 21 INH_C,
@@ -286,7 +286,7 @@ abstract component GATEDRV.H6B
         in 31 = SN2, "Shunt amplifier 2 negative input"
         out 26 = SO2, "Shunt amplifier 2 output"
 
-        psnk [[29], [28, [pad]]] = [PVDD1, GND]::DC(12V), "Gate driver supply 8-60V; AGND and the numbered PowerPAD (57, GND) ground it (ZHCS138C); family default 12V"
+        psnk [[29], [28, [pad]]] = [PVDD1, GND]::DC(12V), "Gate driver supply 8-60V; AGND and the numbered PowerPAD (57, GND) ground it (datasheet); family default 12V"
         psnk [[53, 54], [28]] = [PVDD2, GND]::DC(12V), "Buck regulator supply, separate domain from PVDD1"
 
         out 23 = DVDD, "Internal 3.3V regulator output"

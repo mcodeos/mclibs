@@ -4,7 +4,7 @@
 # Microphone abstract shapes (component inventory C7, electroacoustic family)
 #
 # Two forms, per the U192 ruling — real parts bind one of these with `:`
-# (part-binding playbook). Pin rows are the verified hbl device faces.
+# (part-binding playbook). Pin rows are the verified device faces.
 
 // ---------------------------------------------------------------------------------------------
 // Electret capsule microphone: differential capsule output + quiet capsule ground pair

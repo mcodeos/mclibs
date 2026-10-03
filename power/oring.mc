@@ -1,12 +1,12 @@
 # Copyright (c) 2026 MCode. Built with MCode Bench(TM).
 # Licensed under the Apache License, Version 2.0.
 
-// Ideal-diode ORing pin-shape family, 2:1 (U226 b3878: sedimented from the
-// pwrint board's board-internal ORING.IDEAL per the part-binding playbook).
+// Ideal-diode ORing pin-shape family, 2:1 (U226 b3878: sedimented from a
+// verified board-internal ORING.IDEAL per the part-binding playbook).
 // Two source inputs are combined onto one output pair; the ORing declaration
 // is what admits the PWR-3 source contention on the shared output.
-// The input sink rows state no nominal (U227 b3877, applied-nominal-design.md
-// §4.1 ruling 1): the fed voltage is an application-side property. The output
+// The input sink rows state no nominal (U227 b3877 nominal-law ruling): the fed
+// voltage is an application-side property. The output
 // source row keeps the board's canonical output nominal (source nominal is
 // device truth; the sedimented shape is the board's 5V rail face).
 

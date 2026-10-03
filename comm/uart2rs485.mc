@@ -2,7 +2,7 @@
 # Licensed under the Apache License, Version 2.0.
 
 // UART-to-RS485 transceiver functional face (U181). Pin order is the
-// canonical MAX485-class SOIC-8 device face: 1 RO, 2 /RE (declared _RE), 3 DE, 4 DI,
+// canonical SOIC-8 RS485-transceiver device face: 1 RO, 2 /RE (declared _RE), 3 DE, 4 DI,
 // 5 GND, 6 A, 7 B, 8 VCC. Logic side adopts UART.TTL viewed as DCE
 // (the transceiver drives the DTE's RX through RO and receives the DTE's
 // TX on DI; directions come from the DCE role face), bus side adopts the

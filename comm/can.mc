@@ -3,8 +3,7 @@
 
 // UART-to-CAN transceiver pin-shape family (C3 gap: the bus-side PHY the
 // CAN node controllers have been missing).
-// Anatomy distilled from the page-verified MCP2551 PDIP/SOIC-8 pinout
-// (mcpub comm/mcp2551, DS21667D p.1 package drawing):
+// Anatomy distilled from the page-verified PDIP/SOIC-8 pinout (package drawing):
 //   1 = TXD, 2 = VSS, 3 = VDD, 4 = RXD, 5 = VREF, 6 = CANL, 7 = CANH, 8 = Rs
 // Logic side adopts UART.TTL(DCE) (the uart2rs485 precedent view: the
 // transceiver drives the DTE's RX through RXD and receives the DTE's TX
@@ -26,8 +25,8 @@ abstract component XCVR.CAN
     ]
 
     // Terminal macro: bind the 5V domain onto the transceiver supply pins;
-    // Rs ties to GND = high-speed mode (DS21667D 4.1)
-    // Statement-unity law (design-axioms B10): the ::DC pair taps ride one
+    // Rs ties to GND = high-speed mode (per the datasheet)
+    // Statement-unity law (B10): the ::DC pair taps ride one
     // vector-zip statement.
     func Power([VDD_5V, GND]::DC(5V)) {
         VDD_5V - CAP(100nF, ±20%, CAP.X5R, 25V) - GND

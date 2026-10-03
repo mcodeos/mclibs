@@ -2,10 +2,9 @@
 # Licensed under the Apache License, Version 2.0.
 
 // Dual-channel digital isolator abstract shapes (component inventory C13).
-// Distilled from the page-verified TI "ISO772x High-Speed, Robust EMC,
-// Reinforced and Basic Dual-Channel Digital Isolators" sheet (iso7721.pdf
-// in mcpub isolation/iso7721; pinout Table 5-1 p.6, function Table 8-2
-// p.25, model decode Table 8-1 p.24).
+// Distilled from the page-verified dual-channel digital isolator sheet
+// (pinout, function and
+// model-decode tables).
 //
 // The ifs ISOLATION face is the quad barrier-body shape (IN[A,B,C,D] on
 // side 1, OUT[A,B,C,D] on side 2, EN2): a dual part populates the A/B legs
@@ -15,16 +14,16 @@
 // ride the supply rows -- GND1 and GND2 are separate return copper, no DC
 // bridge across the barrier (same ruling as DCDC.ISO_SOIC8 in power/).
 //
-// Family split follows the datasheet's own decode axis (Table 8-1 p.24):
+// Family split follows the datasheet's own decode axis:
 // last digit 0 = both channels forward (side 1 -> side 2); last digit 1 =
 // channel A reversed (side 2 -> side 1), channel B forward. A concrete
 // part cannot re-direction inherited legs (E5060), so the two footprints
 // are separate family values with full pin restatement.
 //
 // Supply rows state the recommended range only (2.25 V ~ 5.5 V per side,
-// independently settable, p.8): both sides are sinks, one pair per side.
+// independently settable): both sides are sinks, one pair per side.
 // The default-output axis (suffix F = outputs default LOW via internal
-// pull-down, no suffix = default HIGH via 1.5 MOhm pull-up, pp.1/25) is a
+// pull-down, no suffix = default HIGH via 1.5 MOhm pull-up) is a
 // spec row on the concrete part, not a shape difference.
 
 abstract component ISO.DIG2

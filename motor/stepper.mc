@@ -2,9 +2,9 @@
 # Licensed under the Apache License, Version 2.0.
 
 // Stepper driver pin-shape family (C8 gap: stepper subfamily). Distilled
-// from the page-verified DRV8889 PWP pinout (mcpub motor/drv8889, TI
-// ZHCSJO5 p.3 package drawing; Pin Functions table cross-checked against
-// the figure pin-by-pin):
+// from the page-verified PWP stepper-driver pinout (package drawing;
+// pin functions
+// cross-checked pin-by-pin):
 //   1 CPL, 2 CPH, 3 VCP, 4 VM, 5 PGND, 6 AOUT1, 7 AOUT2, 8 BOUT2, 9 BOUT1,
 //   10 PGND, 11 VM, 12 GND, 13 DVDD, 14 nFAULT, 15 VREF, 16 nSCS, 17 VSDO,
 //   18 SDO, 19 SDI, 20 SCLK, 21 STEP, 22 DIR, 23 DRVOFF, 24 nSLEEP;
@@ -41,12 +41,12 @@ abstract component STEPDRV
         2 = CPH, "Charge pump switching node (0.022uF VM-rated to CPL)"
         1 = CPL, "Charge pump switching node"
 
-        psnk [[4, 11], [5, 10, 12, [pad]]] = [VM, GND]::DC(24V), "Motor supply 4.5-45V; PGND, GND and PowerPAD all to system ground (ZHCSJO5 PAD row); family default 24V"
+        psnk [[4, 11], [5, 10, 12, [pad]]] = [VM, GND]::DC(24V), "Motor supply 4.5-45V; PGND, GND and PowerPAD all to system ground (datasheet PAD row); family default 24V"
     ]
 
     // Terminal macro: bind the motor rail and wire the datasheet External
     // Components table. The bulk VM-rated capacitor (CVM2) has no fixed value
-    // in ZHCSJO5 (system-level choice, section 9.1) so it stays on the design
+    // in the datasheet (system-level choice, section 9.1) so it stays on the design
     // side; the macro wires the two 0.01uF pin bypassers, the charge pump
     // parts and the DVDD bypasser.
     func Power([VM_RAIL, GNDP]::DC(24V)) {

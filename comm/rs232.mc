@@ -3,8 +3,8 @@
 
 // UART-to-RS232 line driver/receiver pin-shape family (C3 gap: two-channel
 // charge-pump RS232 transceiver; the DTE side's missing PHY).
-// Anatomy distilled from the page-verified MAX3232 SOIC-16 pinout
-// (mcpub comm/max3232, TI SLLS410O p.3 Figure 5-1; Table 5-1 for directions):
+// Anatomy distilled from the page-verified SOIC-16 pinout (package
+// drawing; pin directions per the function list):
 //   1 = C1+, 2 = V+, 3 = C1-, 4 = C2+, 5 = C2-, 6 = V-, 7 = DOUT2,
 //   8 = RIN2, 9 = ROUT2, 10 = DIN2, 11 = DIN1, 12 = ROUT1, 13 = RIN1,
 //   14 = DOUT1, 15 = GND, 16 = VCC
@@ -39,7 +39,7 @@ abstract component XCVR.RS232
     ]
 
     // Terminal macro: bind the 3.3V domain onto the supply pins and wire the
-    // charge pump (four 0.1uF caps per TI Figure 5-2 external-capacitor
+    // charge pump (four 0.1uF caps per the datasheet external-capacitor
     // values; V+ decouples to VCC, V- decouples to GND). The domain return
     // parameter is GNDD: the component pin 15 is itself spelled GND.
     func Power([VDD_3V3, GNDD]::DC(3.3V)) {

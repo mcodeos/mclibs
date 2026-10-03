@@ -4,7 +4,7 @@
 # Speaker abstract shape (component inventory C7, electroacoustic family)
 #
 # Real parts bind with `:` (part-binding playbook). Pin rows are the verified
-# hbl device face: BTL bridge-driven differential load plus two skeleton/shield
+# device face: BTL bridge-driven differential load plus two skeleton/shield
 # quiet grounds.
 
 use $::mcode.ifs

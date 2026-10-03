@@ -2,9 +2,9 @@
 # Licensed under the Apache License, Version 2.0.
 
 // D flip-flop family shape. Reformed to the verified single-gate face
-// (U195: the paired sample is SN74LVC1G175) - the old catalog face
+// (U195: the paired single-gate sample) - the old catalog face
 // (1=CLK,2=D,3=Q,4=_Q,5=_CLR, no power pins) contradicted the real device
-// and dangled the only consumer's VCC/GND references (mcpub tle7368).
+// and dangled the only consumer's VCC/GND references.
 component TTL.D
 {
     pins = [

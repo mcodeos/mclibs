@@ -49,7 +49,7 @@ component REG.SW(vout::UV.VOLT, iout::UV.AMP, vin::UV.VOLT, eff::UV.PERCENT)
     ]
 }
 // LDO family shape. Reformed to the verified SOT-223 face (U195: the paired
-// sample is AMS1117) - the old face had pins 1 and 3 swapped against every
+// sample) - the old face had pins 1 and 3 swapped against every
 // real SOT-223 LDO and lacked the heat tab; the tab ties to Vout, not GND.
 component REG.LDO(vout::UV.VOLT, iout::UV.AMP, vin::UV.VOLT, vdrop::UV.VOLT)
 {

@@ -1,12 +1,12 @@
 # Copyright (c) 2026 MCode. Built with MCode Bench(TM).
 # Licensed under the Apache License, Version 2.0.
 
-// Li-Po battery pin-shape family, 2-pad (U226 b3878: sedimented from the
-// pwrint board's board-internal BAT.LI_PO per the part-binding playbook).
+// Li-Po battery pin-shape family, 2-pad (U226 b3878: sedimented from a
+// verified board-internal BAT.LI_PO per the part-binding playbook).
 // The psbi row is the bidirectional contract: charge = sink, discharge =
 // source — the discharge nominal is the sedimented board's rail face (a
 // source nominal is device truth; the per-cell chemistry window belongs in
-// a real part's spec, mcpub side).
+// a real part's spec, application side).
 
 abstract component BAT.LI_PO
 {

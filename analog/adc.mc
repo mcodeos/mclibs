@@ -4,8 +4,7 @@
 // 4-channel SPI ADC pin-shape family (C2 gap: the converter device that
 // adopts ADC.SINGLE on its channel pins -- the receiver side the sensor
 // transmitters have been missing).
-// Anatomy distilled from the page-verified MCP3204 SOP14 pinout (mcpub
-// analog/mcp3204, DS21298E p.1 package drawing):
+// Anatomy distilled from the page-verified SOP14 pinout (package drawing):
 //   1..4 = CH0..CH3, 5, 6 = NC, 7 = DGND, 8 = CS/SHDN, 9 = DIN, 10 = DOUT,
 //   11 = CLK, 12 = AGND, 13 = VREF, 14 = VDD
 // SPI adoption rides the Slave wire order [SCLK, SI, SO, CS] =
@@ -20,8 +19,8 @@ abstract component ADC.C4SPI
 
     pins = [
         in [1:4] = CH[0:3]::ADC.SINGLE(RECEIVER)   // channels 0-3, converter samples the lines
-        nc [5, 6] = NC                     // unconnected pads (DS21298E pin diagram: 14L pins 5/6 NC)
-        [13, 12] = [VREF, AGND]::VREF(3.3V)  // reference pair; quiet expectation rides the VREF face (b4332); family default 3.3V, part VDD range 2.7-5.5V (DS21298E)
+        nc [5, 6] = NC                     // unconnected pads (datasheet pin diagram: 14L pins 5/6 NC)
+        [13, 12] = [VREF, AGND]::VREF(3.3V)  // reference pair; quiet expectation rides the VREF face (b4332); family default 3.3V, part VDD range 2.7-5.5V (datasheet)
 
         [14, 7] = [VDD, DGND]::DC(3.3V)    // supply pair: the noisy side, no quiet expectation
         [11, 9, 10, 8] = SPI::SPI(SLAVE)   // Slave wire order [SCLK, SI, SO, CS]
@@ -29,7 +28,7 @@ abstract component ADC.C4SPI
 
     // Terminal macro: bind the 3.3V domain onto the ADC supply pins
     // (supply decoupling, reference decoupling, both returns tied to GND).
-    // Statement-unity law (mcd design-axioms B10): the ::DC pair taps ride
+    // Statement-unity law (B10): the ::DC pair taps ride
     // one vector-zip statement, and the reference bypass returns on AGND so
     // the drawing groups it with the analog pair (netlist-equal to GND under
     // the direct tie). Power is the direct-tie shape; PowerIso is the

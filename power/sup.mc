@@ -3,10 +3,10 @@
 
 // Voltage-supervisor family (abstract; no part numbers, no vendor -- mclibs
 // layer law). These are the first SOURCE-side citizens of the RST interface
-// (mcode ifs/rst.mc): before this family the reset source role had zero
+// (the ifs RST face): before this family the reset source role had zero
 // adopters in the corpus, so the reset-intent chain-reachability judge had no
-// live lane to walk (mcd/doc/ee/reset-intent-design.md §2, both candidates
-// still gates-to-be). Polarity is a datasheet fact of the concrete part --
+// live lane to walk; both candidate judges were still gates-to-be).
+// Polarity is a datasheet fact of the concrete part --
 // abstract RESET here is "asserted while the monitored rail is outside its
 // window"; active-low parts bind it in the pack entry, not here.
 // Variants: SUP = POR/brown-out supervisor (VCC sense + reset output);

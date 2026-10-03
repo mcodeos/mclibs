@@ -1,12 +1,12 @@
 # Copyright (c) 2026 MCode. Built with MCode Bench(TM).
 # Licensed under the Apache License, Version 2.0.
 
-// QFN32 audio-MCU pin-shape family (U226 b3878: sedimented from the pwrint
-// board's board-internal MCU.AUDIO32 per the part-binding playbook — family
-// shapes live in mclibs, boards instantiate the abstract, real parts in mcpub
-// bind with `:`).
-// The three power-sink rows state no nominal (U227 b3877, applied-nominal-
-// design.md §4.1 ruling 1): an input requirement is an application-side
+// QFN32 audio-MCU pin-shape family (U226 b3878: sedimented from a verified
+// board-internal MCU.AUDIO32 per the part-binding playbook — family
+// shapes live here, boards instantiate the abstract, concrete parts bind
+// with `:`).
+// The three power-sink rows state no nominal (U227 b3877 nominal-law
+// ruling): an input requirement is an application-side
 // property; the per-domain current draw (amp:) is device truth and stays.
 
 abstract component MCU.QFN32

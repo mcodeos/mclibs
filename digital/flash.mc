@@ -2,7 +2,7 @@
 # Licensed under the Apache License, Version 2.0.
 
 // SPI NOR flash pin-shape family (U192: storage abstraction, C5 gap).
-// Device-shape face distilled from the verified hbl GD25Q32E board (SOP8,
+// Device-shape face distilled from a verified board face (SOP8,
 // standard SPI NOR pinout):
 //   1 = _CS, 2 = SO/IO1, 3 = _WP/IO2, 4 = VSS, 5 = SI/IO0, 6 = SCLK,
 //   7 = _HOLD/IO3, 8 = VCC

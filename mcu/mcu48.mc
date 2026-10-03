@@ -4,10 +4,9 @@
 // LQFP48 motor-control MCU pin-shape family (component inventory C1: the
 // B6/B-face transmitter sides -- PWM.H6(TRANSMITTER), STEPDIR(TRANSMITTER),
 // single-lane PWM(TRANSMITTER) -- land their named source).
-// Distilled from the page-verified STM32F103C8T6 LQFP48 pinout (ST
-// DocID13587 Rev 17: Table 5 pin definitions pp.28-33, cross-checked pin by
-// pin against the Figure 8 LQFP48 pinout drawing p.26 -- 48/48 agree; real
-// part mcpub mcu/stm32f103c8t6).
+// Distilled from the page-verified LQFP48 motor-control MCU pinout
+// (pin-definition tables cross-checked
+// against the LQFP48 pinout drawing -- 48/48 agree).
 //
 // Timer faces adopted (the shape is a motor-control MCU, so the motion
 // timers claim their pins):
@@ -20,7 +19,7 @@
 //   TIM1_BKIN default pin PA6 is co-claimed by the TIM3 face here; the
 //     remap row PB12 (25) carries BKIN and stays GPIO.
 //
-// Power (Figure 14 power-supply scheme, datasheet p.36): one digital bank
+// Power (per the datasheet power-supply scheme): one digital bank
 // 100nF per VDD + 4.7uF bulk (caution: the 4.7uF must sit on VDD3), analog
 // VDDA 10nF + 1uF; the figure aggregates 5x100nF for the full 100-pin set,
 // this package carries three VDD/VSS pairs.
@@ -31,20 +30,20 @@ abstract component MCU.LQFP48
     description = "48-pin MCU shape: advanced timer adopting PWM.H6(TRANSMITTER) plus single-lane CH4, general-purpose timer adopting STEPDIR(TRANSMITTER), one digital power domain over three VDD/VSS pairs, one analog domain, remaining GPIO/OSC/debug/BOOT pins unbound with alternate functions in descriptions"
 
     pins = [
-        psnk [[24, 36, 48], [23, 35, 47]] = [VDD, VSS]::DC(amp:50mA), "Digital power over three VDD/VSS pairs; Run-mode max 50.3mA at 72MHz all peripherals on (DocID13587 Table 13); decoupling 100nF per VDD + 4.7uF bulk on VDD3 (Figure 14)"
-        psnk [9, 8] = [VDDA, VSSA]::DC(amp:0.8mA), "Analog power (VDDA 2.4-3.6V with ADC in use, same potential as VDD, max 300mV VDD-VDDA delta, Table 9/note 2); 0.8mA per ADC while ADON (Table 17 note 2); decoupling 10nF + 1uF (Figure 14)"
+        psnk [[24, 36, 48], [23, 35, 47]] = [VDD, VSS]::DC(amp:50mA), "Digital power over three VDD/VSS pairs; Run-mode max 50.3mA at 72MHz all peripherals on (per the datasheet current table); decoupling 100nF per VDD + 4.7uF bulk on VDD3 (per the datasheet decoupling scheme)"
+        psnk [9, 8] = [VDDA, VSSA]::DC(amp:0.8mA), "Analog power (VDDA 2.4-3.6V with ADC in use, same potential as VDD, max 300mV VDD-VDDA delta); 0.8mA per ADC while ADON (per the datasheet); decoupling 10nF + 1uF"
 
         [29, 26, 30, 27, 31, 28] = TIM1{UH, UL, VH, VL, WH, WL}::PWM.H6(TRANSMITTER), "Advanced timer complementary pair set: CH1-CH3 on PA8-PA10, CH1N-CH3N on PB13-PB15"
         out 32 = TIM1CH4::PWM(TRANSMITTER), "TIM1_CH4 on PA11"
         [16, 17] = TIM3{STEP, DIR}::STEPDIR(TRANSMITTER), "TIM3_CH1/CH2 on PA6/PA7"
 
-        in 1 = VBAT, "Backup battery input 1.8-3.6V (Table 9); tie to VDD with a 100nF ceramic when no battery is fitted (RM0008)"
+        in 1 = VBAT, "Backup battery input 1.8-3.6V; tie to VDD with a 100nF ceramic when no battery is fitted (per the reference manual)"
         in 44 = BOOT0, "Boot mode input (BOOT1 is PB2, pin 20)"
         io 7 = RST{NRST}::RST(RECEIVER), "Bidirectional reset"
 
-        io 5 = OSC_IN, "Main oscillator input (remap PD0; the Figure 8 drawing prints PD0-OSC_IN)"
+        io 5 = OSC_IN, "Main oscillator input (remap PD0; the drawing prints PD0-OSC_IN)"
         io 6 = OSC_OUT, "Main oscillator output (remap PD1)"
-        io 3 = PC14, "GPIO / OSC32_IN (backup domain: output limited to 2MHz / 30pF / 3mA sink, Table 5 note 5)"
+        io 3 = PC14, "GPIO / OSC32_IN (backup domain: output limited to 2MHz / 30pF / 3mA sink)"
         io 4 = PC15, "GPIO / OSC32_OUT (backup-domain limits as PC14)"
         io 2 = PC13, "GPIO / TAMPER-RTC (backup-domain limits as PC14)"
 
@@ -74,7 +73,7 @@ abstract component MCU.LQFP48
     ]
 
     // Terminal macro: bind the digital and analog domains, dropping the
-    // Figure 14 decoupling at each continuation (100nF + 4.7uF digital,
+    // datasheet decoupling at each continuation (100nF + 4.7uF digital,
     // 10nF + 1uF analog). GNDP because no pin here is named GND, but the
     // two return groups are distinct nets (digital VSS, analog VSSA).
     func Power([VDD_3V3, GNDP]::DC(3.3V), [VDDA_3V3, GNDA]::DC(3.3V)) {
