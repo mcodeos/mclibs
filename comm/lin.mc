@@ -21,10 +21,7 @@ abstract component UARTtoLIN
     description = "LIN transceiver shape: TXD/RXD logic side adopting UART.TTL(DCE), LBUS single-wire bus side, VBB/VSS 12V battery-domain supply pair, active-low _CS and _WAKE control inputs, VREN regulator-enable output"
 
     pins = [
-        in 4 = TXD, "Driver Input (from DTE TX)"
-        out 1 = RXD, "Receive Output (to DTE RX)"
-        [1, 4] = UART{RXD, TXD}::UART.TTL(DCE)   // DCE view: member 1 TX drives the DTE's RX
-
+        [1, 4] = UART{RXD, TXD}::UART.TTL(DCE), ["Receive Output (to DTE RX)", "Driver Input (from DTE TX)"]   // DCE view: member 1 TX drives the DTE's RX; bare rows merged into the adoption (4.10)
         io [6, 5] = LIN{LBUS, VSS}::LIN(), "LIN bus wire with return"   // role-less conductor view
 
         psnk [7, 5] = [VBB, VSS]::DC(12V)   // VSS rides both rows: bus return on the face, supply return on the crossing
@@ -34,9 +31,10 @@ abstract component UARTtoLIN
     ]
 
     // Terminal macro: bind the 12V battery domain onto the supply pins
+    // Statement-unity law (design-axioms B10): the ::DC pair taps ride one
+    // vector-zip statement.
     func Power([VBB_12V, GND]::DC(12V)) {
         VBB_12V - CAP(100nF, ±20%, CAP.X5R, 25V) - GND
-        VBB_12V - VBB
-        GND - VSS
+        [VBB_12V, GND] - [VBB, VSS]  // supply pair, one bundle
     }
 }

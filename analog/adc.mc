@@ -30,24 +30,25 @@ abstract component ADC.C4SPI
 
     // Terminal macro: bind the 3.3V domain onto the ADC supply pins
     // (supply decoupling, reference decoupling, both returns tied to GND).
-    // Power is the direct-tie shape; PowerIsolated is the bead variant.
+    // Statement-unity law (mcd design-axioms B10): the ::DC pair taps ride
+    // one vector-zip statement, and the reference bypass returns on AGND so
+    // the drawing groups it with the analog pair (netlist-equal to GND under
+    // the direct tie). Power is the direct-tie shape; PowerIso is the
+    // bead variant.
     func Power([VDD_RAIL, GND]::DC(3.3V)) {
         VDD_RAIL - CAP(100nF, ±20%, CAP.X5R, 25V) - GND
-        VDD_RAIL - VDD
+        [VDD_RAIL, GND] - [VDD, DGND]  // supply pair, one bundle
         GND - AGND  // analog return, direct tie
-        GND - DGND  // digital return
-
-        GND - CAP(100nF, ±20%, CAP.X5R, 25V) - VREF  // reference bypass
+        AGND - CAP(100nF, ±20%, CAP.X5R, 25V) - VREF  // reference bypass, analog side
     }
 
     // Isolated variant: the analog return joins the digital ground through a
     // ferrite bead instead of a direct tie. AGND stays its own net (DC-common,
     // HF-isolated), so the reference bypass returns on the analog side and the
     // VREF quiet expectation judges on AGND alone.
-    func PowerIsolated([VDD_RAIL, GND]::DC(3.3V)) {
+    func PowerIso([VDD_RAIL, GND]::DC(3.3V)) {
         VDD_RAIL - CAP(100nF, ±20%, CAP.X5R, 25V) - GND
-        VDD_RAIL - VDD
-        GND - DGND  // digital return, direct tie
+        [VDD_RAIL, GND] - [VDD, DGND]  // supply pair, one bundle
         GND - IND.FB(600Ω, 500mA, 100MHz) - AGND  // analog return via bead
         AGND - CAP(100nF, ±20%, CAP.X5R, 25V) - VREF  // reference bypass, analog side
     }

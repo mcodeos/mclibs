@@ -14,7 +14,7 @@ use $::mcode.ifs
 
 recipe CURRENT_LIMIT
 {
-    func route(a, b)
+    func Route(a, b)
     {
         a - b
     }

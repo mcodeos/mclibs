@@ -19,12 +19,8 @@ abstract component UARTtoCAN
     description = "CAN transceiver shape: TXD/RXD logic side adopting UART.TTL(DCE), CANH/CANL differential bus side, VDD/VSS 5V supply pair, VDD/2 reference output, slope-control input"
 
     pins = [
-        in 1 = TXD, "Driver Input (from DTE TX)"
-        out 4 = RXD, "Receive Output (to DTE RX)"
-        [4, 1] = UART{RXD, TXD}::UART.TTL(DCE)   // DCE view: member 1 TX drives the DTE's RX
-
+        [4, 1] = UART{RXD, TXD}::UART.TTL(DCE), ["Receive Output (to DTE RX)", "Driver Input (from DTE TX)"]   // DCE view: member 1 TX drives the DTE's RX; bare TXD/RXD rows merged into the adoption (4.10)
         io [7, 6, 2] = CAN{CANH, CANL, GND}::CAN(), "CAN bus pair with return"   // role-less conductor view; VSS rides the face row as the bus return
-
         psnk [3, 2] = [VDD, VSS]::DC(5V)   // VSS rides both rows: bus return on the face, supply return on the crossing
         out 5 = VREF, "VDD/2 reference output"
         in 8 = Rs, "Slope control input (high-speed mode when tied to GND, slope resistor for rate control, standby when tied to VDD)"
@@ -32,10 +28,11 @@ abstract component UARTtoCAN
 
     // Terminal macro: bind the 5V domain onto the transceiver supply pins;
     // Rs ties to GND = high-speed mode (DS21667D 4.1)
+    // Statement-unity law (design-axioms B10): the ::DC pair taps ride one
+    // vector-zip statement.
     func Power([VDD_5V, GND]::DC(5V)) {
         VDD_5V - CAP(100nF, ±20%, CAP.X5R, 25V) - GND
-        VDD_5V - VDD
-        GND - VSS
+        [VDD_5V, GND] - [VDD, VSS]  // supply pair, one bundle
         GND - Rs
     }
 }

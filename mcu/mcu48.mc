@@ -41,7 +41,7 @@ abstract component MCU.LQFP48
 
         in 1 = VBAT, "Backup battery input 1.8-3.6V (Table 9); tie to VDD with a 100nF ceramic when no battery is fitted (RM0008)"
         in 44 = BOOT0, "Boot mode input (BOOT1 is PB2, pin 20)"
-        io 7 = NRST, "Bidirectional reset"
+        io 7 = RST{NRST}::RST(RECEIVER), "Bidirectional reset"
 
         io 5 = OSC_IN, "Main oscillator input (remap PD0; the Figure 8 drawing prints PD0-OSC_IN)"
         io 6 = OSC_OUT, "Main oscillator output (remap PD1)"

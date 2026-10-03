@@ -27,13 +27,9 @@ abstract component UARTtoRS232
         5 = C2N, "C2-: charge-pump flying capacitor 2 minus"
         out 6 = VM, "V-: negative charge-pump output"
 
-        out 12 = ROUT1, "Receiver logic output, channel 1 (to DTE RX)"
-        in 11 = DIN1, "Driver logic input, channel 1 (from DTE TX)"
-        [12, 11] = UART{ROUT1, DIN1}::UART.TTL(DCE)   // DCE view: member 1 TX drives the DTE's RX
+        [12, 11] = UART{ROUT1, DIN1}::UART.TTL(DCE), ["Receiver logic output, channel 1 (to DTE RX)", "Driver logic input, channel 1 (from DTE TX)"]   // DCE view: member 1 TX drives the DTE's RX; bare rows merged into the adoption (4.10)
 
-        in 13 = RIN1, "Receiver RS232 input, channel 1"
-        out 14 = DOUT1, "Driver RS232 output, channel 1"
-        [13, 14, 15] = RS232{RIN1, DOUT1, GND}::UART.RS232.3(DCE)   // cable side presents DCE; pin 15 GND rides the face row as the cable return
+        [13, 14, 15] = RS232{RIN1, DOUT1, GND}::UART.RS232.3(DCE), ["Receiver RS232 input, channel 1", "Driver RS232 output, channel 1", "Cable return (rides the face row)"]   // cable side presents DCE; pin 15 GND rides the face row as the cable return
 
         out 9 = ROUT2, "Receiver logic output, channel 2 (to DTE RX)"
         in 10 = DIN2, "Driver logic input, channel 2 (from DTE TX)"
@@ -49,8 +45,7 @@ abstract component UARTtoRS232
     // parameter is GNDD: the component pin 15 is itself spelled GND.
     func Power([VDD_3V3, GNDD]::DC(3.3V)) {
         VDD_3V3 - CAP(100nF, ±20%, CAP.X5R, 25V) - GNDD
-        VDD_3V3 - VCC
-        GND - GNDD
+        [VDD_3V3, GND] - [VCC, GNDD]  // supply pair, one bundle
         C1P - CAP(100nF, ±20%, CAP.X5R, 25V) - C1N
         C2P - CAP(100nF, ±20%, CAP.X5R, 25V) - C2N
         VP - CAP(100nF, ±20%, CAP.X5R, 25V) - VCC

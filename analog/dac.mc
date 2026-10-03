@@ -29,12 +29,15 @@ abstract component DAC.C1SPI
     // Terminal macro: bind the 3.3V domain onto the DAC supply pins
     // (supply decoupling, reference bypass, LDAC tied low so every write
     // lands in the output register immediately)
+    // Statement-unity law (mcd design-axioms B10): the ::DC pair taps ride
+    // one vector-zip statement, and the reference bypass returns on VSS (the
+    // reference pair's own return member) so the drawing groups it with the
+    // VREF/VSS pair (netlist-equal to GND under the tie above).
     func Power([VDD_RAIL, GND]::DC(3.3V)) {
         VDD_RAIL - CAP(100nF, ±20%, CAP.X5R, 25V) - GND
-        VDD_RAIL - VDD
-        GND - VSS  // VDD decoupling
+        [VDD_RAIL, GND] - [VDD, VSS]  // supply pair, one bundle
 
-        GND - CAP(100nF, ±20%, CAP.X5R, 25V) - VREF  // reference bypass
+        VSS - CAP(100nF, ±20%, CAP.X5R, 25V) - VREF  // reference bypass, on the reference pair
 
         GND - LDAC  // tie low: latch on every CS rising edge
     }

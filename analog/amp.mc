@@ -37,7 +37,7 @@ component AMP.INSTRUMENTATION(gain::UV.DB, cmrr::UV.DB, bw::UV.HZ, volt::UV.VOLT
         [5,6] = DC{VCC,VEE}::DC(volt), ["Positive power supply", "Negative power supply (or ground)"]
     ]
     
-    func DifferentialAmplifier(input1, input2, vref)
+    func Amplify(input1, input2, vref)
     {
         input1 - this.IN\+
         input2 - this.IN\-
@@ -64,7 +64,7 @@ component AMP.COMPARATOR(hyst::UV.VOLT, tresp::UV.TIME, volt::UV.VOLT)
         [4,5] = DC{VCC,GND}::DC(volt), ["Positive power supply", "Ground"]
     ]
     
-    func VoltageComparator(reference, input)
+    func Compare(reference, input)
     {
         reference - this.IN\-
         input - this.IN\+
@@ -91,7 +91,7 @@ component AMP.OTA(gm::UV.SIEMENS, iout::UV.AMP, volt::UV.VOLT)
         6 = BIAS @role(quiet)  # Bias current control (analog bias pin)
     ]
     
-    func VoltageToCurrentConverter(input, bias)
+    func VtoI(input, bias)
     {
         input - this.IN\+
         bias - this.BIAS
@@ -116,7 +116,7 @@ component AMP.BUFFER(zin::UV.OHM, iout::UV.AMP, volt::UV.VOLT)
         [3,4] = DC{VCC,VEE}::DC(volt), ["Positive power supply", "Negative power supply (or ground)"]
     ]
     
-    func UnityGainBuffer(input)
+    func Buffer(input)
     {
         input - this.IN
         return this.OUT
@@ -128,16 +128,16 @@ component AMP.BUFFER(zin::UV.OHM, iout::UV.AMP, volt::UV.VOLT)
 # AMP(12V)
 
 # 2. Instrumentation amplifier as differential amplifier
-# AMP.INSTRUMENTATION(60dB, 120dB, 1MHz, 15V).DifferentialAmplifier(sensor_pos, sensor_neg, ground)
+# AMP.INSTRUMENTATION(60dB, 120dB, 1MHz, 15V).Amplify(sensor_pos, sensor_neg, ground)
 
 # 3. Comparator as voltage level detector
-# AMP.COMPARATOR(50mV, 10ns, 5V).VoltageComparator(reference_voltage, input_voltage)
+# AMP.COMPARATOR(50mV, 10ns, 5V).Compare(reference_voltage, input_voltage)
 
 # 4. OTA as voltage-controlled current source
-# AMP.OTA(1mS, 100mA, 12V).VoltageToCurrentConverter(control_voltage, bias_current)
+# AMP.OTA(1mS, 100mA, 12V).VtoI(control_voltage, bias_current)
 
 # 5. Buffer amplifier for impedance matching
-# AMP.BUFFER(1TΩ, 50mA, 9V).UnityGainBuffer(high_impedance_input)
+# AMP.BUFFER(1TΩ, 50mA, 9V).Buffer(high_impedance_input)
 
 // ---------------------------------------------------------------------------------------------
 // Audio power amplifier, BTL output (component inventory C7, electroacoustic family)

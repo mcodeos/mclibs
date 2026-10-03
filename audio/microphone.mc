@@ -16,7 +16,7 @@ abstract component MICROPHONE.ELECTRET
     description = "Differential analog capsule output; capsule body ground expects quiet copper (return intent is declared by the consuming module, conduit does not cross layers)"
 
     pins = [
-        [1, 2] = MIC{P, N} @class(analog)  // differential analog output, P/N as one differential pair
+        [1, 2] = MIC{P, N}::ADC.DIFF(TRANSMITTER) @class(analog)  // differential capsule output adopts the ADC.DIFF source face (role = sensor/signal source); @pair(p)/@class(analog) ride the face, manual tag kept per amp.mc corpus form
         [3, 4] = GND @role(quiet)          // capsule body ground: expects quiet copper (6051/6052 judge)
     ]
 }
@@ -30,7 +30,7 @@ abstract component MICROPHONE.MEMS
     description = "Single-ended analog output; the whole power pair expects a quiet identity (hot VCC lands on the quiet rail via the domain face, return on the quiet conduit)"
 
     pins = [
-        out 1 = P @class(analog)                              // microphone signal positive
+        out 1 = P::ADC.SINGLE(TRANSMITTER) @class(analog)     // single-ended analog source adopts the ADC.SINGLE source face; manual name P preserved
         psnk [4, [2, 3]] = [VCC, GND]::DC(3.3V) @role(quiet)  // power pair expects quiet identity (6051/6052 per member)
     ]
 }
