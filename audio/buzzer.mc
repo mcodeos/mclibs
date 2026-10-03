@@ -1,10 +1,9 @@
-# Copyright (c) 2026 MCode
-#
+# Copyright (c) 2026 MCode. Built with MCode Bench(TM).
 # Licensed under the Apache License, Version 2.0.
 
 # Piezo sounder abstract shape (component inventory C7, electroacoustic
 # family). Distilled from the page-verified TDK PS-series catalog
-# (tdk-ps-buzzer-catalog.pdf beside this file; image-only PDF, document
+# (mo/ds/tdk-ps-buzzer-catalog.pdf; image-only PDF, document
 # code 007-01/20110508/ef532_ps, PS1240P02BT detail on catalog p.3).
 #
 # The PS series ships without oscillator circuit: an external AC drive

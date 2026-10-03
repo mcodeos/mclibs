@@ -1,5 +1,4 @@
-# Copyright (c) 2026 MCode
-#
+# Copyright (c) 2026 MCode. Built with MCode Bench(TM).
 # Licensed under the Apache License, Version 2.0.
 
 # CD4000B Series - Classic general purpose, low power, wide voltage (3V~18V)

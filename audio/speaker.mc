@@ -1,5 +1,4 @@
-# Copyright (c) 2026 MCode
-#
+# Copyright (c) 2026 MCode. Built with MCode Bench(TM).
 # Licensed under the Apache License, Version 2.0.
 
 # Speaker abstract shape (component inventory C7, electroacoustic family)

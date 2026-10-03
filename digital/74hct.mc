@@ -1,5 +1,4 @@
-# Copyright (c) 2026 MCode
-#
+# Copyright (c) 2026 MCode. Built with MCode Bench(TM).
 # Licensed under the Apache License, Version 2.0.
 
 # 74HCT Series - CMOS with TTL compatibility (4.5V~5.5V)

@@ -1,5 +1,4 @@
-# Copyright (c) 2026 MCode
-#
+# Copyright (c) 2026 MCode. Built with MCode Bench(TM).
 # Licensed under the Apache License, Version 2.0.
 
 // Three-phase gate driver pin-shape family (C8 gap, interface side B6: the

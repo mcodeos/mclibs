@@ -1,5 +1,4 @@
-# Copyright (c) 2026 MCode
-#
+# Copyright (c) 2026 MCode. Built with MCode Bench(TM).
 # Licensed under the Apache License, Version 2.0.
 
 # 74HC Series - CMOS compatible with TTL, medium speed (2V~6V)
