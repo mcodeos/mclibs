@@ -15,7 +15,7 @@
 // its shape from the face table, the master/slave roles belong to the
 // controllers above this PHY.
 
-abstract component UARTtoLIN
+abstract component XCVR.LIN
 {
     name = "UART to LIN transceiver"
     description = "LIN transceiver shape: TXD/RXD logic side adopting UART.TTL(DCE), LBUS single-wire bus side, VBB/VSS 12V battery-domain supply pair, active-low _CS and _WAKE control inputs, VREN regulator-enable output"

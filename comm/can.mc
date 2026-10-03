@@ -13,7 +13,7 @@
 // device takes its shape from the face table, it does not claim a node
 // role (the controller above this PHY does).
 
-abstract component UARTtoCAN
+abstract component XCVR.CAN
 {
     name = "UART to CAN transceiver"
     description = "CAN transceiver shape: TXD/RXD logic side adopting UART.TTL(DCE), CANH/CANL differential bus side, VDD/VSS 5V supply pair, VDD/2 reference output, slope-control input"

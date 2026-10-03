@@ -10,14 +10,14 @@
 // 2-wire UART.RS485 base family. The active-low receiver enable carries the
 // `_` prefix per pin-semantics 2.8 (NAMING.md 6): the prefix marks an
 // active-low signal, whatever its direction.
-abstract component UARTtoRS485
+abstract component XCVR.RS485
 {
-    name = "UARTtoRS485"
+    name = "XCVR.RS485"
     description = "UART to RS485 Transceiver"
 
     partno = ""
     spec.HBM = ±0kV
-    spec.workingtemperature = -0°C ~ +0°C
+    spec.working_temperature = -0°C ~ +0°C
 
     pins = [
         [1, 4] = UART{RO, DI}::UART.TTL(DCE), ["Receive Output (to DTE RX)", "Driver Input (from DTE TX)"]   // DCE view: directions come from the role face; bare rows merged into the adoption (4.10)
@@ -37,7 +37,7 @@ abstract component UARTtoRS485
         VCC - RES(5.1kΩ) - RS485.A - RES(120Ω) - RS485.B - RES(5.1kΩ) - GND
     }
 
-    func AutoTrans()
+    func AutoDirection()
     {
         TRANS.NPN Q
         VCC - RES(4.7kΩ) - (Q.COLLECTOR + DE + _RE)

@@ -31,12 +31,12 @@ component FILTER.HP(fcut::UV.HZ, ripple::UV.DB, atten::UV.DB)
         3 = GND @role(quiet)
     ]
 }
-component FILTER.BP(flow::UV.HZ, fhigh::UV.HZ, ripple::UV.DB, atten::UV.DB)
+component FILTER.BP(flo::UV.HZ, fhi::UV.HZ, ripple::UV.DB, atten::UV.DB)
 {
     name = "Band Pass Filter"
     spec = [
-        lower_cutoff = flow
-        upper_cutoff = fhigh
+        lower_cutoff = flo
+        upper_cutoff = fhi
         pass_band_ripple = ripple
         stop_band_attenuation = atten
     ]
@@ -46,12 +46,12 @@ component FILTER.BP(flow::UV.HZ, fhigh::UV.HZ, ripple::UV.DB, atten::UV.DB)
         3 = GND @role(quiet)
     ]
 }
-component FILTER.BS(flow::UV.HZ, fhigh::UV.HZ, ripple::UV.DB, atten::UV.DB)
+component FILTER.BS(flo::UV.HZ, fhi::UV.HZ, ripple::UV.DB, atten::UV.DB)
 {
     name = "Band Stop Filter"
     spec = [
-        lower_cutoff = flow
-        upper_cutoff = fhigh
+        lower_cutoff = flo
+        upper_cutoff = fhi
         pass_band_ripple = ripple
         stop_band_attenuation = atten
     ]
@@ -88,12 +88,12 @@ component FILTER.AP(phase::UV.ANGLE, frange::STRING)
         3 = GND @role(quiet)
     ]
 }
-component FILTER.ACTIVE(flow::UV.HZ, fhigh::UV.HZ, gain::UV.DB, volt::UV.VOLT)
+component FILTER.ACTIVE(flo::UV.HZ, fhi::UV.HZ, gain::UV.DB, volt::UV.VOLT)
 {
     name = "Active Filter"
     spec = [
-        low_pass = flow
-        high_pass = fhigh
+        low_pass = flo
+        high_pass = fhi
         gain = gain
         supply_voltage = volt
     ]
