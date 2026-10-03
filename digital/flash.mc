@@ -36,8 +36,8 @@ abstract component FLASH.SPI_NOR
         VDD_3V3 - VCC
         GND - VSS  // VCC decoupling
 
-        RES(10kΩ).Pull([_CS, VDD_3V3])
-        RES(10kΩ).Pull([_WP, VDD_3V3])
-        RES(10kΩ).Pull([_HOLD, VDD_3V3])
+        RES(10kΩ).Pullup([_CS, VDD_3V3])
+        RES(10kΩ).Pullup([_WP, VDD_3V3])
+        RES(10kΩ).Pullup([_HOLD, VDD_3V3])
     }
 }
