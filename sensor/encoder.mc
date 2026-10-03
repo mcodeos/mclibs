@@ -16,8 +16,8 @@
 
 abstract component ENC.INC {
     name        = "Incremental rotary encoder (2-phase A/B)"
-    description = "Two-phase incremental quadrature contact pair with common: the A/B
-        pulse trains encode position delta (edge count) and direction (phase lead); no index
+    description = "Two-phase incremental quadrature contact pair with common: the A/B \
+        pulse trains encode position delta (edge count) and direction (phase lead); no index \
         (Z) lane; contact outputs carry no drive transistor, the reader side expects pull-ups"
 
     pins = [
@@ -32,8 +32,8 @@ abstract component ENC.INC {
 // (E5060), so the switch rides its own family value.
 abstract component ENC.INC.SW {
     name        = "Incremental rotary encoder (2-phase A/B) with push-on switch"
-    description = "Quadrature element of ENC.INC plus the family push-on switch: a
-        passive normally-open contact pair with no direction words and no interface
+    description = "Quadrature element of ENC.INC plus the family push-on switch: a \
+        passive normally-open contact pair with no direction words and no interface \
         adoption (ruling-19 census A1)"
 
     pins = [
